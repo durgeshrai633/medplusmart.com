@@ -5,27 +5,411 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Roboto, Helvetica\Neue, Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #f8f8f8;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .row {
+        flex-direction: row;
+      }
+
+      .col {
+        flex-direction: column;
+      }
+
+      img {
+        max-width: 100%;
+        /* height: auto; */
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+      }
+      ul {
+        list-style: none;
+      }
+      .nav-bar {
+        padding: 5px 20px;
+        /* border: 2px solid green; */
+      }
+
+      .top-nav {
+        justify-content: space-between;
+        /* border: 2px solid red; */
+        align-items: center;
+      }
+      .left-div {
+        width: fit-content;
+        /* border: 2px solid gray; */
+      }
+      .right-div {
+        align-items: center;
+        justify-content: space-between;
+        /* border: 2px solid black; */
+        gap: 20px;
+        color: black;
+      }
+      .download {
+        align-items: center;
+        gap: 15px;
+      }
+      .download > img {
+        cursor: pointer;
+      }
+      .download > img:hover {
+        color: #e71c37;
+      }
+      .logo {
+        background-color: #c3161c;
+        padding: 5px 16px;
+        color: #fbf1f2;
+        font-weight: 800;
+        font-size: 16px;
+        border-radius: 4px;
+      }
+      .logo > span {
+        color: #ffffff;
+        font-weight: 500;
+      }
+      .sign-in-button {
+        padding: 8px 16px;
+        border: 1px solid #e71c37 !important ;
+        background-color: white;
+        color: #e71c37;
+        cursor: pointer;
+        border-radius: 3px;
+      }
+
+      .sign-in-button:hover {
+        color: white;
+        background: #e71c37;
+        transition: all 0.5s ease;
+      }
+
+      .container-sign-in {
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 2px solid green;
+      }
+
+      .sign-in-div {
+        width: 600px;
+        height: 500px;
+        margin: 50px auto;
+        /* border: 2px solid red; */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      .left-part-sign-in {
+        background-color: #69ddff;
+        color: white;
+        padding: 10px 10px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .left-part-sign-in ul {
+        margin-left: 10px;
+      }
+
+      .left-part-sign-in ul li {
+        width: 85%;
+        padding: 10px;
+        font-size: 12px;
+      }
+
+      /* .icon::before {
+        content: "\f058";
+        font-weight: 900;
+        font-family: "Font Awesome 5 brands";
+        padding-right: 5px;
+        margin-left: -20px;
+      } */
+
+      .close-icon {
+        text-align: right;
+      }
+      .close-icon img {
+        cursor: pointer;
+      }
+
+      .right-part-sign-in {
+        width: 100%;
+        padding: 10px 10px;
+        padding-top: 20px;
+        justify-content: space-between;
+      }
+
+      .right-part-sign-in form {
+        padding: 10px 20px;
+        gap: 20px;
+      }
+
+      .right-part-sign-in form button {
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        padding: 6px 12px;
+      }
+
+      .right-part-sign-in-footer {
+        align-self: center;
+        border-top: 1px solid #ddd;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.2em;
+      }
+      .right-part-sign-in-footer a {
+        color: #4679fe;
+      }
+      .right-part-sign-in-footer a:hover {
+        color: rgb(63, 63, 248);
+      }
+      .sign-in-input {
+        border: none;
+        border-bottom: 2px solid #ddd;
+        outline: none;
+        background-color: #f8f8f8;
+        margin-bottom: 10px;
+      }
+
+      .sign-in-input:focus {
+        padding-bottom: 20px;
+      }
+
+      #sign-in,
+      #register {
+        background: #212121;
+        color: white;
+      }
+      #sign-in:hover,
+      #register:hover {
+        opacity: 0.9;
+        transition: all 0.5s ease;
+      }
+      #otp-sign-in {
+        color: #c3161c;
+        border: 1px solid #d7d7d7;
+        background-color: #f8f8f8;
+      }
+
+      #otp-sign-in:hover {
+        border: 1px solid #212121;
+        color: #212121;
+        transition: all 0.5s ease;
+      }
+
+      #registration {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <div class="nav-bar">
-      <div class="top-nav">
+      <div class="top-nav flex row">
         <div class="left-div">
-          <a href=""
-            ><img
-              src="https://static1.medplusmart.com/medplusmart/assets/_325472601571f31e1bf00674c368d335_/new_theme/web/images/spacer.gif"
-              alt="medplusmart logo"
-          /></a>
+          <a href="home.html"
+            ><div class="logo">MedPlus <span>Mart</span></div></a
+          >
         </div>
-        <div class="right-div">
+        <div class="right-div flex row">
           <a href="#">call 040067006700!</a>
           <a href="#">Store Finder</a>
-          <div>
+          <div class="download flex">
             <span>Download App</span>
+            <img
+              src="https://img.icons8.com/material-rounded/24/000000/android-os.png"
+            />
+            <img
+              src="https://img.icons8.com/material-sharp/24/000000/mac-os.png"
+            />
+          </div>
+          <button class="sign-in-button" id="signin">Sign in/Register</button>
+        </div>
+        <div class="container-sign-in" id="modal">
+          <div class="sign-in-div flex row">
+            <div class="left-part-sign-in">
+              <div>
+                <h2 class="heading-sign-in">Sign-in / Register</h2>
+                <ul>
+                  <li class="icon">Participate in FlexiRewars program</li>
+                  <li class="icon">Avail discounts at our stores</li>
+                  <li class="icon">Access your previous bills & records</li>
+                  <li class="icon">
+                    Exclusive MedPlus Family Health Plan Offer
+                  </li>
+                </ul>
+              </div>
+              <img
+                src="https://static1.medplusmart.com/medplusmart/assets/_91c3f142ad1b80d8ec54af4248b2d805_/new_theme/web/images/new/signin-register.png"
+                alt=""
+              />
+            </div>
+            <div class="right-part-sign-in flex col">
+              <div class="close-icon">
+                <img
+                  src="https://static1.medplusmart.com/medplusmart/assets/_2df912a8adaabe680f296d028912963b_/new_theme/web/images/xclose.png.pagespeed.ic.hZtCLUI4yy.png"
+                  alt=""
+                  onclick="closeModal()"
+                  ;
+                />
+                <form action="" class="flex col" id="sign-in-form">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="sign-in-input"
+                    placeholder="Email Id / Mobile No"
+                  />
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    class="sign-in-input"
+                    placeholder="Password"
+                  />
+                  <button type="submit" id="sign-in">Sign in</button>
+                  <button id="otp-sign-in">Login through OTP</button>
+                </form>
+                <!-- Registration form -->
+                <form action="" class="flex col" id="registration">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="sign-in-input"
+                    placeholder="Your Name"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="sign-in-input"
+                    placeholder="Email"
+                  />
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    class="sign-in-input"
+                    placeholder="Password"
+                  />
+                  <input
+                    type="password"
+                    name="confirmPassword"
+                    id="confirmPassword"
+                    class="sign-in-input"
+                    placeholder="Confirm Password"
+                  />
+                  <input
+                    type="number"
+                    name="mobileNumber"
+                    id="mobileNumber"
+                    class="sign-in-input"
+                    placeholder="Mobile Number"
+                  />
+                  <span style="text-align: left"
+                    >If you are an existing medplus customer enter the
+                    registered mobile number with us</span
+                  >
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: flex-start;
+                      text-align: left;
+                    "
+                  >
+                    <div>
+                      <input type="checkbox" name="check1" id="check1" />
+                      <label for="check1"
+                        >I have read and agree to <a href="">T&C's</a></label
+                      >
+                    </div>
+                    <div>
+                      <input type="checkbox" name="check2" id="check2" />
+                      <label for="check2"
+                        >Yes I would like to be updated of new promotional
+                        offers.</label
+                      >
+                    </div>
+                  </div>
+                  <button type="submit" id="register">Register</button>
+                </form>
+                <!-- Registration form ends here -->
+              </div>
+
+              <div class="right-part-sign-in-footer">
+                <span
+                  >New to MedPlus?
+                  <a onclick="registration()">Register here</a></span
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="location-nav"></div>
       <div class="main-nav"></div>
     </div>
+
+    <footer>
+      <a href="https://icons8.com/icon/86306/android-os"
+        >Android OS icon by Icons8</a
+      >
+    </footer>
   </body>
 </html>
+
+<script>
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+
+  document.getElementById("signin").addEventListener("click", openModal);
+
+  function openModal() {
+    document.getElementById("modal").style.display = "flex";
+  }
+
+  function registration() {
+    document.getElementById("registration").style.display = "flex";
+    document.getElementById("sign-in-form").style.display = "none";
+  }
+</script>
