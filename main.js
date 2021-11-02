@@ -4,7 +4,7 @@ function closeModal() {
     document.getElementById("modal").style.display = "none";
   }
 
-//   document.getElementById("signin").addEventListener("click", openModal);
+  document.getElementById("signin").addEventListener("click", openModal);
 
   // Opening the signin/registration form on middle of the page
   function openModal() {
@@ -37,8 +37,6 @@ function closeModal() {
   document.getElementById("search").addEventListener("click", function (e) {
     document.getElementById("search").setAttribute("placeholder", "");
     document.getElementById("search").style.backgroundColor = "white";
-
-
   });
 
   function putPlaceholder() {
@@ -46,12 +44,19 @@ function closeModal() {
       .getElementById("search")
       .setAttribute("placeholder", "Search for... general or pharma products");
     document.getElementById("search").style.backgroundColor = "#F8F9FA";
-
   }
-  document.getElementById("searchMenu").addEventListener("click",function(){
+  document.getElementById("searchMenu").addEventListener("click", function () {
     document.getElementById("search-menu").style.display = "block";
-  })
+  });
 
-  function removeSearchList(){
+  function removeSearchList() {
     document.getElementById("search-menu").style.display = "none";
+  }
+
+  // document.getElementsByClassName("search-menu-item").addEventListener("click",function(){
+  //   alert("clicked");
+  // })
+
+  function viewShoppingCart() {
+    document.getElementById("cart-mini-menu").style.display = "block";
   }

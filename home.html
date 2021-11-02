@@ -17,267 +17,8 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
-    <style>
-      /* only for check purposes */
-      .border {
-        border-radius: 3px;
-      }
-
-      /* ends here */
-      /* universal selectors */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: Roboto;
-        font-size: 12px;
-        line-height: 1.42857143;
-        color: #333;
-        background-color: #ffffff;
-      }
-      .grid {
-        display: grid;
-      }
-
-      .grid-col-2 {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .flex {
-        display: flex;
-      }
-
-      .row {
-        flex-direction: row;
-      }
-
-      .col {
-        flex-direction: column;
-      }
-
-      img {
-        max-width: 100%;
-        /* height: auto; */
-      }
-
-      a {
-        text-decoration: none;
-        color: black;
-        cursor: pointer;
-      }
-      ul {
-        list-style: none;
-      }
-      /* Universal styling ends here */
-
-      /* Nav bar styling  */
-      .nav-bar {
-        padding: 5px 20px;
-        /* border: 2px solid green; */
-      }
-
-      /* Top nav bar styling */
-      .top-nav {
-        justify-content: space-between;
-        /* border: 2px solid red; */
-        align-items: center;
-      }
-      .left-div {
-        width: fit-content;
-        /* border: 2px solid gray; */
-      }
-      .right-div {
-        align-items: center;
-        justify-content: space-between;
-        /* border: 2px solid black; */
-        gap: 20px;
-        color: black;
-      }
-      .download {
-        align-items: center;
-        gap: 15px;
-      }
-      .download > img {
-        cursor: pointer;
-      }
-      .download > img:hover {
-        color: #e71c37;
-      }
-      .logo {
-        background-color: #c3161c;
-        padding: 5px 16px;
-        color: #fbf1f2;
-        font-weight: 800;
-        font-size: 16px;
-        border-radius: 4px;
-      }
-      .logo > span {
-        color: #ffffff;
-        font-weight: 500;
-      }
-      .sign-in-button {
-        padding: 8px 16px;
-        border: 1px solid #e71c37 !important ;
-        background-color: white;
-        color: #e71c37;
-        cursor: pointer;
-        border-radius: 3px;
-      }
-
-      .sign-in-button:hover {
-        color: white;
-        background: #e71c37;
-        transition: all 0.5s ease;
-      }
-
-      /* Signin/registration form container styling */
-      .container-sign-in {
-        position: absolute;
-        display: none;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border: 2px solid green;
-        z-index: 1050;
-      }
-
-      .sign-in-div {
-        width: 600px;
-        height: 500px;
-        margin: 50px auto;
-        /* border: 2px solid red; */
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-        z-index: 1050;
-        background-color: #f8f8f8;
-      }
-
-      .left-part-sign-in {
-        background-color: #69ddff;
-        color: white;
-        padding: 10px 10px;
-        padding-top: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      .left-part-sign-in ul {
-        margin-left: 10px;
-      }
-
-      .left-part-sign-in ul li {
-        width: 85%;
-        padding: 10px;
-        font-size: 12px;
-      }
-
-      /* .icon::before {
-        content: "\f058";
-        font-weight: 900;
-        font-family: "Font Awesome 5 brands";
-        padding-right: 5px;
-        margin-left: -20px;
-      } */
-
-      .close-icon {
-        text-align: right;
-      }
-      .close-icon img {
-        cursor: pointer;
-      }
-
-      .right-part-sign-in {
-        width: 100%;
-        max-width: 500px;
-        box-sizing: border-box;
-        padding: 10px 10px;
-        padding-top: 20px;
-        justify-content: space-between;
-      }
-
-      .right-part-sign-in form {
-        padding: 10px 20px;
-        gap: 20px;
-      }
-
-      .right-part-sign-in form button {
-        display: inline-block;
-        margin-bottom: 0;
-        font-weight: 600;
-        text-align: center;
-        vertical-align: middle;
-        cursor: pointer;
-        border: 1px solid transparent;
-        white-space: nowrap;
-        padding: 6px 12px;
-      }
-
-      .right-part-sign-in-footer {
-        align-self: center;
-        border-top: 1px solid #ddd;
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-        font-size: 1.2em;
-      }
-      .right-part-sign-in-footer a {
-        color: #4679fe;
-      }
-      .right-part-sign-in-footer a:hover {
-        color: rgb(63, 63, 248);
-      }
-      .sign-in-input {
-        border: none;
-        border-bottom: 2px solid #ddd;
-        outline: none;
-        background-color: #f8f8f8;
-        margin-bottom: 10px;
-      }
-
-      .sign-in-input:focus {
-        padding-bottom: 20px;
-      }
-
-      #sign-in,
-      #register {
-        background: #212121;
-        color: white;
-      }
-      #sign-in:hover,
-      #register:hover {
-        opacity: 0.9;
-        transition: all 0.5s ease;
-      }
-      #otp-sign-in {
-        color: #c3161c;
-        border: 1px solid #d7d7d7;
-        background-color: #f8f8f8;
-      }
-
-      #otp-sign-in:hover {
-        border: 1px solid #212121;
-        color: #212121;
-        transition: all 0.5s ease;
-      }
-
-      #registration {
-        display: none;
-      }
-
-      #sign-in-span {
-        display: none;
-      }
-
-      /* top nav bar styling ends here */
-
-      /* Location nav bar styling starts here */
-      
-    </style>
+    <link rel="stylesheet" href="main.css" />
+    <style></style>
   </head>
   <body>
     <!-- Nav bar starts here -->
@@ -460,113 +201,15 @@
           </div>
         </div>
       </div>
-    
-      </style>
+
       <!-- Top nav bar ends here -->
 
       <!-- location nav bar starts here -->
-      <style>
-        .location-nav{
-          padding:10px 0;
-          gap: 30px;
-          justify-content: space-between;
-          border-block: 1px solid #dedede;
-          margin-top: 5px;
-        }
-        .location-nav > div:first-child{
-          margin-right: 40px;
-        }
-        .location-nav > div:nth-child(2){
-          border: 1px solid #dedede;
-          position: relative;
-        }
-        .location-nav > div > span{
-          background: #dedede;
-          font-size:25px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          width: 40px;
-          margin-right: 10px;
-        }
-        .location-nav > div h3,h4{
-          font-weight: 400;
-        }
-        .right-location-div > *{
-          background-color: #F8F9FA;
-          font-size: 15px;
-        }
-          #searchButton{
-          padding-inline: 10px;
-        }
-        #searchButton:hover{
-          outline: 1px solid #dedede;
-        }
-
-        .padding-inline{
-          padding-inline:20px;
-        }
-        .no-border{
-          border: none;
-          outline: none;
-        }
-        .allProducts:hover,#searchButton:hover{
-          cursor: pointer;
-        }
-
-        #search-menu{
-          position: absolute;
-          top: 100%;
-          width: 150px;
-          display: none;
-          background-color: white;
-          border: 1px solid #dedede;
-          z-index: 1100;
-        }
-        #search-menu > a{
-          display: block;
-          padding:5px 10px;
-          text-align:justify;
-        }
-
-        #search-menu > a:hover{
-          color: red;
-        }
-        
-        .last-location-div{
-          justify-content: space-between;
-          flex-basis: 380px;
-        }
-
-        .last-location-div >div > span{
-          font-size: 25px;
-        }
-
-        .last-location-div button{
-          padding-inline: 25px;
-          background: #08CE73;
-          color: white;
-          border: 1px solid #08CE73;
-          cursor: pointer;
-          font-weight: 600;
-          text-align: center;
-        }
-        .last-location-div button i{
-          margin-right: 5px;
-        }
-        i{
-          cursor: pointer;
-        }
-
-        .last-location-div button:hover{
-
-        }
-      </style>
+      <style></style>
       <div class="location-nav flex">
         <div class="left-location-div flex border">
           <span>
-          <i class="fas fa-map-marker-alt"></i>
+            <i class="fas fa-map-marker-alt"></i>
           </span>
           <div>
             <h3>6,56, Moosapet, Bhavaninagr...</h3>
@@ -574,27 +217,105 @@
           </div>
         </div>
         <div class="right-location-div flex border">
-          <button class="padding-inline no-border allProducts" id="searchMenu" onblur="removeSearchList()">All Products <span><i class="fas fa-caret-down"></i></span>
+          <button
+            class="padding-inline no-border allProducts"
+            id="searchMenu"
+            onblur="removeSearchList()"
+          >
+            All Products <span><i class="fas fa-caret-down"></i></span>
           </button>
           <div id="search-menu">
-            <a id="general-link" class="search-menu-item" href="#">General store</a>
-            <a class="search-menu-item" href="#">Pharmacy</a>
+            <a id="general-link" class="search-menu-item" href="#"
+              >General store</a
+            >
+            <a class="search-menu-item" href="https://www.facebook.com"
+              >Pharmacy</a
+            >
             <a class="search-menu-item" href="#">All products</a>
           </div>
-          <input type="text" id="search" onblur="putPlaceholder()" class="padding-inline no-border" placeholder="Search for... general or pharma products" style="width: 400px;">
-          <button class="no-border" id="searchButton"><span><i class="fas fa-search"></i></span></button>
+          <input
+            type="text"
+            id="search"
+            onblur="putPlaceholder()"
+            class="padding-inline no-border"
+            placeholder="Search for... general or pharma products"
+            style="width: 400px"
+          />
+          <button class="no-border" id="searchButton">
+            <span><i class="fas fa-search"></i></span>
+          </button>
         </div>
 
         <div class="last-location-div flex border">
+          <div id="cart-mini-menu" class="shopping-cart-list-div">
+            <div
+              class="flex"
+              style="justify-content: space-between; padding: 10px"
+            >
+              <h3>Current order</h3>
+              <a href="">clear</a>
+            </div>
+            <table style="text-align: left; padding: 10px">
+              <thead>
+                <tr>
+                  <th>Product name</th>
+                  <th>Qty</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>HIMALAYA TOTAL CARE BABY PANTS M 54S</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+            <button
+              onclick="viewShoppingCart()"
+              style="width: 100%; background: #e93049; padding-block: 10px"
+            >
+              View Shopping Cart
+            </button>
+          </div>
           <button><i class="fas fa-cloud-upload-alt"></i>Upload</button>
-          <div style="display: flex;justify-content: space-between; gap: 30px; position: relative;">
-            <span><span style="position: absolute;background: red;color: white;font-size: 8px;border-radius: 50%;width: 10px;text-align: center;">0</span><i class="fas fa-bell"></i></span>
-            <span><span style="position: absolute;background: red;color: white;font-size: 8px;border-radius: 50%;width: 10px;text-align: center;">0</span><i class="fas fa-shopping-cart"></i></span>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              gap: 30px;
+              position: relative;
+            "
+          >
+            <span
+              ><span
+                style="
+                  position: absolute;
+                  background: red;
+                  color: white;
+                  font-size: 8px;
+                  border-radius: 50%;
+                  width: 10px;
+                  text-align: center;
+                "
+                >0</span
+              ><i class="fas fa-bell"></i
+            ></span>
+            <span
+              ><span
+                style="
+                  position: absolute;
+                  background: red;
+                  color: white;
+                  font-size: 8px;
+                  border-radius: 50%;
+                  width: 10px;
+                  text-align: center;
+                "
+                >0</span
+              ><i class="fas fa-shopping-cart"></i
+            ></span>
           </div>
         </div>
-
       </div>
-
 
       <!-- location nav bar ends here -->
       <div class="main-nav"></div>
@@ -609,66 +330,5 @@
 </html>
 
 <script>
-  // Top navigation javascript starts here
-
-  function closeModal() {
-    document.getElementById("modal").style.display = "none";
-  }
-
-  document.getElementById("signin").addEventListener("click", openModal);
-
-  // Opening the signin/registration form on middle of the page
-  function openModal() {
-    document.getElementById("modal").style.display = "flex";
-  }
-
-  // new customer regitration form showing
-  function registration() {
-    document.getElementById("registration").style.display = "flex";
-    document.getElementById("sign-in-form").style.display = "none";
-    document.getElementById("registration-span").style.display = "none";
-    document.getElementById("sign-in-span").style.display = "block";
-  }
-
-  // new customer sign in form showing
-  function signin() {
-    document.getElementById("registration").style.display = "none";
-    document.getElementById("sign-in-form").style.display = "flex";
-    document.getElementById("registration-span").style.display = "block";
-    document.getElementById("sign-in-span").style.display = "none";
-  }
-
-  // Top navbar javascript ends here
-
-  // location nav starts here
-
-  document.getElementById("search").addEventListener("click", function (e) {
-    document.getElementById("search").setAttribute("placeholder", "");
-  });
-  document.getElementById("search").addEventListener("click", function (e) {
-    document.getElementById("search").setAttribute("placeholder", "");
-    document.getElementById("search").style.backgroundColor = "white";
-
-
-  });
-
-  function putPlaceholder() {
-    document
-      .getElementById("search")
-      .setAttribute("placeholder", "Search for... general or pharma products");
-    document.getElementById("search").style.backgroundColor = "#F8F9FA";
-
-  }
-  document.getElementById("searchMenu").addEventListener("click",function(){
-    document.getElementById("search-menu").style.display = "block";
-  })
-
-  function removeSearchList(){
-    document.getElementById("search-menu").style.display = "none";
-  }
-
-  // document.getElementsByClassName("search-menu-item").addEventListener("click",function(){
-  //   alert("clicked");
-  // })
-
+  
 </script>
