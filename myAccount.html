@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Account</title>
+        <script src="https://kit.fontawesome.com/bb916d5bed.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                background-color: #f8f9fb;
+                font-family: "Roboto", sans-serif;
+            }
+            .nav {
+                height: 100px;
+                width: 90%;
+                background-color: #fff;
+                margin: auto;
+            }
+            .mainBody {
+                display: grid;
+                margin: 40px auto;
+                width: 94%;
+                grid-template-columns: 22% 73%;
+                gap: 3%;
+            }
+            .lBody,
+            .rBody {
+                height: 550px;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 1px 1px 3px rgb(145, 144, 144), 0px 0px 1px rgb(145, 144, 144);
+            }
+
+            .lBody > ul {
+                list-style: none;
+                font-size: 20px;
+                padding: 0px;
+                margin: 0px;
+            }
+            .lBody > ul > li {
+                border-bottom: 1px solid rgb(180, 177, 177);
+                padding: 5px 15px;
+                margin-top: 10px;
+                margin-bottom: 15px;
+                cursor: pointer;
+                display: flex;
+            }
+            .lBody > ul > li:last-child {
+                border: none;
+            }
+            .lBody > ul > li > img {
+                height: 32px;
+                margin-right: 15px;
+            }
+            .rBody {
+                padding: 40px;
+                height: 472px;
+                position: relative;
+            }
+            .greetUser {
+                padding: 1px 80px;
+                font-size: 30px;
+            }
+            .accDetails {
+                width: 100%;
+                height: 250px;
+                border: rgb(180, 177, 177) 1px solid;
+                border-radius: 5px;
+                margin-top: 60px;
+                display: grid;
+                grid-template-columns: 48% 45%;
+                padding-top: 30px;
+            }
+            .iconAccDetails {
+                display: flex;
+                margin: 25px 25px;
+                font-size: 16px;
+                vertical-align: center;
+                /* border: rgb(192, 88, 88) 1px solid; */
+            }
+            .iconAccDetails > img {
+                /* border: rgb(148, 33, 33) 1px solid; */
+                height: 50px;
+            }
+            .iconAccDetails > div > p {
+                margin: 5px 10px;
+            }
+            .colorInfo {
+                color: #4a9cee;
+            }
+            .userId {
+                width: 270px;
+                height: 28px;
+                color: white;
+                background-image: linear-gradient(90deg, #ff4787 0%, #ff6347 100%);
+                border-radius: 5px;
+                padding: 10px;
+                font-size: 11px;
+                position: absolute;
+                left: 100px;
+                box-shadow: 0 20px 15px -15px rgb(204 129 98);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav"></div>
+        <div class="mainBody">
+            <div class="lBody">
+                <ul>
+                    <li id="myAcc">
+                        <img
+                            src="https://static2.medplusmart.com/live/webpwa/images/myprofile-icn-36-cssbg.svg"
+                            alt=""
+                        />My Account
+                    </li>
+                    <li id="purHis">
+                        <img
+                            src="https://static2.medplusmart.com/live/webpwa/images/purchasehistory-icn-cssbg.svg"
+                            alt=""
+                        />Purchase History
+                    </li>
+                    <li id="myLabOrd">
+                        <img
+                            src="https://static2.medplusmart.com/live/webpwa/images/lab-orders-icn-cssbg.svg"
+                            alt=""
+                        />My Lab Orders
+                    </li>
+                    <li id="refHis">
+                        <img
+                            src="https://static2.medplusmart.com/live/webpwa/images/refillhistory-icn-cssbg.svg"
+                            alt=""
+                        />Refill History
+                    </li>
+                    <li id="healthRec">
+                        <img
+                            src="https://static2.medplusmart.com/live/webpwa/images/healthrecords-icn-36-cssbg.svg"
+                            alt=""
+                        />Health Records
+                    </li>
+                    <li id="freOrdList">
+                        <img
+                            src="https://static2.medplusmart.com/live/webpwa/images/frequently-ordered-list-36px.svg"
+                            alt=""
+                        />Frequently Ordered List
+                    </li>
+                    <li id="flexiRew">
+                        <img
+                            src="https://static2.medplusmart.com/live/webpwa/images/flexirewards-icn-36-cssbg.svg"
+                            alt=""
+                        />FlexiRewards
+                    </li>
+                    <li id="myWall">
+                        <img
+                            src="https://static2.medplusmart.com/live/webpwa/images/medpluswallet-icn-36-cssbg.svg"
+                            alt=""
+                        />My Wallets
+                    </li>
+                    <li id="myComp">
+                        <img
+                            src="https://static2.medplusmart.com/live/webpwa/images/my-complaints-icn-36-cssbg.svg"
+                            alt=""
+                        />My Complaints
+                    </li>
+                </ul>
+            </div>
+            <div class="rBody"></div>
+        </div>
+    </body>
+</html>
+<script>
+    var userDetails = {
+        id: "60178396",
+        name: "Vikash Kumar",
+        password: "vikash",
+        email: "vikashoffice.vk@gmail.com",
+        mobile: "8986298980",
+        address: "Qr- 407/800, L. B. Shashtri Nagar, Patna-23",
+    };
+    var myAcc = `<p class="greetUser"><strong>Hello,</strong> ${userDetails.name}</p>
+            <div class="userId"><i class="far fa-user fa-2x"> <span style="margin-left: 20px;">MedPlus ID: ${userDetails.id}</span>     </i></div>
+            <div class="accDetails">
+                <div class="iconAccDetails">
+                    <img src="https://static2.medplusmart.com/live/webpwa/images/my-account-password-icn-cssbg.svg" alt="">
+                    <div>
+                        <p>Password | <span class="colorInfo">Change Password</span> </p>
+                        <p class="colorInfo">*******</p>
+                    </div>
+                </div>
+                <div class="iconAccDetails">
+                    <img src="https://static2.medplusmart.com/live/webpwa/images/my-account-mail-icn-cssbg.svg" alt="">
+                    <div>
+                        <p>Email | <span class="colorInfo">Change Email</span></p>
+                        <p class="colorInfo">${userDetails.email}</p>
+                    </div>
+                </div>
+                <div class="iconAccDetails">
+                    <img src="https://static2.medplusmart.com/live/webpwa/images/my-account-phn-icn-cssbg.svg" alt="">
+                    <div>
+                        <p>Mobile Number | <span class="colorInfo">Change Mobile</span></p>
+                        <p>${userDetails.mobile}</p>
+                    </div>
+                </div>
+                <div class="iconAccDetails">
+                    <img src="https://static2.medplusmart.com/live/webpwa/images/my-account-loc-icn-cssbg.svg" alt="">
+                    <div>
+                        <p>Address | <span class="colorInfo">Change Address</span></p>
+                        <p>${userDetails.address}</p>
+                    </div>
+                </div>
+            </div>`;
+
+    var purHis = `<h1>Hay</h1>`;
+
+    document.querySelector(".rBody").innerHTML = myAcc;
+    var previousSelected = document.getElementById("myAcc");
+
+    document.getElementById("myAcc").addEventListener("click", function () {
+        previousSelected.style.color = "black";
+        previousSelected.style.borderRight = "none";
+        previousSelected = document.getElementById("myAcc");
+        document.querySelector(".rBody").innerHTML = "";
+        document.querySelector(".rBody").innerHTML = myAcc;
+        document.getElementById("myAcc").style.color = "#ff4444";
+        document.getElementById("myAcc").style.borderRight = "4px solid #ff4444";
+        document.getElementById("myAcc").style.borderRightLength = "5px";
+    });
+    document.getElementById("purHis").addEventListener("click", function () {
+        document.querySelector(".rBody").innerHTML = "";
+        document.querySelector(".rBody").innerHTML = purHis;
+        previousSelected.style.color = "black";
+        previousSelected.style.borderRight = "none";
+        previousSelected = document.getElementById("purHis"); //to be changed
+        document.getElementById("purHis").style.color = "#ff4444";
+        document.getElementById("purHis").style.borderRight = "4px solid #ff4444";
+    });
+</script>
