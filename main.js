@@ -4,7 +4,7 @@ function closeModal() {
     document.getElementById("modal").style.display = "none";
   }
 
-  document.getElementById("signin").addEventListener("click", openModal);
+  window.document.getElementById("signin").addEventListener("click", openModal);
 
   // Opening the signin/registration form on middle of the page
   function openModal() {

@@ -18,7 +18,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="main.css" />
-    <style></style>
+    <!-- <script src="main.js"></script> -->
   </head>
   <body>
     <!-- Nav bar starts here -->
@@ -42,7 +42,9 @@
               src="https://img.icons8.com/material-sharp/24/000000/mac-os.png"
             />
           </div>
-          <button class="sign-in-button" id="signin">Sign in/Register</button>
+          <div>
+            <button class="sign-in-button" id="signin">Sign in/Register</button>
+          </div>
         </div>
         <div class="container-sign-in" id="modal">
           <div class="sign-in-div flex row">
@@ -205,7 +207,6 @@
       <!-- Top nav bar ends here -->
 
       <!-- location nav bar starts here -->
-      <style></style>
       <div class="location-nav flex">
         <div class="left-location-div flex border">
           <span>
@@ -237,9 +238,9 @@
             type="text"
             id="search"
             onblur="putPlaceholder()"
-            class="padding-inline no-border"
+            class="no-border"
             placeholder="Search for... general or pharma products"
-            style="width: 400px"
+            style="width: 400px; padding-left: 10px"
           />
           <button class="no-border" id="searchButton">
             <span><i class="fas fa-search"></i></span>
@@ -253,7 +254,7 @@
               style="justify-content: space-between; padding: 10px"
             >
               <h3>Current order</h3>
-              <a href="">clear</a>
+              <span href="" onclick="removeCart()">clear</span>
             </div>
             <table style="text-align: left; padding: 10px">
               <thead>
@@ -270,7 +271,6 @@
               </tbody>
             </table>
             <button
-              onclick="viewShoppingCart()"
               style="width: 100%; background: #e93049; padding-block: 10px"
             >
               View Shopping Cart
@@ -311,14 +311,29 @@
                   text-align: center;
                 "
                 >0</span
-              ><i class="fas fa-shopping-cart"></i
+              ><i onclick="viewShoppingCart()" class="fas fa-shopping-cart"></i
             ></span>
           </div>
         </div>
       </div>
+    </div>
+    <!-- location nav bar ends here -->
 
-      <!-- location nav bar ends here -->
-      <div class="main-nav"></div>
+    <!-- main-nav bar starts here -->
+    <div class="main-nav">
+      <ul class="nav-list flex">
+        <li class="nav-list-item"><a href="">Health Store</a></li>
+        <li class="nav-list-item"><a href="">Pharmecy</a></li>
+        <li class="nav-list-item"><a href="">Lab tests</a></li>
+        <li class="nav-list-item">
+          <a href="myAccount.html">Flexi Rewards</a>
+        </li>
+        <li class="nav-list-item"><a href="">Promotions</a></li>
+        <li class="nav-list-item"><a href="">Healthy Life</a></li>
+        <li class="nav-list-item">
+          <a href="myAccount.html">MedPlus Wallet</a>
+        </li>
+      </ul>
     </div>
 
     <footer>
@@ -330,5 +345,69 @@
 </html>
 
 <script>
-  
+  // Top navigation javascript starts here
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+  document.getElementById("signin").addEventListener("click", openModal);
+
+  // Opening the signin/registration form on middle of the page
+  function openModal() {
+    document.getElementById("modal").style.display = "flex";
+  }
+
+  // new customer regitration form showing
+  function registration() {
+    document.getElementById("registration").style.display = "flex";
+    document.getElementById("sign-in-form").style.display = "none";
+    document.getElementById("registration-span").style.display = "none";
+    document.getElementById("sign-in-span").style.display = "block";
+  }
+
+  // new customer sign in form showing
+  function signin() {
+    document.getElementById("registration").style.display = "none";
+    document.getElementById("sign-in-form").style.display = "flex";
+    document.getElementById("registration-span").style.display = "block";
+    document.getElementById("sign-in-span").style.display = "none";
+  }
+
+  // Top navbar javascript ends here
+
+  // location nav starts here
+
+  document.getElementById("search").addEventListener("click", function (e) {
+    document.getElementById("search").setAttribute("placeholder", "");
+  });
+  document.getElementById("search").addEventListener("click", function (e) {
+    document.getElementById("search").setAttribute("placeholder", "");
+    document.getElementById("search").style.backgroundColor = "white";
+  });
+
+  function putPlaceholder() {
+    document
+      .getElementById("search")
+      .setAttribute("placeholder", "Search for... general or pharma products");
+    document.getElementById("search").style.backgroundColor = "#F8F9FA";
+  }
+  document.getElementById("searchMenu").addEventListener("click", function () {
+    document.getElementById("search-menu").style.display = "block";
+  });
+
+  function removeSearchList() {
+    document.getElementById("search-menu").style.display = "none";
+  }
+
+  // document.getElementsByClassName("search-menu-item").addEventListener("click",function(){
+  //   alert("clicked");
+  // })
+
+  function viewShoppingCart() {
+    document.getElementById("cart-mini-menu").style.display = "block";
+  }
+  function removeCart() {
+    document.getElementById("cart-mini-menu").style.display = "none";
+    console.log("clicked");
+  }
 </script>
