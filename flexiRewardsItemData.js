@@ -88,5 +88,5 @@ var flexiRewardsItemData=[
         img_url:"https://static2.medplusmart.com/products/NATU0022_S.jpg?v=8dd379",
         price:"150.00",
         points:"140"
-    }
+    },
 ]
