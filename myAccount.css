@@ -11,9 +11,9 @@ body {
 .mainBody {
     display: grid;
     margin: 40px auto;
-    width: 94%;
-    grid-template-columns: 22% 73%;
-    gap: 3%;
+    width: 98%;
+    grid-template-columns: 18% 81%;
+    gap: 2%;
 }
 .redButton {
     border: none;
@@ -118,20 +118,60 @@ body {
     transform: translate(30%, -45%);
     text-align: center;
 }
-.purHisHead1{
+.purHisHead1 {
     margin: -35px;
     display: inline-block;
 }
-.purHisHead1>h3,.purHisHead1>p{
+.purHisHead1 > h3,
+.purHisHead1 > p {
     margin: 8px;
 }
-.purHisHead2>p{
+.purHisHead2 > p {
     margin: 0;
 }
-.purHisHead2{
+.purHisHead2 {
     display: inline-block;
     margin-left: 70%;
     display: flex;
     vertical-align: top;
     margin-top: -22px;
+}
+
+/* FlexiREward CSS */
+
+.rewPointHead {
+    width: 99%;
+    height: 180px;
+    position: relative;
+}
+.rewPointHeadBK {
+    background-color: rgba(255, 211, 224, 0.33);
+    width: 99%;
+    height: 130px;
+    border-radius: 10px;
+    margin-left: 2%;
+    font-size: 14px;
+    position: relative;
+}
+#moneyBagImg {
+    position: absolute;
+    left: -15px;
+    top: 35px;
+}
+.rewPointHeadBK p:first-child {
+    font-size: 25px;
+    color: #dc3545;
+}
+.rewPointText {
+    margin: 0px 80px;
+    padding-top: 5px;
+}
+.rewardPointCartField {
+    position: absolute;
+    right: 36px;
+    top: 25px;
+}
+.cartImg {
+    border-radius: 50%;
+    width: 80px;
 }
