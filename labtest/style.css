@@ -1,0 +1,309 @@
+#firstpart{
+   
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 350px;
+   margin-top: 7%;
+}
+
+#firstpart>div:nth-child(1){
+    border: 1px solid grey;
+    width: 36%;
+    height: 83%;
+margin-left: 11%;
+text-align: center;
+background-image:url("images/shades.png");
+background-size: contain;
+color: #6f6f6f;
+
+}
+
+#firstpart>div:nth-child(2){
+    /* border: 1px solid grey; */
+    width: 36%;
+    height: 83%;
+    margin-right: 11%;
+   
+}
+#firstpart img{
+    margin-top: 7%;
+}
+#firstpartbutton{
+    width: 70%;
+    background-color: #00d664;
+    border: 1px solid #00d664;
+    color: white;
+    height: 70px;
+    border-radius: 5px;
+    line-height: 10px;
+   
+
+}
+#firstpart>div:nth-child(2)>h1{
+    font-size: 32px;
+    text-align: center;
+    color: #414141;
+}
+#viewall{
+ text-decoration: none;
+float: right;
+}
+#grid{
+margin-top: 8%;
+display: grid;
+grid-template-columns:50% 50%;
+grid-template-rows: 40% 40%;
+}
+#grid>div{
+    border: .1px solid grey; 
+}
+#grid>div>a{
+    text-decoration: none;
+    color:black;
+    line-height:0px;
+}
+
+.parameters{
+    font-size: 14px;
+    font-weight: lighter;
+    line-height:-25px;
+
+}
+
+
+
+#container{
+    /* border: 1px solid red; */
+    width: 100%;
+     height: 550px;
+    display: flex;
+   background-color: #b5e5f5;
+ 
+
+}
+#container>div:nth-child(1){
+    /* border: 1px solid blue; */
+    width:67%;
+    height: 94%;
+    margin-top: 2%;
+    
+}
+#container>div:nth-child(2){
+    /* border: 1px solid blue; */
+    width:38%;
+ 
+    margin-top: 3%;
+    background-image: url("https://www.medplusmart.com/lab/images/lab/xfaq.jpg.pagespeed.ic.cqT8G3860T.webp");
+    background-size:cover;
+ 
+    }
+ #container>div>.textdiv{
+    display: flex;
+/* border: 1px solid red; */
+width: 91%;
+height: 30%;
+margin-left: 4%;
+
+
+
+ 
+} 
+.faq{
+    margin-left: 2%;
+    font-size: 40px;
+}
+h1{
+    font-size: 18px;
+}
+#more{
+    font-size: 15px;
+    padding: 5px;
+    width: 7%;
+    background-color: #b5e5f5;
+    color:blue;
+    border: 1px solid blue;
+}
+#container>div>.textdiv>div:first-child{
+  background-color: #1fc055;
+    /* border: 1px solid green; */
+    width: 6%;
+    height: 28%;
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+text-align: right;
+margin-top:1.5%;
+
+}
+
+#container>div>.textdiv>div:last-child{
+  
+    /* border: 1px solid green; */
+    width: 97%;
+    height: 100%;
+    color: #768184;
+    margin-left: 1%;
+
+    /* word-spacing: 4px; */
+
+}
+.textdiv h1+p{
+    margin-top: -1%;
+}
+#symbols{
+   background-color: #103754;
+   display: flex;
+   justify-content: space-around;
+   /* margin-top: 200px; */
+}
+#camadiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+/* couroselstarts--------------------- */
+
+.container{
+    width: 70%;
+    margin: 10px auto;
+  
+   
+}
+.car{
+    /* border: 1px solid red; */
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+.slider{
+    height: 100%;
+    display: flex;
+    width:400% ;
+    /* border: 1px solid red; */
+    transition: 0.3s;
+    /* transform: translate(-50%); */
+}
+.slider section{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center;  */
+}
+.controls .arrow{
+position: absolute;
+top: 50%;
+cursor: pointer;
+transform: translateY(-50%); 
+color:#cccccc;
+}
+.controls .left{
+    left:0px;
+}
+.controls .right{
+    right: 0px;
+}
+.controls ul{
+    position: absolute;
+    bottom: 20px;
+   left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+}
+.controls ul li{
+    width: 8px;
+    height: 8px;
+    border: 2px solid #333;
+    border-radius:50%;
+    margin: 10px;
+    background:green;
+    cursor: pointer;
+  
+}
+.controls ul li.selected{
+    background: transparent;
+}
+
+.text{
+    text-align: center;
+  
+
+}
+.text h2{
+    color: #6d6d6d;
+}
+.textdiv1{
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+    word-spacing: 4px;
+    line-height: 25px;
+    margin-top: 3%;
+    color: #d2d2d2;
+}
+/* lastdivstarts */
+#lastdiv{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    /* border: 1px solid red; */
+    background-color: #f3f3f3;
+    text-align: justify;
+}
+#lastdiv>div{
+    /* border: 1px solid red;  */
+       margin-left: 1%;
+       
+}
+#lastdiv>:nth-child(1){
+    width: 50%;
+    
+}
+#lastdiv>:nth-child(2){
+    width: 45%;
+    margin-left: 4%;
+}
+#lastdiv>div p{
+    font-size: 15px;
+    word-spacing: 4px;
+}
+#email{
+    width: 50%;
+    font-size: 15px;
+    padding: 10px;
+    background-color: #f3f3f3;
+}
+#submit{
+    width: 15%;
+    font-size: 15px;
+    padding: 10px;
+}
+#lastdiv>:last-child{
+    display: flex;
+flex-wrap: wrap;
+}
+#lastdiv>:last-child>div{
+    
+    /* border: 1px solid blue; */
+    flex-basis: 32%;
+    height: 60%;
+    line-height: 8px;
+    color: #818588;
+}
+#lastdiv>:last-child>:last-child{
+    flex-basis: 60%;
+  height: 15%;
+   padding: 15px;
+   font-size: 30px;
+   color: black;
+   font-weight: bold;
+ margin-top: 10px;
+ margin-left: 38%;
+
+}
