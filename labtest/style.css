@@ -58,18 +58,21 @@ grid-template-rows: 40% 40%;
 }
 #grid>div{
     border: .1px solid grey; 
+  
 }
 #grid>div>a{
     text-decoration: none;
     color:black;
     line-height:0px;
 }
-
+.master{
+    margin-left:2%;
+}
 .parameters{
     font-size: 14px;
     font-weight: lighter;
     line-height:-25px;
-
+    margin-left:2%;
 }
 
 
