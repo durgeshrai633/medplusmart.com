@@ -11,6 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,400;1,500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="mainCaro.css" />
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -328,7 +330,9 @@
         <li class="nav-list-item">
           <a href="myAccount.html">Flexi Rewards</a>
         </li>
-        <li class="nav-list-item"><a href="./promotion_page_sachin/promotion.html">Promotions</a></li>
+        <li class="nav-list-item">
+          <a href="./promotion_page_sachin/promotion.html">Promotions</a>
+        </li>
         <li class="nav-list-item"><a href="">Healthy Life</a></li>
         <li class="nav-list-item">
           <a href="myAccount.html">MedPlus Wallet</a>
@@ -338,7 +342,21 @@
 
     <div class="main-container">
       <!-- hero section -->
-      <div class="hero"></div>
+      <div class="hero">
+        <div class="mainCarouselContainer">
+          <div class="mainCarousel">
+            <div class="carousel">
+              <div class="carousel-track-container">
+                <ul class="carousel-track"></ul>
+              </div>
+              <div class="carousel-nav"></div>
+            </div>
+          </div>
+          <div class="sideCarousel">
+            <!-- Side carousel content -->
+          </div>
+        </div>
+      </div>
       <!-- my account section -->
 
       <div class="my-account-div">
@@ -622,5 +640,6 @@
       <h1>This would be a header</h1>
     </footer>
   </body>
+  <script src="mainCaro.js"></script>
   <script src="main.js"></script>
 </html>
