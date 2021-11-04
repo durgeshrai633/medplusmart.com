@@ -31,7 +31,6 @@ body{
     padding: 0;
     position: relative;
     height:100%;
-    transition: transform 250ms ease-in;
 }
 .carousel-slide{
     position: absolute;
@@ -63,7 +62,7 @@ body{
 .category-list{
     display: flex;
     justify-content: center;
-    width: 80vw;
+    width: 85vw;
     flex-wrap: wrap;
     margin: 1% auto;
 }
@@ -76,7 +75,8 @@ body{
 }
 
 .ls-item > a{
-    border: 1px solid blue;
+    border: 1px solid #28f;
+    color: #28f;
     border-radius:5px;
     text-decoration: none;
     padding:6px 14px;
