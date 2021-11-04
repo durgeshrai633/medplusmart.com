@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>curousel</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="leftcouroselstyle.css">
+</head>
+<body>
+    <div class="container"> 
+        <div class="car">
+            <div class="slider">
+              <section>
+                <div class="imgdiv">
+                    <img src="https://static2.medplusmart.com/live/bannerImage/Mart/8e1f74f67f835ce00f16feb4c2c9e23d.jpg" alt="">
+                    <img src="https://static2.medplusmart.com/live/bannerImage/Mart/e10e46f47a5a9daa930873b0b4693a03.jpg" alt="">
+                </div>
+     
+              </section>
+              <section>
+                <div class="imgdiv">
+                    <img src="https://static2.medplusmart.com/live/bannerImage/Mart/f4299316c2dc5a20207b295e401873f0.jpg" alt="">
+                    <img src="https://static2.medplusmart.com/live/bannerImage/Mart/36045a605ef44a77c43f1715f6530e25.jpg" alt="">
+                </div>
+              </section>
+         
+            
+              <!-- // html example
+              -->
+            </div>
+            <div class="controls">
+                <span class="arrow left"> <span>&#8249;</span></span>
+                <span class="arrow right"><span>&#8250;</span></span>
+           
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>
+<script>
+var slider=document.querySelector(".slider");
+
+var leftarrow=document.querySelector(".left");
+var rightarrow=document.querySelector(".right");
+
+var sectionindex=0;
+
+rightarrow.addEventListener("click",function(){
+    
+    sectionindex=sectionindex<1?sectionindex+1:1;
+    slider.style.transform='translate('+(sectionindex)*-50+'%)';
+});
+
+leftarrow.addEventListener("click",function(){
+    
+    sectionindex=sectionindex>0?sectionindex-1:0;
+    slider.style.transform='translate('+(sectionindex)*-50+'%)';
+});
+</script>
