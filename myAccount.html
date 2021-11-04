@@ -13,10 +13,326 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="myAccount.css" />
+        <link rel="stylesheet" href="main.css">
         <style></style>
     </head>
     <body>
-        <div class="nav"></div>
+        <!-- Nav bar starts here -->
+    <div class="nav-bar">
+        <!-- Top nav bar starts here -->
+        <div class="top-nav flex row">
+          <div class="left-div">
+            <a href="home.html"
+              ><div class="logo">MedPlus <span>Mart</span></div></a
+            >
+          </div>
+          <div class="right-div flex row">
+            <a href="#">call 040067006700!</a>
+            <a href="#">Store Finder</a>
+            <div class="download flex">
+              <span>Download App</span>
+              <img
+                src="https://img.icons8.com/material-rounded/24/000000/android-os.png"
+              />
+              <img
+                src="https://img.icons8.com/material-sharp/24/000000/mac-os.png"
+              />
+            </div>
+            <div>
+              <button class="sign-in-button" id="signin">Sign in/Register</button>
+            </div>
+          </div>
+          <div class="container-sign-in" id="modal">
+            <div class="sign-in-div flex row">
+              <div class="left-part-sign-in">
+                <div>
+                  <h2 class="heading-sign-in">Sign-in / Register</h2>
+                  <ul>
+                    <li class="icon">Participate in FlexiRewars program</li>
+                    <li class="icon">Avail discounts at our stores</li>
+                    <li class="icon">Access your previous bills & records</li>
+                    <li class="icon">
+                      Exclusive MedPlus Family Health Plan Offer
+                    </li>
+                  </ul>
+                </div>
+                <img
+                  src="https://static1.medplusmart.com/medplusmart/assets/_91c3f142ad1b80d8ec54af4248b2d805_/new_theme/web/images/new/signin-register.png"
+                  alt=""
+                />
+              </div>
+              <div class="right-part-sign-in flex col">
+                <div class="close-icon">
+                  <img
+                    src="https://static1.medplusmart.com/medplusmart/assets/_2df912a8adaabe680f296d028912963b_/new_theme/web/images/xclose.png.pagespeed.ic.hZtCLUI4yy.png"
+                    alt=""
+                    onclick="closeModal()"
+                    ;
+                  />
+                  <form action="" class="flex col" id="sign-in-form">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      class="sign-in-input"
+                      placeholder="Email Id / Mobile No"
+                    />
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      class="sign-in-input"
+                      placeholder="Password"
+                    />
+                    <button type="submit" id="sign-in">Sign in</button>
+                    <button id="otp-sign-in">Login through OTP</button>
+                  </form>
+                  <!-- Registration form -->
+                  <form action="" class="flex col" id="registration">
+                    <div
+                      style="
+                        display: grid;
+                        grid-template-columns: 150px 150px;
+                        grid-gap: 20px;
+                      "
+                    >
+                      <input
+                        type="text"
+                        name="first name"
+                        id="fname"
+                        class="sign-in-input"
+                        placeholder="First Name"
+                      />
+                      <input
+                        type="text"
+                        name="last name"
+                        id="lname"
+                        class="sign-in-input"
+                        placeholder="Last Name"
+                      />
+                    </div>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      class="sign-in-input"
+                      placeholder="Email"
+                      required
+                    />
+                    <div
+                      style="
+                        display: grid;
+                        grid-template-columns: 150px 150px;
+                        grid-gap: 20px;
+                      "
+                    >
+                      <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        class="sign-in-input"
+                        placeholder="Password"
+                        required
+                      />
+                      <input
+                        type="password"
+                        name="confirmPassword"
+                        id="confirmPassword"
+                        class="sign-in-input"
+                        placeholder="Confirm Password"
+                        required
+                      />
+                    </div>
+                    <input
+                      type="number"
+                      name="mobileNumber"
+                      id="mobileNumber"
+                      class="sign-in-input"
+                      placeholder="Mobile Number"
+                      required
+                    />
+                    <span style="text-align: left"
+                      >If you are an existing medplus customer enter the
+                      registered mobile number with us</span
+                    >
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        text-align: left;
+                      "
+                    >
+                      <div>
+                        <input type="checkbox" name="check1" id="check1" />
+                        <label for="check1"
+                          >I have read and agree to <a href="">T&C's</a></label
+                        >
+                      </div>
+                      <div>
+                        <input type="checkbox" name="check2" id="check2" />
+                        <label for="check2"
+                          >Yes I would like to be updated of new promotional
+                          offers.</label
+                        >
+                      </div>
+                    </div>
+                    <button type="submit" id="register">Register</button>
+                    <span style="text-align: left; margin-top: -10px; color: #999"
+                      >Note: All fields are mandatory</span
+                    >
+                  </form>
+                  <!-- Registration form ends here -->
+                </div>
+  
+                <div class="right-part-sign-in-footer">
+                  <span id="registration-span"
+                    >New to MedPlus?
+                    <a onclick="registration()">Register here</a></span
+                  >
+                  <span id="sign-in-span"
+                    >Existing User of MedPlus?
+                    <a onclick="signin()">Sign In</a></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Top nav bar ends here -->
+  
+        <!-- location nav bar starts here -->
+        <div class="location-nav flex">
+          <div class="left-location-div flex border">
+            <span>
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            <div>
+              <h3>6,56, Moosapet, Bhavaninagr...</h3>
+              <h4>Home delivery and store pickup available</h4>
+            </div>
+          </div>
+          <div class="right-location-div flex border">
+            <button
+              class="padding-inline no-border allProducts"
+              id="searchMenu"
+              onblur="removeSearchList()"
+            >
+              All Products <span><i class="fas fa-caret-down"></i></span>
+            </button>
+            <div id="search-menu">
+              <a id="general-link" class="search-menu-item" href="#"
+                >General store</a
+              >
+              <a class="search-menu-item" href="https://www.facebook.com"
+                >Pharmacy</a
+              >
+              <a class="search-menu-item" href="#">All products</a>
+            </div>
+            <input
+              type="text"
+              id="search"
+              onblur="putPlaceholder()"
+              class="no-border"
+              placeholder="Search for... general or pharma products"
+              style="width: 400px; padding-left: 10px"
+            />
+            <button class="no-border" id="searchButton">
+              <span><i class="fas fa-search"></i></span>
+            </button>
+          </div>
+  
+          <div class="last-location-div flex border">
+            <div id="cart-mini-menu" class="shopping-cart-list-div">
+              <div
+                class="flex"
+                style="justify-content: space-between; padding: 10px"
+              >
+                <h3>Current order</h3>
+                <span href="" onclick="removeCart()">clear</span>
+              </div>
+              <table style="text-align: left; padding: 10px">
+                <thead>
+                  <tr>
+                    <th>Product name</th>
+                    <th>Qty</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>HIMALAYA TOTAL CARE BABY PANTS M 54S</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button
+                style="width: 100%; background: #e93049; padding-block: 10px"
+              >
+                View Shopping Cart
+              </button>
+            </div>
+            <button><i class="fas fa-cloud-upload-alt"></i>Upload</button>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+                position: relative;
+              "
+            >
+              <span
+                ><span
+                  style="
+                    position: absolute;
+                    background: red;
+                    color: white;
+                    font-size: 8px;
+                    border-radius: 50%;
+                    width: 10px;
+                    text-align: center;
+                  "
+                  >0</span
+                ><i class="fas fa-bell"></i
+              ></span>
+              <span
+                ><span
+                  style="
+                    position: absolute;
+                    background: red;
+                    color: white;
+                    font-size: 8px;
+                    border-radius: 50%;
+                    width: 10px;
+                    text-align: center;
+                  "
+                  >0</span
+                ><i onclick="viewShoppingCart()" class="fas fa-shopping-cart"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- location nav bar ends here -->
+  
+      <!-- main-nav bar starts here -->
+      <div class="main-nav">
+        <ul class="nav-list flex">
+          <li class="nav-list-item"><a href="home.html">Health Store</a></li>
+          <li class="nav-list-item"><a href="">Pharmecy</a></li>
+          <li class="nav-list-item"><a href="">Lab tests</a></li>
+          <li class="nav-list-item">
+            <a href="myAccount.html">Flexi Rewards</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="./promotion_page_sachin/promotion.html">Promotions</a>
+          </li>
+          <li class="nav-list-item"><a href="">Healthy Life</a></li>
+          <li class="nav-list-item">
+            <a href="myAccount.html">MedPlus Wallet</a>
+          </li>
+        </ul>
+      </div>
         <div class="mainBody">
             <div class="lBody">
                 <ul>
@@ -100,6 +416,7 @@
             </div>
         </div>
     </body>
+    <script src="main.js"></script>
 </html>
 <script>
     var userDetails = {
