@@ -419,7 +419,7 @@ i {
   position: relative;
 }
 
-.just-image{
+.just-image {
   cursor: pointer;
 }
 
@@ -488,13 +488,13 @@ i {
   gap: 20px;
 }
 
-.download-app-div{
+.download-app-div {
   margin-block: 20px;
   background: white;
   padding: 32px 8px;
 }
 
-.download-app-container{
+.download-app-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -504,7 +504,7 @@ i {
   margin: 32px 8px;
 }
 
-.download-app-container > div:nth-child(2){
+.download-app-container > div:nth-child(2) {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -512,21 +512,129 @@ i {
   justify-content: space-around;
 }
 
-.download-app-container > div:nth-child(2) > div:first-child{
+.download-app-container > div:nth-child(2) > div:first-child {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 20px 80px;
   gap: 20px;
 }
-.download-app-container > div:nth-child(2) > div:nth-child(2){
+.download-app-container > div:nth-child(2) > div:nth-child(2) {
   cursor: pointer;
 }
 
-.download-app-container h6{
+.download-app-container h6 {
   font-size: 32px;
   font-weight: 500;
 }
-.download-app-container p{
+.download-app-container p {
   font-size: 20px;
+}
+
+/* Contact section */
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.phone-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subs-form {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.subs-form input {
+  width: 300px;
+  padding: 8px 10px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+
+.subs-form button {
+  padding: 8px 16px;
+  border: 1px solid #e71c37 !important ;
+  color: white;
+  background-color: #e71c37;
+  cursor: pointer;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+/* bottom nav */
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  padding-block-end: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ddd;
+}
+.bottom-nav div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bottom-nav a {
+  font-size: 15px;
+  color: #002ad1;
+  text-transform: capitalize;
+}
+
+/* payment options */
+
+.payment-options {
+}
+
+.payment-options div {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+.payment-options a {
+  display: block;
+  width: 84px;
+  min-height: 32px;
+  background-image: url(https://www.medplusmart.com/new_theme/web/images/xPaymentlogos.png.pagespeed.ic.-l9AdCRa6a.png);
+  border-radius: 4px;
+}
+
+.payment-options a:first-child {
+  background-position: -228px -10px;
+}
+.payment-options a:nth-child(2) {
+  background-position: -120px -10px;
+}
+
+.payment-options a:nth-child(3) {
+  background-position: -12px -66px;
+}
+.payment-options a:nth-child(4) {
+  background-position: -120px -122px;
+}
+.payment-options a:nth-child(5) {
+  background-position: -120px -66px;
+}
+.payment-options a:nth-child(6) {
+  background-position: -228px -66px;
+}
+.payment-options a:nth-child(7) {
+  background-position: -12px -122px;
+}
+.payment-options a:nth-child(8) {
+  background-position: -12px -10px;
 }
