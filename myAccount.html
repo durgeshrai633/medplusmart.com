@@ -12,8 +12,8 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="myAccount.css" />
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="myAccount.css" />
         <style></style>
     </head>
     <body>
@@ -393,31 +393,15 @@
                 </ul>
             </div>
             <div class="rBody">
-                <div class="purHis">
-                    <div class="rewPointHead">
-                        <div class="rewPointHeadBK">
-                            <div class="rewPointText">
-                                <p>Rewards Points Summary</i></p>
-                                <p>Total available points for redemption as on today ${userDetails.rewardPoint} points</p>
-                            </div>
-                            <div class="rewardPointCartField">
-                                <img class="cartImg" src="https://i.ibb.co/kGJWMQm/123.jpg" alt="">
-                                <div class="nItemsInCart">10</div>
-                            </div>
-                        </div>
-                        <img
-                            id="moneyBagImg"
-                            src="https://static2.medplusmart.com/live/webpwa/images/money.svg"
-                            alt=""
-                        />
-                    </div>
-                    <div class="rewPointItems"></div>
-                </div>
+        
+                    
+                     
             </div>
         </div>
     </body>
     <script src="main.js"></script>
 </html>
+<script src="flexiRewardsItemData.js"></script>
 <script>
     var userDetails = {
         id: "60178396",
@@ -896,8 +880,13 @@
                     </div>
                 </div>`;
 
-    // document.querySelector(".rBody").innerHTML = myAcc;
+    
+    
+    
+    document.querySelector(".rBody").innerHTML = myAcc;
     var previousSelected = document.getElementById("myAcc");
+    // console.log(flexiRewardsItemData)
+
 
     document.getElementById("myAcc").addEventListener("click", function () {
         previousSelected.style.color = "black";
@@ -953,5 +942,63 @@
         previousSelected = document.getElementById("freOrdList"); //to be changed
         document.getElementById("freOrdList").style.color = "#ff4444";
         document.getElementById("freOrdList").style.borderRight = "4px solid #ff4444";
+    });
+    
+    document.getElementById("flexiRew").addEventListener("click", function () {
+        document.querySelector(".rBody").innerHTML = "";
+        document.querySelector(".rBody").style.height = "1525px";
+         //TO be changed
+         var flexiRew=`<div class="purHis">
+                    <div class="rewPointHead">
+                        <div class="rewPointHeadBK">
+                            <div class="rewPointText">
+                                <p>Rewards Points Summary</i></p>
+                                <p>Total available points for redemption as on today ${userDetails.rewardPoint} points</p>
+                            </div>
+                            <div class="rewardPointCartField">
+                                <img class="cartImg" src="https://i.ibb.co/kGJWMQm/123.jpg" alt="">
+                                <div class="nItemsInCart">10</div>
+                            </div>
+                        </div>
+                        <img
+                            id="moneyBagImg"
+                            src="https://static2.medplusmart.com/live/webpwa/images/money.svg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="rewPointItems"></div>
+                    <div class="allItemsInFlexiRewards">
+                        <button class="allItemsButtonFlexiRewards">All Items</button>
+                    </div>
+                    <div id="flexiItemsCards">
+                `
+        var toShow=``
+        flexiRewardsItemData.forEach(item => {
+            toShow+=`
+            <div class="flexiItemsCard">
+                            <div class="flexiItemsCardPhoto">
+                                <img class="flexiItemsCardImg" src="${item.img_url}" alt="">
+                            </div>
+                            <div class="flexiItemsCardName">
+                                <h3>${item.name}</h3>
+                            </div>
+                            <p style="margin: 2px 5px; color: rgb(82, 82, 241);">More Detailes</p>
+                            <div class="priceAndPoints">
+                                <p>₹${item.price}</p>
+                                <h2>${item.points} Pts</h2>
+                            </div>
+                            <button style="padding: 4px; width:95%;margin:7px"; class="redButton">Add to Cart</button>
+                        </div>
+            `
+        })
+        flexiRew+=toShow+"</div></div>"
+        // document.getElementById("flexiItemsCards").innerHTML=toShow
+        document.querySelector(".rBody").innerHTML = flexiRew;
+        previousSelected.style.color = "black";
+        previousSelected.style.borderRight = "none";
+        previousSelected = document.getElementById("flexiRew"); //to be changed
+        document.getElementById("flexiRew").style.color = "#ff4444";
+        document.getElementById("flexiRew").style.borderRight = "4px solid #ff4444";
+
     });
 </script>
