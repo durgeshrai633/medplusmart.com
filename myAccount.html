@@ -393,9 +393,9 @@
                 </ul>
             </div>
             <div class="rBody">
-        
-                    
-                     
+                <!-- <div class="walletBanner">
+
+                </div> -->
             </div>
         </div>
     </body>
@@ -892,6 +892,7 @@
         previousSelected.style.color = "black";
         previousSelected.style.borderRight = "none";
         previousSelected = document.getElementById("myAcc");
+        document.querySelector(".rBody").style.height = "550px";
         document.querySelector(".rBody").innerHTML = "";
         document.querySelector(".rBody").innerHTML = myAcc;
         document.getElementById("myAcc").style.color = "#ff4444";
@@ -899,6 +900,7 @@
         document.getElementById("myAcc").style.borderRightLength = "5px";
     });
     document.getElementById("purHis").addEventListener("click", function () {
+        document.querySelector(".rBody").style.height = "550px";
         document.querySelector(".rBody").innerHTML = "";
         document.querySelector(".rBody").innerHTML = purHis;
         previousSelected.style.color = "black";
@@ -908,6 +910,7 @@
         document.getElementById("purHis").style.borderRight = "4px solid #ff4444";
     });
     document.getElementById("myLabOrd").addEventListener("click", function () {
+        document.querySelector(".rBody").style.height = "550px";
         document.querySelector(".rBody").innerHTML = "";
         document.querySelector(".rBody").innerHTML = myLabOrd; //TO be changed
         previousSelected.style.color = "black";
@@ -917,6 +920,7 @@
         document.getElementById("myLabOrd").style.borderRight = "4px solid #ff4444";
     });
     document.getElementById("refHis").addEventListener("click", function () {
+        document.querySelector(".rBody").style.height = "550px";
         document.querySelector(".rBody").innerHTML = "";
         document.querySelector(".rBody").innerHTML = refHis; //TO be changed
         previousSelected.style.color = "black";
@@ -926,6 +930,7 @@
         document.getElementById("refHis").style.borderRight = "4px solid #ff4444";
     });
     document.getElementById("healthRec").addEventListener("click", function () {
+        document.querySelector(".rBody").style.height = "550px";
         document.querySelector(".rBody").innerHTML = "";
         document.querySelector(".rBody").innerHTML = healthRec; //TO be changed
         previousSelected.style.color = "black";
@@ -935,6 +940,7 @@
         document.getElementById("healthRec").style.borderRight = "4px solid #ff4444";
     });
     document.getElementById("freOrdList").addEventListener("click", function () {
+        document.querySelector(".rBody").style.height = "550px";
         document.querySelector(".rBody").innerHTML = "";
         document.querySelector(".rBody").innerHTML = freOrdList; //TO be changed
         previousSelected.style.color = "black";
