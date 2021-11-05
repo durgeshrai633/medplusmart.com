@@ -63,3 +63,7 @@ function closeModal() {
     document.getElementById("cart-mini-menu").style.display = "none";
     console.log("clicked");
   }
+
+  document.getElementById("goToCartButton").addEventListener("click",function(){
+    window.location.href = "cart.html";
+  })

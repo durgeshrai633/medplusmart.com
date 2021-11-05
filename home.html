@@ -229,12 +229,17 @@
           </button>
           <div id="search-menu">
             <a id="general-link" class="search-menu-item" href="#"
+              ><i class="fas fa-check-circle" style="margin-right: 5px"></i
               >General store</a
             >
             <a class="search-menu-item" href="https://www.facebook.com"
+              ><i class="fas fa-check-circle" style="margin-right: 5px"></i
               >Pharmacy</a
             >
-            <a class="search-menu-item" href="#">All products</a>
+            <a class="search-menu-item" href="#"
+              ><i class="fas fa-check-circle" style="margin-right: 5px"></i>All
+              products</a
+            >
           </div>
           <input
             type="text"
@@ -274,6 +279,7 @@
             </table>
             <button
               style="width: 100%; background: #e93049; padding-block: 10px"
+              id="goToCartButton"
             >
               View Shopping Cart
             </button>
@@ -341,20 +347,51 @@
     </div>
 
     <div class="main-container">
-      <!-- hero section -->
-      <div class="hero">
-        <div class="mainCarouselContainer">
-          <div class="mainCarousel">
-            <div class="carousel">
-              <div class="carousel-track-container">
-                <ul class="carousel-track"></ul>
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          position: relative;
+        "
+      >
+        <!-- hero section -->
+        <div class="hero">
+          <div class="mainCarouselContainer">
+            <div class="mainCarousel">
+              <div class="carousel">
+                <div class="carousel-track-container">
+                  <ul class="carousel-track"></ul>
+                </div>
+                <div class="carousel-nav"></div>
               </div>
-              <div class="carousel-nav"></div>
+            </div>
+            <div class="sideCarousel">
+              <!-- Side carousel content -->
             </div>
           </div>
-          <div class="sideCarousel">
-            <!-- Side carousel content -->
-          </div>
+        </div>
+
+        <div
+          style="
+            position: absolute;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 350px;
+            height: 340px;
+          "
+        >
+          <img
+            src="https://static2.medplusmart.com/live/bannerImage/Mart/8e1f74f67f835ce00f16feb4c2c9e23d.jpg"
+            alt=""
+            style="height: 100%"
+          />
+          <img
+            src="https://static2.medplusmart.com/live/bannerImage/Mart/e10e46f47a5a9daa930873b0b4693a03.jpg"
+            alt=""
+            style="height: 100%"
+          />
         </div>
       </div>
       <!-- my account section -->
