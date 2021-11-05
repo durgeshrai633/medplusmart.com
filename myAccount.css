@@ -14,6 +14,7 @@ body {
     width: 98%;
     grid-template-columns: 18% 81%;
     gap: 2%;
+    background-color: #f8f9fb;
 }
 .redButton {
     border: none;
@@ -70,7 +71,7 @@ body {
     height: 250px;
     border: rgb(180, 177, 177) 1px solid;
     border-radius: 5px;
-    margin-top: 60px;
+    margin-top: 50px;
     display: grid;
     grid-template-columns: 48% 45%;
     padding-top: 30px;
@@ -93,8 +94,8 @@ body {
     color: #4a9cee;
 }
 .userId {
-    width: 270px;
-    height: 28px;
+    width: 290px;
+    height: 45px;
     color: white;
     background-image: linear-gradient(90deg, #ff4787 0%, #ff6347 100%);
     border-radius: 5px;
@@ -102,6 +103,7 @@ body {
     font-size: 11px;
     position: absolute;
     left: 100px;
+    top: 110px;
     box-shadow: 0 20px 15px -15px rgb(204 129 98);
 }
 /* Purchase History */
@@ -161,6 +163,7 @@ body {
 .rewPointHeadBK p:first-child {
     font-size: 25px;
     color: #dc3545;
+    margin: 20px 0px 20px;
 }
 .rewPointText {
     margin: 0px 80px;
@@ -176,7 +179,7 @@ body {
     position: relative;
     width: 80px;
 }
-.nItemsInCart{
+.nItemsInCart {
     background-color: white;
     color: #e71c37;
     position: absolute;
@@ -185,4 +188,62 @@ body {
     padding: 5px;
     font-size: 16px;
     border-radius: 40%;
+}
+.allItemsInFlexiRewards {
+    height: 80px;
+    width: 109%;
+    background-color: #eee;
+    margin-left: -40px;
+    margin-top: 32px;
+    padding: 20px 40px;
+}
+.allItemsButtonFlexiRewards {
+    font-size: 17px;
+    padding: 7px;
+    border: #e71c37 solid 1px;
+    border-radius: 18px;
+    color: #e71c37;
+    background-color: white;
+}
+#flexiItemsCards {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap: 1.5%;
+}
+.flexiItemsCard {
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    border: 0.5px rgba(8,8,8,.125) solid;
+    border-radius: 5px;
+}
+.flexiItemsCard:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.flexiItemsCardPhoto {
+    height: 150px;
+}
+.flexiItemsCardImg {
+    height: 100%;
+    width: 200px;
+    object-fit: contain;
+}
+.flexiItemsCardName {
+    height: 42px;
+    overflow: hidden;
+    margin-left: 5px;
+}
+.priceAndPoints{
+    display: flex;
+    justify-content: space-between;
+    vertical-align: top;
+}
+.priceAndPoints>p{
+    font-size: 15px;
+    margin:1px 5px;
+}
+.priceAndPoints>h2{
+    color: #e71c37;
+    margin-right: 5px;
 }
