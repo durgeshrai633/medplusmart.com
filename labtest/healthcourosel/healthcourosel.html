@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>curousel</title>
+   
+  <link rel="stylesheet" href="healthcourosel.css">
+</head>
+<body>
+    <div class="flexbox">
+        <!-- 1st box -->
+        <div class="container"> 
+            <h4>Information you can use for a</h4>
+            <h2>HEALTHY LIFE</h2>
+            <div class="car">
+                <div class="slider">
+                <section>
+                    <div class="healthtext">
+                       <a href="">
+                           <p>
+                               <span style="font-size: 16px;color:grey;">Best Exercise For Easy Child Birth</span><br>
+                               <span style="font-size: 12px;color:grey;">by MedPlus Team, October 30, 2021</span>
+                           </p>
+                       </a>
+                         <div class="textdiv">
+                            <p> Everything has its own process;&nbsp;childbirth is no different. Although it is a beautiful experience, it can also be quite difficult a situation to handle. One important milestone during pregnancy is the labor and for this, it is ...</p>
+													
+                            <p class="readmore">Read more<a>&#8250;</a></p>
+                       				
+												
+						</div>
+                       </div>
+                
+                </section>
+                <section>
+                    <div class="healthtext">
+                        <a href="">
+                            <p>
+                                <span style="font-size: 16px;color:grey;">Best Exercise For Easy Child Birth</span><br>
+                                <span style="font-size: 12px;color:grey;">by MedPlus Team, October 30, 2021</span>
+                            </p>
+                        </a>
+                          <div class="textdiv">
+                             <p>Biotin is a water-soluble vitamin, from the family of Vitamin B. It is also known as Vitamin H, where H stands for Haar and Haut ? German words which mean hair and skin. One of the main uses of biotin… </p>
+
+                             <p class="readmore">Read more<a>&#8250;</a></p>
+                                                     
+                            
+                          </div>
+                        </div>
+                
+             
+                </div>
+                <div class="controls">
+                     <ul>
+                         <li class="selected"></li>
+                         <li ></li>
+                        
+                     </ul>
+                </div>
+            
+            </div>
+        </div>
+        <!-- 2nd box -->
+        <div></div>
+    </div>
+</body>
+</html>
+<script>
+    var slider=document.querySelector(".slider");
+
+    // var indicatorparents=document.querySelector(".controls ul");
+
+    var sectionindex=0;
+
+document.querySelectorAll(".controls li").forEach(function(indicator,index){
+   indicator.addEventListener("click",function(){
+    sectionindex=index;
+    document.querySelector(".controls .selected").classList.remove("selected");
+    indicator.classList.add('selected')
+   slider.style.transform= 'translate( '+(sectionindex)*-50+'% )'; 
+})
+})
+</script>
