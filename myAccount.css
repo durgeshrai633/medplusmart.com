@@ -11,7 +11,7 @@ body {
 .mainBody {
     display: grid;
     margin: 40px auto;
-    width: 98%;
+    width: 97%;
     grid-template-columns: 18% 81%;
     gap: 2%;
     background-color: #f8f9fb;
@@ -215,10 +215,10 @@ body {
     height: 275px;
     display: flex;
     flex-direction: column;
-    border: 0.5px rgba(8,8,8,.125) solid;
+    border: 0.5px rgba(8, 8, 8, 0.125) solid;
     border-radius: 5px;
 }
-.flexiItemsCard:hover{
+.flexiItemsCard:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .flexiItemsCardPhoto {
@@ -234,16 +234,125 @@ body {
     overflow: hidden;
     margin-left: 5px;
 }
-.priceAndPoints{
+.priceAndPoints {
     display: flex;
     justify-content: space-between;
     vertical-align: top;
 }
-.priceAndPoints>p{
+.priceAndPoints > p {
     font-size: 15px;
-    margin:1px 5px;
+    margin: 1px 5px;
 }
-.priceAndPoints>h2{
+.priceAndPoints > h2 {
     color: #e71c37;
     margin-right: 5px;
+}
+
+/* My wallet css */
+.walletBanner {
+    display: flex;
+    margin: 10px -40px 30px;
+    width: 106%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.walletBannerTextBox {
+    height: 240px;
+    width: 560px;
+    padding: 15px 10px;
+}
+.walletBannerImg1 {
+    height: 200px;
+}
+.walletBannerImg2 {
+    height: 160px;
+}
+.walletBannerTextBox p {
+    color: gray;
+    margin-top: 5px;
+}
+.walletMainBody {
+    display: flex;
+}
+.lWalletMainBody112 p:first-child {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(97, 96, 96);
+    text-align: right;
+    padding: 3px;
+}
+.lWalletMainBody112 p:last-child {
+    font-size: 16px;
+    font-weight: 500;
+    color: #08ce73;
+    padding: 3px;
+    text-align: right;
+}
+.lWalletMainBody11 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: gray 1px solid;
+}
+.lWalletMainBody12 p {
+    display: flex;
+    padding: 7px 10px;
+    justify-content: space-between;
+    font-size: 16px;
+}
+.lWalletMainBody1,
+.lWalletMainBody2 {
+    border: gray 1px solid;
+    width: 280px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.lWalletMainBody2 {
+    padding: 10px;
+}
+.lWalletMainBody2 h3 {
+    font-size: 14px;
+}
+.lWalletMainBody2 p {
+    font-size: 14px;
+    display: flex;
+    vertical-align: top;
+    gap: 10px;
+    margin: 15px 0px;
+}
+.unEditableAmount{
+    background-color: rgb(233, 232, 232);
+    font-size: 20px;
+    padding: 7px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    border: rgb(175, 173, 173) 0.5px solid;
+    width: 110px;
+}
+.unEditableAmountB button{
+    color: grey;
+    padding: 7px;
+    border: rgb(175, 173, 173) 0.5px solid;
+    border-radius: 5px;
+    margin: 0px 20px 20px 0;
+    font-size: 18px;
+    background-color: white;
+    cursor: pointer;
+}
+.walletForm input{
+    /* display: inline-block; */
+    width: 400px;
+    height: 30px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px grey solid;
+}
+.walletForm button{
+    padding: 7px 20px;
+}
+
+
+
+.walletMainBody{
+    display: flex;
+    gap: 30px;
 }
