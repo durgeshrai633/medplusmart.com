@@ -67,3 +67,36 @@ function closeModal() {
   document.getElementById("goToCartButton").addEventListener("click",function(){
     window.location.href = "cart.html";
   })
+
+
+  // Registering the new user
+  var users = JSON.parse(localStorage.getItem("userList"))||[];
+
+  document.getElementById("registration").addEventListener("submit",registerUser)
+
+
+  function registerUser(e){
+    e.preventDefault();
+    var fname = document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var email = document.getElementById("rEmail").value;
+    var mobile = document.getElementById("mobileNumber").value;
+    var password = document.getElementById("rPassword").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    
+    if(password == confirmPassword){
+      console.log("into ther if")
+      var user = {
+        userName: fname +" "+ lname,
+        userEmail: email,
+        userPassword: password,
+        userMobile: mobile,
+        cart:[]
+      }
+      users.push(user);
+      localStorage.setItem("userList",JSON.stringify(users));
+    }else{
+      alert("Please confirm password")
+    }
+  
+  }
