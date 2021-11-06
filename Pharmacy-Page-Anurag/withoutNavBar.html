@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <style>
-      body {
+      #aBody{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -22,12 +22,12 @@
         line-height: 1.42857143;
         color: #333;
       }
-      body > img {
+      #aBody > img {
         margin: auto;
         height: 73px;
         width: 34%;
       }
-      body > #midDiv {
+      #aBody > #midDiv {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -77,7 +77,7 @@
       #imgDiv > img {
         height: 100%;
       }
-      h2 {
+      #textDiv>h2 {
         line-height: 0%;
         margin-left: 2.2%;
         font-weight: 100;
@@ -224,23 +224,23 @@
         height: 578px;
       }
 
-      ul > li {
-        margin-bottom: 30px;
+      .a2Ul > li {
+        margin-bottom: 25px;
       }
-      ul > li::marker {
+      .a2Ul > li::marker {
         content: "> ";
       }
-      ul a {
+      .a2Ul a {
         text-decoration: none;
         color: gray;
         line-height: 33px;
         font-size: 13px;
       }
-      ul a:hover {
+      .a2Ul a:hover {
         color: red;
         font-size: 14px;
       }
-      ul p {
+      .a2Ul p {
         margin-bottom: 0%;
         font-size: 14px;
         color: black;
@@ -252,7 +252,7 @@
       }
     </style>
   </head>
-  <body>
+  <body id="aBody">
     <img
       src="https://static1.medplusmart.com/medplusmart/assets/_327123f268ce0ba8b58c06e2127b1cac_/new_theme/web/images/new/three-ways-to-order.png"
       alt="3 Ways to Order your medicine"
@@ -359,7 +359,7 @@
     var mainDivList = document.getElementById("mainList");
 
     var leftClick = `<div class="column">
-          <ul>
+          <ul class="a2Ul">
             <li>
                 <p>Gastrointestinal & Hepatobiliary System</p>
                 <br>
@@ -428,7 +428,7 @@
         </ul>
         </div>
         <div class="column">
-          <ul>
+          <ul class="a2Ul">
             <li>
               <p>Musculo-Skeletal System</p>
               <br>
@@ -514,7 +514,7 @@
           </ul>
         </div>
         <div class="column">
-          <ul>
+          <ul class="a2Ul">
             <li> 
               <p>Vitamins & Minerals</p>
               <br>
@@ -598,7 +598,7 @@
         </div>`;
 
     var rightClick = `<div class="column">
-          <ul>
+          <ul class="a2Ul">
             <li>
                 <p>Anaesthesia</p>
                 <br>
@@ -632,7 +632,7 @@
         </ul>
         </div>
         <div class="column">
-          <ul>
+          <ul class="a2Ul">
             <li>
                 <p>Cathesters & Tubes</p>
                 <br>
@@ -669,7 +669,7 @@
           </ul>
         </div>
         <div class="column">
-          <ul>
+          <ul class="a2Ul">
             <li>
                 <p>Surgicals</p>
                 <br>
