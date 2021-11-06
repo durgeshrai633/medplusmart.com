@@ -1,3 +1,147 @@
+/* navstarts */
+
+
+
+.labnav{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+
+}
+.labnav>:first-child{
+    width: 57%;
+    /* border: 1px solid blue; */
+    padding: 0px;
+}
+.labnav>:nth-child(2){
+    width: 29%;
+    /* border: 1px solid blue; */
+}
+.labnav>:last-child{
+   width: 14%;
+    /* border: 1px solid blue; */
+}
+#callrow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#callrow a{
+    text-decoration: none;
+    color: black;
+}
+#apple{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1%
+}
+#signinregister{
+    padding: 10px;
+    height: 40px;
+    color: red;
+    border: 1px solid red;
+    background-color:white;
+
+}
+.labnavlocation{
+    /* border: 1px solid green; */
+   width: 100%;
+   height: 50px;
+   display: flex;
+
+   flex-direction:row;
+  
+}
+.labnavlocation>:first-child{
+    width:20%;
+    /* border: 1px solid blue; */
+  line-height: 0;
+  font-size: 10px;
+  margin-top: .5%;
+}
+.labnavlocation>:first-child>:last-child h4{
+font-size: 16px;
+margin-top:10px;
+}
+#lablocationflex{
+display: flex;
+}
+#lablocationflex>:last-child{
+    /* border: 1px solid blue; */
+    margin-left: 10px;
+}
+.labnavlocation>:nth-child(2){
+    width: 51%;
+    /* height: 45px; */
+    background-color: #f8f9fa;
+    /* border: 1px solid grey; */
+    margin-left: 2%;
+
+    
+    
+
+}
+
+.labnavlocation>:nth-child(2) input{
+    width: 80.5%;
+  height: 84%;
+    font-size: 15px;
+    /* border: 1px solid blue; */
+padding: 0px;
+margin-left: 1%;
+ /* margin-bottom: 1%; */
+border:none;
+padding: 3px;
+background-color: #f8f9fa;
+    
+  
+}
+#labsearchbutton{
+    padding: 14px;
+    width: 15%;
+    color: white;
+    background-color: black;
+    text-align: left;
+    font-size: 16px;
+    margin-left:-1%;
+}
+.labnavlocation>:nth-child(2)>div a{
+    font-size: 14px;
+    color: black;
+}
+.labnavlocation>:nth-child(2)>div a:hover{
+    color: black;
+    text-decoration: none;
+    
+}
+.labnavlocation >:last-child{
+    /* border: 1px solid red; */
+    width: 28%;
+}
+
+.labnavlocation>:last-child{
+    display: flex;
+    flex-direction: row-reverse;
+align-items: center;
+
+}
+.labnavlocation>:last-child>a{
+color: black;
+
+margin-right: 10%;
+    
+}
+
+
+
+/* nav barends */
+
+/* container first part starts */
 #firstpart{
    
     /* border: 1px solid red; */
