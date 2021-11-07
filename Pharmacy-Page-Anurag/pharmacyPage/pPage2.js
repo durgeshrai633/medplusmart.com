@@ -1,347 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      #aBody{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        background-color: #f8f8f8;
-        font-family: Roboto, Helvetica\Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        line-height: 1.42857143;
-        color: #333;
-      }
-      #aBody > img {
-        margin: auto;
-        height: 73px;
-        width: 34%;
-      }
-      #aBody > #midDiv {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 85%;
-        margin: auto;
-        margin-top: 40px;
-        align-items: center;
-      }
-      #midDiv > div {
-        height: 360px;
-        width: 30%;
-        background-color: white;
-      }
-      #imgDiv1 {
-        height: 40%;
-        width: 40%;
-        margin: auto;
-        margin-top: 2%;
-
-        display: block;
-        background-position: -227px 0px;
-        background-image: url(https://static1.medplusmart.com/medplusmart/assets/_2df912a…_/new_theme/web/images/xoffers_sprite.png.pagespeed.ic.mJETDbqTXI.png);
-        background-repeat: no-repeat;
-      }
-      #imgDiv2 {
-        height: 40%;
-        width: 40%;
-        margin: auto;
-        margin-top: 2%;
-
-        display: block;
-        background-position: 41px 0px;
-        background-image: url(https://static1.medplusmart.com/medplusmart/assets/_2df912a…_/new_theme/web/images/xoffers_sprite.png.pagespeed.ic.mJETDbqTXI.png);
-        background-repeat: no-repeat;
-      }
-      #imgDiv3 {
-        height: 40%;
-        width: 40%;
-        margin: auto;
-        margin-top: 2%;
-
-        display: block;
-        background-position: -95px 0px;
-        background-image: url(https://static1.medplusmart.com/medplusmart/assets/_2df912a…_/new_theme/web/images/xoffers_sprite.png.pagespeed.ic.mJETDbqTXI.png);
-        background-repeat: no-repeat;
-      }
-      #imgDiv > img {
-        height: 100%;
-      }
-      #textDiv>h2 {
-        line-height: 0%;
-        margin-left: 2.2%;
-        font-weight: 100;
-        font-size: 20px;
-        font-family: sans-serif;
-        margin-top: 25px;
-      }
-      hr {
-        width: 20%;
-        height: 1px;
-        background-color: #e93049;
-        line-height: 0%;
-        margin-left: 4%;
-      }
-      #textDiv > li {
-        color: gray;
-        font-size: 14px;
-
-        margin-bottom: 3%;
-      }
-      #textDiv button {
-        background-color: #e93049;
-        color: white;
-        width: 90%;
-        height: 35px;
-        border-radius: 4px;
-        margin-left: 4%;
-        border: transparent;
-      }
-      #lowerDiv {
-        background-color: white;
-        width: 98%;
-        height: 360px;
-
-        margin: auto;
-        margin-top: 40px;
-      }
-      #lowerDiv > h2 {
-        margin-left: 1%;
-        margin-top: 2%;
-      }
-      #lowerDiv > hr {
-        width: 5%;
-        margin-left: 1%;
-      }
-      #lowerDiv > div {
-        width: 27.25%;
-
-        height: 60%;
-
-        margin-left: 6%;
-        margin-top: 2%;
-        background-color: #e6e6e6;
-      }
-      #sMainDiv {
-        width: 80%;
-        height: 90%;
-        margin: auto;
-        margin-top: 2.3%;
-      }
-      #upto {
-        color: #e84f64;
-
-        font-size: 18px;
-      }
-      #percent {
-        height: 25%;
-        width: 70%;
-        display: flex;
-      }
-      #percent > h1 {
-        font-size: 47px;
-        line-height: 0px;
-        width: fit-content;
-        color: #e84f64;
-
-        font-weight: 700;
-      }
-      #percent > h3 {
-        margin-top: 0%;
-        padding-left: 6%;
-        font-size: 18px;
-      }
-      #percent + hr {
-        margin-left: 34%;
-        margin-top: 0%;
-        height: 2px;
-        color: #e84f64;
-      }
-      p + button {
-        width: 100%;
-        padding: 5px 0px;
-
-        border-radius: 2px;
-      }
-      #catMainDiv {
-        height: 1512px;
-        width: 98%;
-        margin: auto;
-        margin-top: 60px;
-        background-color: white;
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-      }
-      .catDiv {
-        width: 34.8%;
-        height: 38px;
-        background-color: black;
-        color: white;
-        font-size: 16px;
-        padding-top: 15px;
-        text-align: center;
-      }
-
-      .rightCat {
-        margin-left: 0.5%;
-      }
-      #align {
-        display: flex;
-        justify-content: center;
-        margin-top: -25px;
-      }
-      #align2 {
-        width: 70%;
-        height: 1%;
-        margin: auto;
-        display: flex;
-      }
-      #leftTri {
-        width: 20px;
-        margin-left: 25%;
-      }
-      #rightTri {
-        /* border: 1px solid blue; */
-        width: 20px;
-        margin-left: 48%;
-      }
-      #mainList {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      .column {
-        width: 31%;
-        height: 578px;
-      }
-
-      .a2Ul > li {
-        margin-bottom: px;
-      }
-      .a2Ul > li::marker {
-        content: "> ";
-      }
-      .a2Ul a {
-        text-decoration: none;
-        color: gray;
-        line-height: 33px;
-        font-size: 13px;
-      }
-      .a2Ul a:hover {
-        color: red;
-        font-size: 14px;
-      }
-      .a2Ul p {
-        margin-bottom: 0%;
-        font-size: 14px;
-        color: black;
-        font-weight: 600;
-      }
-      #heading + hr {
-        width: 4.8%;
-        margin-left: 2.2%;
-      }
-    </style>
-  </head>
-  <body id="aBody">
-    <img
-      src="https://static1.medplusmart.com/medplusmart/assets/_327123f268ce0ba8b58c06e2127b1cac_/new_theme/web/images/new/three-ways-to-order.png"
-      alt="3 Ways to Order your medicine"
-    />
-    <div id="midDiv">
-      <div>
-        <div id="imgDiv1"></div>
-        <div id="textDiv">
-          <h2>Buy Online</h2>
-          <hr />
-          <ul>
-            <li>Search and select the medicines you want</li>
-            <li>Upload your prescription at check out</li>
-            <li>Choose home delivery or store pick up</li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <div id="imgDiv2">
-          </div>
-        <div id="textDiv">
-          <h2>Click and Pick</h2>
-          <hr />
-          <ul>
-            <li>Search and select teh Medicines you want</li>
-            <li>
-              Select the MedPlus store where you wish to pick up teh order
-            </li>
-            <li>
-              Show the prescription at the store and collect your medicine
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <div id="imgDiv3">
-          </div>
-        <div id="textDiv">
-          <h2>Recieve a Call Back</h2>
-          <hr />
-          <ul>
-            <li>
-              Our customer Representative will call you and confirm the order
-            </li>
-          </ul>
-          <button>Upload your Prescription</button>
-        </div>
-      </div>
-    </div>
-    <div id="lowerDiv">
-      <h2>Current Offers</h2>
-      <hr />
-      <div>
-        <div id="sMainDiv">
-          <div id="upto">Up to</div>
-          <div id="percent">
-            <h1>35%</h1>
-            <h3>Savings on Medicines</h3>
-          </div>
-          <hr />
-          <div id="belowPercent">
-            <p>Offers valid on all purchases, when you chose FlexiRewards</p>
-            <button>View Details</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="catMainDiv" class="catMainLeft">
-      <div id="align">
-        <div id="leftCat" class="catDiv leftCat">
-          Drugs by Therapeutic Category
-        </div>
-        <div id="rightCat" class="catDiv rightCat">
-          Surgicals product by category
-        </div>
-      </div>
-      <div id="align2">
-        <div id="leftTri"></div>
-        <div id="rightTri"></div>
-      </div>
-      <div>
-        <h2 id="heading">Browse drugs by Therapeutic category</h2>
-        <hr />
-      </div>
-      <div id="mainList"></div>
-    </div>
-  </body>
-  <script>
-    var leftDiv = document.getElementById("leftCat");
+var leftDiv = document.getElementById("leftCat");
     leftDiv.addEventListener("click", left);
 
     var rightDiv = document.getElementById("rightCat");
@@ -706,11 +363,12 @@
     leftDiv.style.backgroundColor = "#00cc66";
     rightDiv.style.backgroundColor = "black";
     leftDiv.style.height = "60px";
-    rightDiv.style.height = "30px";
+    rightDiv.style.height = "45px";
     leftDiv.style.verticalAlign = "center";
     // leftDiv.style.padding="2%";
     rightDiv.style.marginTop = "0px";
     leftDiv.style.marginTop = "-15px";
+    
     divHeight.style.height = "1512px";
     rightTriangle.innerHTML = "";
     leftTriangle.append(triangle);
@@ -721,7 +379,7 @@
       leftDiv.style.backgroundColor = "#00cc66";
       rightDiv.style.backgroundColor = "black";
       leftDiv.style.height = "60px";
-      rightDiv.style.height = "30px";
+      rightDiv.style.height = "45px";
       leftDiv.style.verticalAlign = "center";
 
       rightDiv.style.marginTop = "0px";
@@ -731,6 +389,7 @@
       leftTriangle.append(triangle);
       headder.textContent = "";
       headder.textContent = "Browse drugs by Therapeutic category";
+    //   headder.style.marginBottom="40px"
       mainDivList.innerHTML = "";
       mainDivList.innerHTML = leftClick;
     }
@@ -740,7 +399,7 @@
       rightDiv.style.backgroundColor = "#00cc66";
       leftDiv.style.backgroundColor = "black";
       rightDiv.style.height = "60px";
-      leftDiv.style.height = "30px";
+      leftDiv.style.height = "45px";
       leftDiv.style.marginTop = "0px";
       rightDiv.style.marginTop = "-15px";
 
@@ -753,5 +412,3 @@
       headder.textContent = "Browse Surgicals products by category";
       rightTriangle.append(triangle);
     }
-  </script>
-</html>
