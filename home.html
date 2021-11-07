@@ -46,9 +46,11 @@
               src="https://img.icons8.com/material-sharp/24/000000/mac-os.png"
             />
           </div>
-          <div>
+          <div id="userNameDiv1">
             <button class="sign-in-button" id="signin">Sign in/Register</button>
           </div>
+          <div id="userNameDiv2"></div>
+          <div id="userNameMenu"></div>
         </div>
         <div class="container-sign-in" id="modal">
           <div class="sign-in-div flex row">
@@ -485,6 +487,10 @@
         </div>
       </div>
 
+      <!-- catagary section starts here -->
+  
+      <!-- catagery secton ends here -->
+
       <!-- just an image -->
 
       <div class="just-image">
@@ -772,7 +778,6 @@
           />
         </div>
       </div>
-
       <div class="payment-options">
         <h2>Payments</h2>
         <div>
@@ -788,6 +793,12 @@
       </div>
     </div>
 
+
+
+
+
+
+ <button id="optionOpener">Click to open the floating menu</button>
     <footer>
       <a href="https://icons8.com/icon/86306/android-os"
         >Android OS icon by Icons8</a
@@ -797,20 +808,21 @@
   </body>
   <script src="mainCaro.js"></script>
   <script src="main.js"></script>
+
   <script>
-     var slider=document.querySelector(".slider");
+    var slider=document.querySelector(".slider");
 
-// var indicatorparents=document.querySelector(".controls ul");
+    // var indicatorparents=document.querySelector(".controls ul");
 
-var sectionindex=0;
+    var sectionindex=0;
 
 document.querySelectorAll(".controls li").forEach(function(indicator,index){
-indicator.addEventListener("click",function(){
-sectionindex=index;
-document.querySelector(".controls .selected").classList.remove("selected");
-indicator.classList.add('selected')
-slider.style.transform= 'translate( '+(sectionindex)*-50+'% )'; 
+   indicator.addEventListener("click",function(){
+    sectionindex=index;
+    document.querySelector(".controls .selected").classList.remove("selected");
+    indicator.classList.add('selected')
+   slider.style.transform= 'translate( '+(sectionindex)*-50+'% )'; 
 })
 })
-  </script>
+</script>
 </html>
