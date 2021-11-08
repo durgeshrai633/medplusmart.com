@@ -1,4 +1,5 @@
-/* only for check purposes */
+
+        /* only for check purposes */
 .border {
   border-radius: 3px;
 }
@@ -91,24 +92,6 @@ ul {
   font-size: 16px;
   border-radius: 4px;
 }
-
-#userNameDiv2 {
-  font-size: 16px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  cursor: pointer;
-}
-#userNameDiv2 .fa-sort-down::before {
-  content: "\f0dd";
-  margin-left: 5px;
-  margin-top: -10px;
-}
-#userNameDiv2 span {
-  display: flex;
-  gap: 5px;
-}
-
 .logo > span {
   color: #ffffff;
   font-weight: 500;
@@ -414,13 +397,12 @@ i {
 }
 
 .my-account-div {
-  padding: 20px;
-  margin-block: 20px;
+  padding: 10px;
+  margin-block: 10px;
   background: white;
-  /* border: 2px solid red; */
 }
 .my-account-flex {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -471,8 +453,10 @@ i {
   border: 1px solid #ddd;
   border-radius: 5px;
   flex-grow: 1;
+  gap: 10px;
+  justify-content: left;
   align-items: center;
-  padding: 30px;
+  padding: 10px;
   cursor: pointer;
   position: relative;
   background-color: white;
@@ -656,53 +640,4 @@ i {
   background-position: -12px -10px;
 }
 
-/* catagery section css */
-
-/* menu clicking on username */
-
-#userNameMenu {
-  position: absolute;
-  top: 40px;
-  right: 0;
-  /* border: 2px solid red; */
-  z-index: 5000;
-  background-color: #ffffff;
-}
-
-#aDiv {
-  /* border: 2px solid green; */
-}
-#aUl {
-  font-size: 14px;
-  box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
-}
-
-.aLi:hover {
-  background-color: #f8f9fa;
-}
-.aLi {
-  text-decoration: none;
-  list-style: none;
-  padding: 10px 15px;
-}
-.aLi > a {
-  text-decoration-line: none;
-  color: black;
-
-  display: flex;
-  height: 20px;
-}
-.sImg {
-  margin-right: 7%;
-}
-#myhr {
-  border: 1px solid #e5e5e5;
-  height: 0px;
-}
-.aLi > p {
-  font-size: 16px;
-}
-
-#logOutButton{
-  cursor: pointer;
-}
+    

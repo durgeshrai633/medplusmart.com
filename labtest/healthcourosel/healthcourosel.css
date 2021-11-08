@@ -1,3 +1,4 @@
+
 .flexbox{
     display: flex;
     width:100% ;
@@ -87,4 +88,94 @@ padding-right: 10px;
 .container h4{
     font-size: 18px;
     font-weight: 100;
+}
+.flexbox {
+    margin-block: 20px;
+  display: flex;
+  width: 100%;
+  /* border: 2px solid blue; */
+  height: 270px;
+  padding: 20px 10px;
+  background: #ffffff;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+
+.flexbox > div:last-child {
+  flex-basis: 40%;
+  /* border: 1px solid red;  */
+  background-image: url("https://static1.medplusmart.com/medplusmart/assets/_2df912a8adaabe680f296d028912963b_/new_theme/web/images/new/articles-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.flexbox .container1 {
+  flex-basis: 60%;
+  /* border: 1px solid red; */
+  padding: 15px;
+}
+.car {
+  /* border: 1px solid red; */
+  height: 50%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+}
+.slider {
+  height: 100%;
+  display: flex;
+  width: 200%;
+  /* border: 1px solid red; */
+  transition: 0.3s;
+  /* transform: translate(-0%); */
+}
+.slider section {
+  /* border: 1px solid green; */
+  flex-basis: 100%;
+  /* display: flex; */
+  justify-content: center;
+}
+.healthtext > a {
+  text-decoration: none;
+}
+.readmore {
+  color: red;
+  cursor: pointer;
+  float: right;
+  padding-right: 10px;
+}
+.controls ul {
+  position: absolute;
+  bottom: 13%;
+  /* transform: translateY(-50%); */
+  list-style: none;
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+}
+.controls ul li {
+  width: 25px;
+  height: 3px;
+  border: 1px solid #333;
+  border-radius: 10%;
+  /* background:green; */
+  cursor: pointer;
+  margin-left: 10px;
+}
+.controls ul li.selected {
+  background: red;
+}
+
+.container1 h4,
+h2 {
+  line-height: 0px;
+}
+.container1 h2 {
+  font-size: 48px;
+  font-weight: 500;
+  color: #fc8019;
+  padding-bottom: 0;
+  margin-top: 30px;
+}
+.container1 h4 {
+  font-size: 18px;
+  font-weight: 100;
 }
