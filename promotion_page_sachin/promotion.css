@@ -6,9 +6,17 @@
     font-size: 14px;
 }
 
+.fas{
+    font-size: 25px;
+}
+
+.download-app-div{
+    width: 95vw;
+}
 body{
     background-color: #f8f8f8 !important;
 }
+
 
 .carousel {
     position: relative;
