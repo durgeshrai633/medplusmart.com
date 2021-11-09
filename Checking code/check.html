@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,217 +21,219 @@
     />
     <style>
       * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
 
-.cateCarouselSection {
-    position: relative;
-    width: 95vw;
-    height: 42vh;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
+      .cateCarouselSection {
+        position: relative;
+        width: 95vw;
+        height: 42vh;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
 
-.cate-carousel {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
+      .cate-carousel {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
 
-.cate-carousel-track-container {
-    position: relative;
-    height: 100%;
-    width: 95%;
-    overflow: hidden;
-    margin: 0 auto;
-}
+      .cate-carousel-track-container {
+        position: relative;
+        height: 100%;
+        width: 95%;
+        overflow: hidden;
+        margin: 0 auto;
+      }
 
-.cate-carousel-track {
-    position: relative;
-    list-style: none;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-}
+      .cate-carousel-track {
+        position: relative;
+        list-style: none;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+      }
 
-.cate-carousel-slide{
-    display:flex;
-    flex-direction: column;
-    gap: 1vw;
-    position: absolute;
-    top:6vh;
-    cursor: pointer;
-}
+      .cate-carousel-slide {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        position: absolute;
+        top: 6vh;
+        cursor: pointer;
+      }
 
-.cate-carousel-slide:hover{
-    color:#e54;
-}
+      .cate-carousel-slide:hover {
+        color: #e54;
+      }
 
-.cate-carousel-slide>img:hover{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+      .cate-carousel-slide > img:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
 
-.cate-carousel-slide> img {
-    border: 1px solid grey;
-    border-radius:50%;
-    padding:4vh;
-    background-color: #fff;
-}
+      .cate-carousel-slide > img {
+        border: 1px solid grey;
+        border-radius: 50%;
+        padding: 4vh;
+        background-color: #fff;
+      }
 
-.cate-carousel-slide p {
-    text-align: center;
-    font-weight: bolder;
-}
+      .cate-carousel-slide p {
+        text-align: center;
+        font-weight: bolder;
+      }
 
-.cate-carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: 0;
-    border-radius: 50%;
-    cursor: pointer;
-    color: red;
-    width: 5vh;
-    height: 5vh;
-}
+      .cate-carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        color: red;
+        width: 5vh;
+        height: 5vh;
+      }
 
-.cate-carousel-btn:hover{
-    background-color:tomato;
-    color: #fff;
-}
+      .cate-carousel-btn:hover {
+        background-color: tomato;
+        color: #fff;
+      }
 
-.cate-carousel-btn i {
+      .cate-prev-btn {
+        left: 10px;
+      }
 
-}
-
-.cate-prev-btn {
-    left:10px;
-}
-
-.cate-next-btn {
-    right: 10px;
-}
+      .cate-next-btn {
+        right: 10px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="cateCarouselSection">
-        <h2>Shop by Category</h2>
-        <div class="cate-carousel">
-            <div class="cate-carousel-track-container">
-                <ul class="cate-carousel-track">
-                </ul>
-            </div>
-            <button class="cate-carousel-btn cate-prev-btn">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="cate-carousel-btn cate-next-btn">
-                <i class="fas fa-chevron-right"></i>
-            </button>
+      <h2>Shop by Category</h2>
+      <div class="cate-carousel">
+        <div class="cate-carousel-track-container">
+          <ul class="cate-carousel-track"></ul>
         </div>
+        <button class="cate-carousel-btn cate-prev-btn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="cate-carousel-btn cate-next-btn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
     </div>
-</body>
-<script>
-    var categoryCarouselImages = [{
-        caroImg: "https://www.medplusmart.com/new_theme/web/images/new/xpharmacy-cat-icn.png.pagespeed.ic.9I12fTP2Cb.webp",
-        title: "Pharmacy"
-    },
-    {
-        caroImg: "https://www.medplusmart.com/new_theme/web/images/new/xlab-tests-cat-icn.png.pagespeed.ic.sfswoBA0UR.webp",
-        title: "LabTests"
-    },
-    {
-        caroImg: "https://static2.medplusmart.com/live/bannerImage/Mart/f020c15dc4c57e001200393695d9378c.jpg",
-        title: "Baby Needs"
-    },
-    {
-        caroImg: "https://static2.medplusmart.com/live/bannerImage/Mart/aede9ef1f3ebf36a0a1f4556facc4732.jpg",
-        title: "Pesonal Care"
-    },
-    {
-        caroImg: "https://static2.medplusmart.com/live/bannerImage/Mart/880ae68c4dee7f6632781c46c5c7b0f9.jpg",
-        title: "Health & Nutrition"
-    },
-    {
-        caroImg: "https://static2.medplusmart.com/live/bannerImage/Mart/f44c82c87230e64243501a302d6e7da6.jpg",
-        title: "OTC & Health Needs"
-    },
-    {
-        caroImg: "https://static2.medplusmart.com/live/bannerImage/Mart/dfc7a48caf96c98482b9b38c1b849828.jpg",
-        title: "Vitamins & Supplements"
-    },
-    {
-        caroImg: "https://static2.medplusmart.com/live/bannerImage/Mart/38a94856e3ab4fd14503df7a91993964.jpg",
-        title: "Diabetic Needs"
-    },
-    {
-        caroImg: "https://static2.medplusmart.com/live/bannerImage/Mart/5fe39e3d90819ab9c9e79bae20f56a76.jpg",
-        title: "Household Needs"
-    },
-]
-var index=0
-// var lastSlide= document.querySelector(".cate-carousel-track");
-// console.log(lastSlide.children)
+  </body>
+  <script>
+    var categoryCarouselImages = [
+      {
+        caroImg:
+          "https://www.medplusmart.com/new_theme/web/images/new/xpharmacy-cat-icn.png.pagespeed.ic.9I12fTP2Cb.webp",
+        title: "Pharmacy",
+      },
+      {
+        caroImg:
+          "https://www.medplusmart.com/new_theme/web/images/new/xlab-tests-cat-icn.png.pagespeed.ic.sfswoBA0UR.webp",
+        title: "LabTests",
+      },
+      {
+        caroImg:
+          "https://static2.medplusmart.com/live/bannerImage/Mart/f020c15dc4c57e001200393695d9378c.jpg",
+        title: "Baby Needs",
+      },
+      {
+        caroImg:
+          "https://static2.medplusmart.com/live/bannerImage/Mart/aede9ef1f3ebf36a0a1f4556facc4732.jpg",
+        title: "Pesonal Care",
+      },
+      {
+        caroImg:
+          "https://static2.medplusmart.com/live/bannerImage/Mart/880ae68c4dee7f6632781c46c5c7b0f9.jpg",
+        title: "Health & Nutrition",
+      },
+      {
+        caroImg:
+          "https://static2.medplusmart.com/live/bannerImage/Mart/f44c82c87230e64243501a302d6e7da6.jpg",
+        title: "OTC & Health Needs",
+      },
+      {
+        caroImg:
+          "https://static2.medplusmart.com/live/bannerImage/Mart/dfc7a48caf96c98482b9b38c1b849828.jpg",
+        title: "Vitamins & Supplements",
+      },
+      {
+        caroImg:
+          "https://static2.medplusmart.com/live/bannerImage/Mart/38a94856e3ab4fd14503df7a91993964.jpg",
+        title: "Diabetic Needs",
+      },
+      {
+        caroImg:
+          "https://static2.medplusmart.com/live/bannerImage/Mart/5fe39e3d90819ab9c9e79bae20f56a76.jpg",
+        title: "Household Needs",
+      },
+    ];
+    var index = 0;
+    // var lastSlide= document.querySelector(".cate-carousel-track");
+    // console.log(lastSlide.children)
 
+    // To load the carousel start
+    var caroTrack = document.querySelector(".cate-carousel-track");
 
-// To load the carousel start
-var caroTrack = document.querySelector(".cate-carousel-track");
+    categoryCarouselImages.map(function (item) {
+      var li = document.createElement("li");
+      li.setAttribute("class", "cate-carousel-slide");
+      var img = document.createElement("img");
+      img.setAttribute("src", item.caroImg);
+      var p = document.createElement("p");
+      p.innerText = item.title;
+      li.append(img, p);
+      caroTrack.append(li);
+    });
+    var firstCarousel = caroTrack.children[0];
+    firstCarousel.classList.add("current-slide");
+    // // To make carousel transitions start
+    const track = document.querySelector(".cate-carousel-track");
+    const slides = Array.from(track.children);
+    const nextBtn = document.querySelector(".cate-next-btn");
+    const prevBtn = document.querySelector(".cate-prev-btn");
+    const slideWidth = slides[0].clientWidth + 40;
 
-categoryCarouselImages.map(function (item) {
-    var li = document.createElement("li");
-    li.setAttribute("class", "cate-carousel-slide")
-    var img = document.createElement("img");
-    img.setAttribute("src", item.caroImg)
-    var p = document.createElement("p")
-    p.innerText = item.title
-    li.append(img, p);
-    caroTrack.append(li)
-})
-var firstCarousel = caroTrack.children[0];
-firstCarousel.classList.add("current-slide")
-// // To make carousel transitions start
-const track = document.querySelector(".cate-carousel-track");
-const slides = Array.from(track.children);
-const nextBtn = document.querySelector(".cate-next-btn");
-const prevBtn = document.querySelector(".cate-prev-btn");
-const slideWidth = (slides[0].clientWidth) + 40;
-
-nextBtn.addEventListener("click", function (event) {
-    console.log(event.target.closest("li"))
-    index++
-    if(index<3){
-    const currentSlide = track.querySelector(".current-slide");
-    const nextSlide = currentSlide.nextElementSibling;
-    moveToSlide(track, currentSlide, nextSlide)
-    }
-
-})
-prevBtn.addEventListener("click", function (event) {
-    index--
-    if(index>=1){
+    nextBtn.addEventListener("click", function (event) {
+      console.log(event.target.closest("li"));
+      index++;
+      if (index < 3) {
+        const currentSlide = track.querySelector(".current-slide");
+        const nextSlide = currentSlide.nextElementSibling;
+        moveToSlide(track, currentSlide, nextSlide);
+      }
+    });
+    prevBtn.addEventListener("click", function (event) {
+      index--;
+      if (index >= 1) {
         const currentSlide = track.querySelector(".current-slide");
         const prevSlide = currentSlide.previousElementSibling;
-        moveToSlide(track, currentSlide, prevSlide)
+        moveToSlide(track, currentSlide, prevSlide);
+      }
+    });
+
+    // To add offset to carousel images position start
+    function setSlidePosition(slide, index) {
+      var totalWidth = caroTrack.clientWidth;
+      slide.style.left = slideWidth * index + "px";
     }
+    slides.forEach(setSlidePosition);
+    // To add offset to carousel images position end
 
-})
-
-// To add offset to carousel images position start
-function setSlidePosition(slide, index) {
-    var totalWidth = caroTrack.clientWidth
-    slide.style.left = (slideWidth * index) + "px";
-}
-slides.forEach(setSlidePosition)
-// To add offset to carousel images position end 
-
-function moveToSlide(track, currentSlide, targetSlide) {
-    const nextSlide = targetSlide
-    track.style.transition = "transform 250ms ease-in"
-    track.style.transform = `translateX(-${nextSlide.style.left})`
-    currentSlide.classList.remove("current-slide");
-    targetSlide.classList.add("current-slide");
-}
-</script>
+    function moveToSlide(track, currentSlide, targetSlide) {
+      const nextSlide = targetSlide;
+      track.style.transition = "transform 250ms ease-in";
+      track.style.transform = `translateX(-${nextSlide.style.left})`;
+      currentSlide.classList.remove("current-slide");
+      targetSlide.classList.add("current-slide");
+    }
+  </script>
 </html>
