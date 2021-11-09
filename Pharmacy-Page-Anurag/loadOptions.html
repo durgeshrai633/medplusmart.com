@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body > div {
+      #aDiv {
         margin-left: 85%;
         float: left;
       }
-      ul {
+      #aUl {
         font-size: 14px;
         box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
         width: 202px;
@@ -18,19 +18,19 @@
         padding: 0px;
       }
 
-      li:hover {
+      .aLi:hover {
         background-color: #f8f9fa;
       }
-      li {
+      .aLi {
         text-decoration: none;
 
         list-style: none;
         padding: 10px 15px;
       }
-      li > a {
+      .aLi > a {
         text-decoration-line: none;
         color: black;
-        
+
         display: flex;
         height: 20px;
       }
@@ -39,12 +39,11 @@
       }
       #myhr {
         border: 1px solid #e5e5e5;
-
         height: 0px;
       }
-      li>p{
-          font-size: 16px;
-          margin: 8px;
+      .aLi > p {
+        font-size: 16px;
+        margin: 8px;
       }
     </style>
   </head>
@@ -56,9 +55,9 @@
     var body = document.querySelector("body");
     button.addEventListener("click", loadItem);
 
-    var loadOptions = `<div>
-      <ul>
-        <li>
+    var loadOptions = `<div id="aDiv">
+      <ul id="aUl">
+        <li class="aLi">
           <a href="" title="My Account">
             <img
               class="sImg"
@@ -68,7 +67,7 @@
             My Account
           </a>
         </li>
-        <li>
+        <li class="aLi">
           <a href="">
             <img
               class="sImg"
@@ -78,7 +77,7 @@
             Purchase History
           </a>
         </li>
-        <li>
+        <li class="aLi">
           <a href="">
             <img
               class="sImg"
@@ -88,7 +87,7 @@
             My Lab Orders
           </a>
         </li>
-        <li>
+        <li class="aLi">
           <a href="">
             <img
               class="sImg"
@@ -98,7 +97,7 @@
             Refill History
           </a>
         </li>
-        <li>
+        <li class="aLi">
           <a href="">
             <img
               class="sImg"
@@ -108,33 +107,33 @@
             Health Records
           </a>
         </li>
-        <li>
+        <li class="aLi">
             <a href="">
                 <img class="sImg" src="https://static2.medplusmart.com/live/webpwa/images/frequently-ordered-list-36px.svg" alt="">
                 Frequently Ordered List
             </a>
         </li>
-        <li>
+        <li class="aLi">
             <a href="">
                 <img class="sImg" src="https://static2.medplusmart.com/live/webpwa/images/flexirewards-icn-36-cssbg.svg" alt="">
             FlexiRewards
             </a>
         </li>
-        <li>
+        <li class="aLi">
             <a href="">
                 <img class="sImg" src="https://static2.medplusmart.com/live/webpwa/images/medpluswallet-icn-36-cssbg.svg" alt="">
             My Wallet
             </a>            
             
         </li>
-        <li>
+        <li class="aLi">
             <a href="">
                 <img class="sImg" src="https://static2.medplusmart.com/live/webpwa/images/my-complaints-icn-36-cssbg.svg" alt="">
             My Complaints
             </a>
         </li>
         <hr id="myhr">
-        <li >
+        <li  class="aLi">
             <p>Logout</p>
         </li>
       </ul>

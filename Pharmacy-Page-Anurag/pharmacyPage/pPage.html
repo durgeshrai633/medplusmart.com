@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="promotion.css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="pPage2.css">
+    <link rel="stylesheet" href="pPage.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
-    <title>Promotion Page</title>
-    <link rel="stylesheet" href="/main.css" />
   </head>
-
-  <body>
+  <body id="aBody">
     <!-- Nav bar starts here -->
     <div class="nav-bar">
       <!-- Top nav bar starts here -->
@@ -115,7 +118,7 @@
                   <input
                     type="email"
                     name="email"
-                    id="email"
+                    id="rEmail"
                     class="sign-in-input"
                     placeholder="Email"
                     required
@@ -130,7 +133,7 @@
                     <input
                       type="password"
                       name="password"
-                      id="password"
+                      id="rPassword"
                       class="sign-in-input"
                       placeholder="Password"
                       required
@@ -179,7 +182,7 @@
                     </div>
                   </div>
                   <button type="submit" id="register">Register</button>
-                  <span style="text-align: left; margin-top: -10px; color: #999"
+                  <span style="text-align: left; margin-top: -10px; color: rgb(20, 14, 14)"
                     >Note: All fields are mandatory</span
                   >
                 </form>
@@ -225,14 +228,16 @@
           <div id="search-menu">
             <a id="general-link" class="search-menu-item" href="#"
               ><i class="fas fa-check-circle" style="margin-right: 5px"></i
-                >General store</a
+              >General store</a
             >
             <a class="search-menu-item" href="https://www.facebook.com"
               ><i class="fas fa-check-circle" style="margin-right: 5px"></i
-                >Pharmacy</a
+              >Pharmacy</a
             >
-            <a class="search-menu-item" href="#"><i class="fas fa-check-circle" style="margin-right: 5px"></i
-              >All products</a>
+            <a class="search-menu-item" href="#"
+              ><i class="fas fa-check-circle" style="margin-right: 5px"></i>All
+              products</a
+            >
           </div>
           <input
             type="text"
@@ -272,6 +277,7 @@
             </table>
             <button
               style="width: 100%; background: #e93049; padding-block: 10px"
+              id="goToCartButton"
             >
               View Shopping Cart
             </button>
@@ -329,7 +335,7 @@
           <a href="/myAccount.html">Flexi Rewards</a>
         </li>
         <li class="nav-list-item">
-          <a href="./promotion_page_sachin/promotion.html">Promotions</a>
+          <a href="/promotion_page_sachin/promotion.html">Promotions</a>
         </li>
         <li class="nav-list-item"><a href="">Healthy Life</a></li>
         <li class="nav-list-item">
@@ -337,116 +343,201 @@
         </li>
       </ul>
     </div>
-    <!-- Promotion section-->
 
-    <!-- Promotion carousel start-->
-    <div class="carousel">
-      <div class="carousel-track-container">
-        <ul class="carousel-track">
-          <!-- <li class="carousel-slide current-slide">
-                        <img
-                            src="https://static2.medplusmart.com/live/bannerImage/Mart/0036e89c7e5a2972f3061b54d182f722.jpg">
-                    </li>
-                    <li class="carousel-slide">
-                        <img
-                            src="https://static2.medplusmart.com/live/bannerImage/Mart/60343147c35ebd43bda28c383dad957e.jpg">
-                    </li>
-                    <li class="carousel-slide">
-                        <img
-                            src="https://static2.medplusmart.com/live/bannerImage/Mart/362fcf14bcdb8e04a481cc1c29bc99ea.jpg">
-                    </li>
-                    <li class="carousel-slide">
-                        <img
-                            src="https://static2.medplusmart.com/live/bannerImage/Mart/6c819bc37cfa2c512bc929db636c79d2.jpg">
-                    </li> -->
-        </ul>
+    
+    
+  <body id="aBody">
+    <p id="newP">Home &nbsp/&nbsp Pharmacy</p>
+    <img
+      src="https://static1.medplusmart.com/medplusmart/assets/_327123f268ce0ba8b58c06e2127b1cac_/new_theme/web/images/new/three-ways-to-order.png"
+      alt="3 Ways to Order your medicine"
+    />
+    <div id="midDiv">
+      <div>
+        <div id="imgDiv1"></div>
+        <div id="textDiv">
+          <h2 class="aH2">Buy Online</h2>
+          <hr />
+          <ul>
+            <li>Search and select the medicines you want</li>
+            <li>Upload your prescription at check out</li>
+            <li>Choose home delivery or store pick up</li>
+          </ul>
+        </div>
       </div>
-      <div class="carousel-nav">
-        <!-- <button class="carousel-indicator current-slide"></button>
-                <button class="carousel-indicator"></button>
-                <button class="carousel-indicator"></button>
-                <button class="carousel-indicator"></button> -->
+      <div>
+        <div id="imgDiv2"></div>
+        <div id="textDiv">
+          <h2 class="aH2">Click and Pick</h2>
+          <hr />
+          <ul>
+            <li>Search and select teh Medicines you want</li>
+            <li>
+              Select the MedPlus store where you wish to pick up teh order
+            </li>
+            <li>
+              Show the prescription at the store and collect your medicine
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div id="imgDiv3"></div>
+        <div id="textDiv">
+          <h2 class="aH2">Recieve a Call Back</h2>
+          <hr />
+          <ul>
+            <li>
+              Our customer Representative will call you and confirm the order
+            </li>
+          </ul>
+          <button>Upload your Prescription</button>
+        </div>
       </div>
     </div>
-    <!-- Promotion carousel end-->
-
-    <!-- Promotion category start-->
-    <div class="category-section">
-      <ul class="category-list">
-        <!-- <li class="active ls-item">
-                        <a href="#">
-                            <i class="fas fa-angle-down"></i>ALL
-                        </a>
-                    </li>
-                    <li class="ls-item">
-                        <a href="#">
-                            OTC & HEALTH NEEDS
-                        </a>
-                    </li>
-                    <li class="ls-item">
-                        <a href="#">
-                            PHARMACY
-                        </a>
-                    </li>
-                    <li class="ls-item">
-                        <a href="#">
-                            PERSONAL CARE
-                        </a>
-                    </li>
-                    <li class="ls-item">
-                        <a href="#">
-                            DIABETIC NEEDS
-                        </a>
-                    </li>
-                    <li class="ls-item">
-                        <a href="#">
-                            VITAMINS & SUPPLEMENTS
-                        </a>
-                    </li>
-                    <li class="ls-item">
-                        <a href="#">
-                            BABY NEEDS
-                        </a>
-                    </li>
-                    <li class="ls-item">
-                        <a href="#">
-                            HOUSEHOLD NEEDS
-                        </a>
-                    </li>
-                    <li class="ls-item">
-                        <a href="#">
-                            HEALTH & NUTRITION
-                        </a>
-                    </li> -->
-      </ul>
+    <div id="lowerDiv">
+      <h2>Current Offers</h2>
+      <hr />
+      <div>
+        <div id="sMainDiv">
+          <div id="upto">Up to</div>
+          <div id="percent">
+            <h1>35%</h1>
+            <h3>Savings on Medicines</h3>
+          </div>
+          <hr />
+          <div id="belowPercent">
+            <p>Offers valid on all purchases, when you chose FlexiRewards</p>
+            <button>View Details</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Promotion category end-->
-
-    <!-- Promotion banner start-->
-    <div class="promotion-card-section">
-      <!-- <a href="http://" class="promotion-card">
-                <img src="https://static2.medplusmart.com/live/bannerImage/Mart/179bbcb7a80a5c04be7e455d185aca7d.jpg" title="DoqtarChairBackSupport">
-            </a>
-            <a href="http://" class="promotion-card">
-                <img src="https://static2.medplusmart.com/live/bannerImage/Mart/179bbcb7a80a5c04be7e455d185aca7d.jpg" alt="">
-            </a>
-            <a href="http://" class="promotion-card">
-                <img src="https://static2.medplusmart.com/live/bannerImage/Mart/179bbcb7a80a5c04be7e455d185aca7d.jpg" alt="">
-            </a>
-            <a href="http://" class="promotion-card">
-                <img src="https://static2.medplusmart.com/live/bannerImage/Mart/179bbcb7a80a5c04be7e455d185aca7d.jpg" alt="">
-            </a>
-            <a href="http://" class="promotion-card">
-                <img src="https://static2.medplusmart.com/live/bannerImage/Mart/179bbcb7a80a5c04be7e455d185aca7d.jpg" alt="">
-            </a>
-            <a href="http://" class="promotion-card">
-                <img src="https://static2.medplusmart.com/live/bannerImage/Mart/179bbcb7a80a5c04be7e455d185aca7d.jpg" alt="">
-            </a> -->
+    <div id="catMainDiv" class="catMainLeft">
+      <div id="align">
+        <div id="leftCat" class="catDiv leftCat">
+          Drugs by Therapeutic Category
+        </div>
+        <div id="rightCat" class="catDiv rightCat">
+          Surgicals product by category
+        </div>
+      </div>
+      <div id="align2">
+        <div id="leftTri"></div>
+        <div id="rightTri"></div>
+      </div>
+      <div>
+        <h2 id="heading">Browse drugs by Therapeutic category</h2>
+        <hr />
+      </div>
+      <div id="mainList"></div>
     </div>
-    <!-- Promotion banner end-->
+        
 
-    <!-- Promotion section end -->
+      
+
+     
+
+      
+
+      
+
+      <!-- download ouor app -->
+
+      <div class="download-app-div">
+        <div class="download-app-container">
+          <div>
+            <img
+              src="https://static1.medplusmart.com/medplusmart/assets/_3649eddcab909706a1c11a0b62ddd161_/new_theme/web/images/new/download-app.png"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <div>
+              <h6>Download our app now</h6>
+              <p>
+                Buy general store products and medicines from your mobile at
+                anytime, anywhere
+              </p>
+              <p>Available on:</p>
+            </div>
+            <div>
+              <img
+                src="https://static1.medplusmart.com/medplusmart/assets/_b493453735e6e4eb2438d8f4f4ac53cf_/new_theme/web/images/Google_Play_Store-cssbg.svg"
+                alt=""
+              />
+              <img
+                src="https://static1.medplusmart.com/medplusmart/assets/_211ec1ea25fdedd19882d51c673a439d_/new_theme/web/images/App_Store-cssbg.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="contact">
+          <div class="phone-div">
+            <img
+              src="https://static1.medplusmart.com/medplusmart/assets/_a34d265f3ea369c0259f6cf98563a642_/new_theme/web/images/call.svg"
+              alt=""
+            />
+            <div>
+              <p>Need any help</p>
+              <h3>040-06666676</h3>
+            </div>
+          </div>
+          <div class="subs-form">
+            <div>
+              <p>subscribe for</p>
+              <h3>Latest offers</h3>
+            </div>
+            <form action="">
+              <input type="text" placeholder="Yor email address here" />
+              <button type="submit">subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="bottom-nav">
+          <div>
+            <a href="">About us</a>
+            <a href="">FAQs</a>
+            <a href="">Locate a medplus store</a>
+            <a href="">Track orders</a><a href="">Browse all brands</a>
+            <a href=""> customer feed back </a
+            ><a href="">Community delivery</a> <a href="">Bulk orders</a
+            ><a href="">contact us</a>
+          </div>
+          <img
+            src="https://www.medplusmart.com/new_theme/web/images/xsiteseal_gd_3_h_l_m.png.pagespeed.ic.POGQ56jb50.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="payment-options">
+        <h2>Payments</h2>
+        <div>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <a href="https://icons8.com/icon/86306/android-os"
+        >Android OS icon by Icons8</a
+      >
+      <h1>This would be a header</h1>
+    </footer>
   </body>
-  <script src="promotion.js"></script>
-  <script src="/main.js"></script>
+  
+  <script src="pPage.js"></script>
+  <script src="pPage2.js"></script>
 </html>
