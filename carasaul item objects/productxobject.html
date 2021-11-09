@@ -45,6 +45,7 @@
         align-self: center;
         cursor: pointer;
         display: block;
+        font-size: 200px;
       }
       .pCard button {
         width: fit-content;
@@ -77,6 +78,7 @@
     </style>
   </head>
   <body>
+    <img src="https://static2.medplusmart.com/products/_4329c4_/PAMP0172_T.jpg" alt="" style="transform: scale(0.5);" width="200px" height="200px">
     <div class="container" id="pContainer"></div>
   </body>
 </html>
@@ -153,6 +155,7 @@
 
     var img = document.createElement("img");
     img.setAttribute("src", item.imgLink);
+    // adding image into a div
     var nameSpan = document.createElement("span");
     nameSpan.textContent = item.productName;
     var priceSpan = document.createElement("span");
