@@ -6,47 +6,55 @@
     font-size: 14px;
 }
 
-.fas {
-    font-size: 25px;
-}
-div.download-app-container{
-    width:95vw;
-    margin: 5vh auto 0 auto;
-    border-radius: 16px;
-    gap:0;
+body {
+    background-color: #f8f8f8 !important;
 }
 
-div.download-app-container>div:first-child{
-    min-width:30vw;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+#route {
+    display: none;
 }
 
-div.download-app-container>div>img{
-    width: 100%;   
+#route>span:first-child {
+    color: #28f;
 }
 
+/* footer */
 div.download-app-div {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     padding: 0px;
-    gap:3vh;
+    gap: 3vh;
 }
-div.bottom-nav{
-    width:95vw;
+
+div.download-app-container {
+    width: 95vw;
+    margin: 5vh auto 0 auto;
+    border-radius: 16px;
+    gap: 0;
+}
+
+div.download-app-container>div:first-child {
+    min-width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.download-app-container>div>img {
+    width: 100%;
+}
+
+div.bottom-nav {
+    width: 95vw;
     margin: 0 auto;
 }
-div.bottom-nav>div> a{
-    color:#28f;
 
-}
-body {
-    background-color: #f8f8f8 !important;
+div.bottom-nav>div>a {
+    color: #28f;
 }
 
-
+/*  */
 .carousel {
     position: relative;
     width: 95vw;
@@ -177,13 +185,15 @@ body {
 
 .contact {
     width: 95vw;
-    display:flex;
+    display: flex;
     margin: 0 auto;
 }
-div.phone-div{
-    min-width:30vw;
+
+div.phone-div {
+    min-width: 30vw;
 }
-div.subs-form>form input{
+
+div.subs-form>form input {
     border-bottom: 1px solid #cbcbcb;
 }
 
@@ -212,16 +222,18 @@ div.subs-form>form input{
         margin-top: 1%;
         width: 5%;
     }
-    div.subs-form{
+
+    div.subs-form {
         /* background-color: #cbcbcb; */
         min-width: 40vw;
         display: inline;
     }
-    div.subs-form>*{
+
+    div.subs-form>* {
         text-align: right;
     }
 
-    div.subs-form >form input{
+    div.subs-form>form input {
         width: 20vw;
         overflow: hidden;
         margin-bottom: 5px;
