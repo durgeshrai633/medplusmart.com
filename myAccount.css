@@ -28,6 +28,19 @@ body {
     cursor: pointer;
     background-color: #a71529;
 }
+.cancelButton {
+    border: none;
+    color: #e21b35;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 1px black solid;
+}
+.cancelButton:hover {
+    cursor: pointer;
+    background-color: #e6e4e4;
+}
 .lBody,
 .rBody {
     height: 550px;
@@ -319,7 +332,7 @@ body {
     gap: 10px;
     margin: 15px 0px;
 }
-.unEditableAmount{
+.unEditableAmount {
     background-color: rgb(233, 232, 232);
     font-size: 20px;
     padding: 7px;
@@ -328,7 +341,7 @@ body {
     border: rgb(175, 173, 173) 0.5px solid;
     width: 110px;
 }
-.unEditableAmountB button{
+.unEditableAmountB button {
     color: grey;
     padding: 7px;
     border: rgb(175, 173, 173) 0.5px solid;
@@ -338,7 +351,7 @@ body {
     background-color: white;
     cursor: pointer;
 }
-.walletForm input{
+.walletForm input {
     /* display: inline-block; */
     width: 400px;
     height: 30px;
@@ -346,13 +359,61 @@ body {
     border: none;
     border-bottom: 1px grey solid;
 }
-.walletForm button{
+.walletForm button {
     padding: 7px 20px;
 }
 
-
-
-.walletMainBody{
+.walletMainBody {
     display: flex;
     gap: 30px;
+}
+
+#dataChangePopupCont {
+    z-index: 9;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: transparent;
+}
+#dataChangePopup {
+    width: 60%;
+    margin: 50px 20%;
+    height: 550px;
+    border: 0.5px solid rgb(190, 189, 189);
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 40px;
+}
+#dataChangePopupHead{
+    display: flex;
+    padding: 10px 10px;
+    justify-content: space-between;
+}
+#dataChangePopupHead>h1{
+    font-size: 30px;
+    border-left: 2px red solid;
+    padding-left: 10px;
+}
+
+#dataChangePopupMain{
+    display: flex;
+    justify-content: space-between;
+}
+#dataChangePopupMain1{
+    width: 40%;
+    height: 360px;
+    background-image:url("https://static2.medplusmart.com/live/webpwa/images/my-account-psw-icon-cssbg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#dataChangePopupMain2{
+    height: 360px;
+    width: 55%;
+}
+#dataChangePopupFoot{
+    text-align: center;
+}
+#changePassword:hover,#changeEmail:hover,#changeMobile:hover,#changeAddress:hover{
+    cursor: pointer;
 }

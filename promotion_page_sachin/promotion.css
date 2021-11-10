@@ -1,65 +1,110 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
+    font-family: Roboto, Helvetica\ Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
 }
 
-body{
+.fas {
+    font-size: 25px;
+}
+div.download-app-container{
+    width:95vw;
+    margin: 5vh auto 0 auto;
+    border-radius: 16px;
+    gap:0;
+}
+
+div.download-app-container>div:first-child{
+    min-width:30vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.download-app-container>div>img{
+    width: 100%;   
+}
+
+div.download-app-div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0px;
+    gap:3vh;
+}
+div.bottom-nav{
+    width:95vw;
+    margin: 0 auto;
+}
+div.bottom-nav>div> a{
+    color:#28f;
+
+}
+body {
     background-color: #f8f8f8 !important;
 }
+
 
 .carousel {
     position: relative;
     width: 95vw;
     height: 25vw;
-    margin:0 auto;
+    margin: 0 auto;
 }
-.carousel-slide>img{
+
+.carousel-slide>img {
     width: 100%;
     height: 100%;
 }
+
 .carousel-track-container {
     position: relative;
     height: 100%;
     overflow: hidden;
 }
-.carousel-track{
+
+.carousel-track {
     list-style: none;
     margin: 0;
     padding: 0;
     position: relative;
-    height:100%;
+    height: 100%;
 }
-.carousel-slide{
+
+.carousel-slide {
     position: absolute;
-    top:0;bottom: 0;
+    top: 0;
+    bottom: 0;
     width: 100%;
 }
-.carousel-nav{
+
+.carousel-nav {
     display: flex;
-    justify-content:center;
-    padding:3px 0;
+    justify-content: center;
+    padding: 3px 0;
 }
-.carousel-indicator{
-    width:1.2vw;
-    height:.5vh;
-    background-color:#cbcbcb;
+
+.carousel-indicator {
+    width: 1.2vw;
+    height: .5vh;
+    background-color: #cbcbcb;
     cursor: pointer;
     border: none;
     margin: .5%;
-    border-radius:5px;
-}
-.carousel-indicator.current-slide{
-    background-color:#f22
+    border-radius: 5px;
 }
 
-.category-section{
-    margin-top:2%
+.carousel-indicator.current-slide {
+    background-color: #f22
 }
 
-.category-list{
+.category-section {
+    margin-top: 2%
+}
+
+.category-list {
     display: flex;
     justify-content: center;
     width: 85vw;
@@ -67,71 +112,119 @@ body{
     margin: 1% auto;
 }
 
-.ls-item{
+.ls-item {
     list-style: none;
-    padding:6px 10px;
+    padding: 6px 10px;
     margin-top: 3px;
     transition: all 0.1s ease-out;
 }
 
-.ls-item > a{
+.ls-item>a {
     border: 1px solid #28f;
     color: #28f;
-    border-radius:5px;
+    border-radius: 5px;
     text-decoration: none;
-    padding:6px 14px;
+    padding: 6px 14px;
 }
 
-.active>a{
+.active>a {
     background-color: #001d92;
     color: #fff;
 }
 
-.active>a>i{
+.active>a>i {
     margin-right: 10px;
 }
 
-.ls-item > a:hover{
+.ls-item>a:hover {
     background-color: #001d92;
     color: #fff;
 }
 
 .promotion-card-section {
     width: 95vw;
-    margin:0 auto;
-    display:flex;
+    margin: 0 auto;
+    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;   
+    flex-wrap: wrap;
 }
 
-.promotion-card{
-    width:49%;
+.promotion-card {
+    width: 49%;
     margin-bottom: 1%;
     border: 1.5px solid #f8f8f8;
     border-radius: 3px;
 }
 
-.promotion-card>img{
-     width: 100%;
-     border-radius: 3px;
+.promotion-card>img {
+    width: 100%;
+    border-radius: 3px;
 }
 
-.promotion-card:hover{
+.promotion-card:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition:all 0.5s ease;
+    transition: all 0.5s ease;
     transform: scale(1.009);
 }
 
-@media only screen and (max-width: 480px){
-    .promotion-card{
-        width:100%;
+#route {
+    display: none;
+}
+
+#route>span:first-child {
+    color: #28f;
+}
+
+.contact {
+    width: 95vw;
+    display:flex;
+    margin: 0 auto;
+}
+div.phone-div{
+    min-width:30vw;
+}
+div.subs-form>form input{
+    border-bottom: 1px solid #cbcbcb;
+}
+
+@media only screen and (max-width: 480px) {
+    #route {
+        display: block;
+        width: 95vw;
+        margin: 5vh auto;
+        font-weight: lighter;
     }
-    .category-section{
+
+    .nav-bar,
+    div.main-nav {
+        display: none;
+    }
+
+    .promotion-card {
+        width: 100%;
+    }
+
+    .category-section {
         margin: 5%;
     }
-    .carousel-indicator{
+
+    .carousel-indicator {
         margin-top: 1%;
         width: 5%;
     }
-}
+    div.subs-form{
+        /* background-color: #cbcbcb; */
+        min-width: 40vw;
+        display: inline;
+    }
+    div.subs-form>*{
+        text-align: right;
+    }
 
+    div.subs-form >form input{
+        width: 20vw;
+        overflow: hidden;
+        margin-bottom: 5px;
+    }
+
+}

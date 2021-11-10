@@ -437,6 +437,9 @@
             <img src="https://www.medplusmart.com/new_theme/web/images/xsiteseal_gd_3_h_l_m.png.pagespeed.ic.POGQ56jb50.png" alt="">
           </div>
         </div>
+        <div id="dataChangePopupCont">
+            
+        </div>
     </body>
     <script src="main.js"></script>
 </html>
@@ -458,28 +461,28 @@
                 <div class="iconAccDetails">
                     <img src="https://static2.medplusmart.com/live/webpwa/images/my-account-password-icn-cssbg.svg" alt="">
                     <div>
-                        <p>Password | <span class="colorInfo">Change Password</span> </p>
+                        <p>Password | <span id="changePassword" class="colorInfo">Change Password</span> </p>
                         <p class="colorInfo">*******</p>
                     </div>
                 </div>
                 <div class="iconAccDetails">
                     <img src="https://static2.medplusmart.com/live/webpwa/images/my-account-mail-icn-cssbg.svg" alt="">
                     <div>
-                        <p>Email | <span class="colorInfo">Change Email</span></p>
+                        <p>Email | <span id="changeEmail" class="colorInfo">Change Email</span></p>
                         <p class="colorInfo">${userDetails.email}</p>
                     </div>
                 </div>
                 <div class="iconAccDetails">
                     <img src="https://static2.medplusmart.com/live/webpwa/images/my-account-phn-icn-cssbg.svg" alt="">
                     <div>
-                        <p>Mobile Number | <span class="colorInfo">Change Mobile</span></p>
+                        <p>Mobile Number | <span id="changeMobile" class="colorInfo">Change Mobile</span></p>
                         <p>${userDetails.mobile}</p>
                     </div>
                 </div>
                 <div class="iconAccDetails">
                     <img src="https://static2.medplusmart.com/live/webpwa/images/my-account-loc-icn-cssbg.svg" alt="">
                     <div>
-                        <p>Address | <span class="colorInfo">Change Address</span></p>
+                        <p>Address | <span id="changeAddress" class="colorInfo">Change Address</span></p>
                         <p>${userDetails.address}</p>
                     </div>
                 </div>
@@ -980,7 +983,8 @@
                     <h4>No complaints available.</h4>
                 </div>
             </div>`
-    // document.querySelector(".rBody").innerHTML = myAcc;
+    
+    document.querySelector(".rBody").innerHTML = myAcc;
     var previousSelected = document.getElementById("myAcc");
     // console.log(flexiRewardsItemData)
 
@@ -994,6 +998,33 @@
         document.getElementById("myAcc").style.color = "#ff4444";
         document.getElementById("myAcc").style.borderRight = "4px solid #ff4444";
         document.getElementById("myAcc").style.borderRightLength = "5px";
+
+        var dataChangeConstantHTML=`<div id="dataChangePopup">
+                <div id="dataChangePopupHead"><h1>Change Password</h1><i style="color: gray;" class="fas fa-times-circle fa-3x"></i></div>
+                <hr>
+                <div id="dataChangePopupMain">
+                    <div id="dataChangePopupMain1"></div>
+                    <div id="dataChangePopupMain2">
+                        
+                    </div>
+                </div>
+                <div id="dataChangePopupFoot">
+                    <button style="margin-right: 20px;" class="cancelButton">Cancel</button>
+                    <button class="redButton">Update</button>
+                </div>
+            </div>`
+
+            function showDataChangePopup(){
+                document.getElementById("dataChangePopupCont").innerHTML=dataChangeConstantHTML
+            }
+
+            document.getElementById("changePassword").addEventListener("click",function (){
+                showDataChangePopup()
+
+                var input1=document.createElement("input")
+            })
+
+            
     });
     document.getElementById("purHis").addEventListener("click", function () {
         document.querySelector(".rBody").style.height = "550px";
