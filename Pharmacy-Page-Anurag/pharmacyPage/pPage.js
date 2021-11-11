@@ -135,3 +135,16 @@ sign.style.border="none";
      }
 }
 
+
+// Printing username
+function printUserName(user) {
+  var div = document.getElementById("userNameDiv2");
+  document.getElementById("userNameDiv1").style.display = "none";
+  var span = document.createElement("span");
+  span.textContent = user.userName;
+  var icon = document.createElement("span");
+  icon.innerHTML =
+    '<i class="far fa-user-circle"><i class="fas fa-sort-down"></i>';
+  div.innerHTML = "";
+  div.append(span, icon);
+}
