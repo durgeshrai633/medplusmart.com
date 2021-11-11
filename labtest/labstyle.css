@@ -35,19 +35,20 @@
   margin-left: 1%;
 }
 #signinregister {
-  padding: 0px;
+  padding: 10px;
   box-sizing: border-box;
   height: 40px;
-  color:black;
-  /* border: 1px solid red; */
+  color:red;
+  border: 1px solid red;
   background-color: white;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 13px;
   gap: 10px;
-  border: none;
+
+  /* border: none; */
 }
 .labnavlocation {
   /* border: 1px solid green; */
@@ -84,6 +85,7 @@
 }
 
 .labnavlocation > :nth-child(2) input {
+  outline: none;
   width: 79%;
   height: 84%;
   font-size: 15px;
