@@ -417,3 +417,14 @@ body {
 #changePassword:hover,#changeEmail:hover,#changeMobile:hover,#changeAddress:hover{
     cursor: pointer;
 }
+#dataChangePopupMain2 input{
+    margin-top: 40px;
+    width: 350px;
+    height: 35px;
+    border: none;
+    border-bottom: 2px gray solid;
+}
+#dataChangePopupMain2 input:{
+    border: none;
+    border-bottom: 2px green solid;
+}
