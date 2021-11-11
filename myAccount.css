@@ -81,7 +81,7 @@ body {
 }
 .accDetails {
     width: 100%;
-    height: 250px;
+    height: 280px;
     border: rgb(180, 177, 177) 1px solid;
     border-radius: 5px;
     margin-top: 50px;
@@ -102,6 +102,12 @@ body {
 }
 .iconAccDetails > div > p {
     margin: 5px 10px;
+}
+.iconAccDetails:nth-child(4) > div > p:nth-child(2) {
+    margin: 5px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 40px;
 }
 .colorInfo {
     color: #4a9cee;
@@ -385,35 +391,68 @@ body {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 40px;
 }
-#dataChangePopupHead{
+#dataChangePopupHead {
     display: flex;
     padding: 10px 10px;
     justify-content: space-between;
 }
-#dataChangePopupHead>h1{
+#dataChangePopupHead > h1 {
     font-size: 30px;
     border-left: 2px red solid;
     padding-left: 10px;
 }
 
-#dataChangePopupMain{
+#dataChangePopupMain {
     display: flex;
     justify-content: space-between;
 }
-#dataChangePopupMain1{
+#dataChangePopupMain1 {
     width: 40%;
     height: 360px;
-    background-image:url("https://static2.medplusmart.com/live/webpwa/images/my-account-psw-icon-cssbg.svg");
+    background-image: url("https://static2.medplusmart.com/live/webpwa/images/my-account-psw-icon-cssbg.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
-#dataChangePopupMain2{
+#dataChangePopupMain2 {
     height: 360px;
     width: 55%;
 }
-#dataChangePopupFoot{
+#dataChangePopupFoot {
     text-align: center;
 }
-#changePassword:hover,#changeEmail:hover,#changeMobile:hover,#changeAddress:hover{
+#changePassword:hover,
+#changeEmail:hover,
+#changeMobile:hover,
+#changeAddress:hover {
     cursor: pointer;
+}
+#dataChangePopupMain2 input {
+    margin-top: 40px;
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-bottom: 2px gray solid;
+}
+#dataChangePopupMain2 input:focus {
+    outline: 0;
+    width: 350px;
+    border-bottom: 2px green solid;
+    background-color: rgb(213, 247, 158);
+}
+
+#dataChangePopupMain2 textarea {
+    outline: 0;
+    margin-top: 40px;
+    width: 250px;
+    height: 80px;
+    background: #e6e4e4;
+    border: none;
+}
+#dataChangePopupMain2 textarea:focus {
+    outline: 0;
+    border: none;
+    width: 350px;
+    height: 120px;
+    border-bottom: 2px green solid;
+    background-color: rgb(213, 247, 158);
 }
