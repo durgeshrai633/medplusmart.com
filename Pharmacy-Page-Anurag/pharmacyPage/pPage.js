@@ -114,8 +114,11 @@ function registerUser(e) {
 
   
   }
+
 }
-  var sign=document.getElementById("signin")
+
+
+var sign=document.getElementById("signin")
 
 var userdata=JSON.parse(localStorage.getItem("userList"))
         // console.log(userdata)
@@ -133,6 +136,7 @@ sign.style.fontSize="16px"
 sign.style.border="none";
 
      }
+
 }
 
 

@@ -21,6 +21,41 @@
     />
     <link rel="stylesheet" href="main.css" />
     <!-- <script src="main.js"></script> -->
+
+    <style>
+      .cart-main-div{
+        width: 60%;
+        margin: 20px auto;
+      }
+
+      .cart-product-card{
+        display: flex;
+      }
+
+      .cart-product-card >div{
+        display: flex;
+        flex-direction: column;
+        border: 2px solid red;
+      }
+
+      .cart-product-card >div img{
+        width: 100px;
+        height: 100px;
+      }
+      .cart-product-card>div:last-child{
+        display: flex;
+        flex-direction:column;
+        justify-content:baseline;
+        border: 2px solid green;
+      }
+
+    </style>
+
+
+
+
+
+
   </head>
   <body>
     <!-- Nav bar starts here -->
@@ -81,26 +116,22 @@
         <p style="font-size: 16px; vertical-align: center;display: flex;align-items: center;">Shopping Cart & payment</p>
       </div>
     </div>
-
-
-
     <div style="border: 2px solid red;" class="cart-main-div">
       <div>
         <p>Shopping Cart</p>
-        <div>
+        <div class="cart-product-card">
           <img src="https://static2.medplusmart.com/products/_6b32de_/FAST0098_T.jpg" alt="">
           <div>
             <span>FAST&UP VITALIZE EFFERVESCENT MULTIVITAMINS 20S TABLET ORANGE</span>
             <span>1 Unit(s) / pack |MRP/Pack  ₹ 390.00</span>
             <span>Total Price ₹ 370.50</span>
           </div>
+          <div><button>Remove</button></div>
+          
         </div>
-      </div>
-      <div>
-
       </div>
     </div>
   </body>
-  <script src="mainCaro.js"></script>
-  <script src="main.js"></script>
+  <!-- <script src="mainCaro.js"></script>
+  <script src="main.js"></script> -->
 </html>
