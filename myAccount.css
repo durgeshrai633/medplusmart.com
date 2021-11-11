@@ -426,14 +426,17 @@ body {
 #changeAddress:hover {
     cursor: pointer;
 }
-#dataChangePopupMain2 input {
+#dataChangePopupMain2 input, .walletForm input {
     margin-top: 40px;
     width: 250px;
     height: 35px;
     border: none;
     border-bottom: 2px gray solid;
 }
-#dataChangePopupMain2 input:focus {
+.walletForm input{
+    margin-top: 10px;
+}
+#dataChangePopupMain2 input:focus, .walletForm input:focus{
     outline: 0;
     width: 350px;
     border-bottom: 2px green solid;

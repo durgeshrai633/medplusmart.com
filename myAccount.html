@@ -464,6 +464,7 @@
 </html>
 <script src="flexiRewardsItemData.js"></script>
 <script>
+    var addingCash = 3000;
     var userDetails = JSON.parse(localStorage.getItem("userDetails")) || {
         userId: "60178396",
         userName: "Vikash Kumar",
@@ -472,6 +473,8 @@
         userMobile: "8986298980",
         userAddress: "Qr- 407/800, L. B. Shashtri Nagar, Patna-23",
         userRewardPoint: "30",
+        userRegularCash: "0.00",
+        userFlexiCash: "33.33",
     };
 
     var myAcc = `<p class="greetUser"><strong>Hello,</strong> ${userDetails.userName}</p>
@@ -960,13 +963,19 @@
                         <div class="lWalletMainBody111"><img src="https://static2.medplusmart.com/live/webpwa/images/medpluswallet-icn.49f0bc611a4c9c1e95cb5c4f9fa6f6bc.png" alt=""></div>
                         <div class="lWalletMainBody112">
                           <p>Total Wallet Balance</p>
-                          <p>₹ 0.00</p>
+                          <p id="totalCashShowing">₹ ${
+                              +userDetails.userRegularCash + +userDetails.userFlexiCash
+                          }</p>
                         </div>
                       </div>
                       <div class="lWalletMainBody12">
                         
-                          <p><span>RegularCash:</span><span> <strong>₹ 0.00</strong></span></p>
-                          <p><span>FlexiCash:</span><span><strong>₹ 0.00</strong></span></p>
+                          <p><span>RegularCash:</span><span> <strong id="regularCashShowing">₹ ${
+                              userDetails.userRegularCash
+                          }</strong></span></p>
+                          <p><span>FlexiCash:</span><span><strong>₹ ${
+                              userDetails.userFlexiCash
+                          }</strong></span></p>
                         
                       </div>
                     </div>
@@ -978,20 +987,20 @@
                   </div>
                   <div class="rWalletMainBody">
                     <h2>Add Money to Wallet</h2>
-                    <div class="unEditableAmount">RS 3000</div>
+                    <div class="unEditableAmount">RS ${addingCash}</div>
                     <div class="unEditableAmountB">
-                      <button>+500  <i class="fas fa-plus-circle"></i></button>
-                      <button>+1000  <i class="fas fa-plus-circle"></i></button>
-                      <button>+1500  <i class="fas fa-plus-circle"></i></button>
+                      <button id="add500">+500  <i class="fas fa-plus-circle"></i></button>
+                      <button id="add1000">+1000  <i class="fas fa-plus-circle"></i></button>
+                      <button id="add1500">+1500  <i class="fas fa-plus-circle"></i></button>
                     </div>
                     <p><i class="fas fa-info-circle"></i> Minimum balance to load ₹ 3000</p>
                     <p style="margin: 30px 0 30px; font-size: 18px;">Enter following details as per Debit Card</p>
                     <form class="walletForm">
-                      <input type="text" placeholder="Enter Your Name"><br>
-                      <input type="number" id="" placeholder="Enter Card Number"><br>
-                      <input type="month" id="" placeholder="Enter Expiry Date"><br>
-                      <input type="number" id="" placeholder="Enter CVV"><br>
-                      <button class="redButton">Add Money</button>
+                      <input type="text" id="cardName" placeholder="Enter Your Name"><br>
+                      <input type="number" id="cardNumber" placeholder="Enter Card Number"><br>
+                      <input type="month" id="cardExpDate" placeholder="Enter Expiry Date"><br>
+                      <input type="number" id="cardCVV" placeholder="Enter CVV"><br>
+                      <button id="addCashToWallet" class="redButton">Add Money</button>
                     </form>
                   </div>
                 </div>`;
@@ -1223,11 +1232,11 @@
         document.getElementById("healthRec").style.borderRight = "4px solid #ff4444";
     }
     document.getElementById("healthRec").addEventListener("click", function () {
-        showhealthRec()
+        showhealthRec();
     });
 
     // Showing Frequently Ordered List
-    function showfreOrdList(){
+    function showfreOrdList() {
         document.querySelector(".rBody").style.height = "550px";
         document.querySelector(".rBody").innerHTML = "";
         document.querySelector(".rBody").innerHTML = freOrdList; //TO be changed
@@ -1238,11 +1247,11 @@
         document.getElementById("freOrdList").style.borderRight = "4px solid #ff4444";
     }
     document.getElementById("freOrdList").addEventListener("click", function () {
-        showfreOrdList()
+        showfreOrdList();
     });
 
     // Showing FlexiRewards
-    function showflexiRew(){
+    function showflexiRew() {
         document.querySelector(".rBody").innerHTML = "";
         document.querySelector(".rBody").style.height = "1525px";
         var flexiRew = `<div class="purHis">
@@ -1298,12 +1307,13 @@
         document.getElementById("flexiRew").style.borderRight = "4px solid #ff4444";
     }
     document.getElementById("flexiRew").addEventListener("click", function () {
-        showflexiRew()
+        showflexiRew();
     });
 
     // Showing My Wallets
-    function showmyWall(){
-        document.querySelector(".rBody").style.height = "860px";
+
+    function showmyWall() {
+        document.querySelector(".rBody").style.height = "870px";
         document.querySelector(".rBody").innerHTML = "";
         document.querySelector(".rBody").innerHTML = myWall; //TO be changed
         previousSelected.style.color = "black";
@@ -1311,13 +1321,58 @@
         previousSelected = document.getElementById("myWall"); //to be changed
         document.getElementById("myWall").style.color = "#ff4444";
         document.getElementById("myWall").style.borderRight = "4px solid #ff4444";
+        document.getElementById("add500").addEventListener("click", function () {
+            addingCash += 500;
+            document.querySelector(".unEditableAmount").innerHTML = `RS ${addingCash}`;
+        });
+        document.getElementById("add1000").addEventListener("click", function () {
+            addingCash += 1000;
+            document.querySelector(".unEditableAmount").innerHTML = `RS ${addingCash}`;
+        });
+        document.getElementById("add1500").addEventListener("click", function () {
+            addingCash += 1500;
+            document.querySelector(".unEditableAmount").innerHTML = `RS ${addingCash}`;
+        });
     }
     document.getElementById("myWall").addEventListener("click", function () {
-        showmyWall()
+        event.preventDefault();
+        showmyWall();
+        var allOkToAddCash = true;
+        document.getElementById("addCashToWallet").addEventListener("click", function () {
+            event.preventDefault();
+            if (document.getElementById("cardNumber").value.length !== 16) {
+                alert("Card Number should be of 16 digits");
+                allOkToAddCash = false;
+                // showmyWall();
+            }
+            if (
+                document.getElementById("cardExpDate").value > "2029" ||
+                document.getElementById("cardExpDate").value === ""
+            ) {
+                alert("Expiry Date should be less than 12/2029 and Greater than Today");
+                allOkToAddCash = false;
+                // showmyWall();
+            }
+            if (document.getElementById("cardCVV").value.length !== 3) {
+                alert("CVV Number should be of 3 digits");
+                allOkToAddCash = false;
+                // showmyWall();
+            }
+            if (allOkToAddCash) {
+                userDetails.userRegularCash = +userDetails.userRegularCash + +addingCash;
+                document.getElementById("totalCashShowing").innerHTML = `₹ ${
+                    +userDetails.userRegularCash + +userDetails.userFlexiCash
+                }`;
+                document.getElementById(
+                    "regularCashShowing"
+                ).innerHTML = `₹ ${userDetails.userRegularCash}`;
+                localStorage.setItem("userDetails", JSON.stringify(userDetails));
+            }
+        });
     });
 
     //Showing My Complaints
-    function showmyComp(){
+    function showmyComp() {
         document.querySelector(".rBody").style.height = "550px";
         document.querySelector(".rBody").innerHTML = "";
         document.querySelector(".rBody").innerHTML = myComp; //TO be changed
@@ -1328,6 +1383,6 @@
         document.getElementById("myComp").style.borderRight = "4px solid #ff4444";
     }
     document.getElementById("myComp").addEventListener("click", function () {
-        showmyComp()
+        showmyComp();
     });
 </script>
