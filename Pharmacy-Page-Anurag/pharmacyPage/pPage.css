@@ -98,18 +98,19 @@ ul {
 }
 .sign-in-button {
   padding: 8px 16px;
-  border: 1px solid #e71c37 !important ;
-  background-color: white;
+  border: 1px solid #e71c37  ;
+  background-color: #f8f8f8;
   color: #e71c37;
   cursor: pointer;
   border-radius: 3px;
+
 }
 
-.sign-in-button:hover {
+/* .sign-in-button:hover {
   color: white;
   background: #e71c37;
   transition: all 0.5s ease;
-}
+} */
 
 /* Signin/registration form container styling */
 .container-sign-in {
