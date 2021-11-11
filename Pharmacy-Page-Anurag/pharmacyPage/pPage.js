@@ -114,6 +114,7 @@ function registerUser(e) {
 
   
   }
+}
   var sign=document.getElementById("signin")
 
 var userdata=JSON.parse(localStorage.getItem("userList"))
