@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Roboto, Helvetica\ Neue, Helvetica, Arial, sans-serif;
+    font-family: Roboto;
     font-size: 14px;
 }
 
@@ -197,6 +197,27 @@ div.subs-form>form input {
     border-bottom: 1px solid #cbcbcb;
 }
 
+div.footer-about-div p,
+strong,
+li {
+    font-size: 12px;
+}
+
+.payment-options {
+    width: 95vw;
+    margin: 2vh auto;
+}
+
+.payment-options>div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer-end>ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 @media only screen and (max-width: 480px) {
     #route {
         display: block;
@@ -239,4 +260,29 @@ div.subs-form>form input {
         margin-bottom: 5px;
     }
 
+    div.partners-div {
+        display: flex;
+        gap:20px;
+        flex-wrap: wrap;
+    }
+
+    #footer-end>ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    div.partners-div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    div.partners-div>div>div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
 }
