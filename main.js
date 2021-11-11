@@ -64,6 +64,7 @@ function removeCart() {
   console.log("clicked");
 }
 
+// redirecting to the cart.html
 document
   .getElementById("goToCartButton")
   .addEventListener("click", function () {
@@ -105,8 +106,8 @@ function registerUser(e) {
       users.push(user);
       localStorage.setItem("userList", JSON.stringify(users));
       localStorage.setItem("user", user.userName);
-      closeModal();
       printUserName(user);
+      closeModal();
     } else {
       alert("Please confirm password");
     }
@@ -116,10 +117,10 @@ function registerUser(e) {
   }
 }
 
+// Printing username
 function printUserName(user) {
   var div = document.getElementById("userNameDiv2");
-  var div = (document.getElementById("userNameDiv1").style.display = "none");
-  console.log(div.innerHTML);
+  document.getElementById("userNameDiv1").style.display = "none";
   var span = document.createElement("span");
   span.textContent = user.userName;
   var icon = document.createElement("span");
@@ -244,10 +245,15 @@ function loadItem() {
   body.style.display = "none";
 }
 
+
+
+// Logging out the user
 function logOutUser() {
-  console.log("user logged out");
   localStorage.removeItem("user");
   document.querySelector("#userNameMenu").style.display = "none";
+  document.getElementById("userNameDiv2").style.display = "none";
+  document.getElementById("userNameDiv1").style.display = "block";
+
 }
 
 // Catagory section
@@ -355,8 +361,6 @@ topOffersProduct.map(function (item) {
   document.getElementById("pContainer").append(cardDiv);
 });
 
-
-
 // Best sellers setion
 
 var bestSellersProduct = [
@@ -419,3 +423,22 @@ bestSellersProduct.map(function (item) {
   cardDiv.append(img, nameSpan, priceSpan, addCartButton, heartIcon);
   document.getElementById("bContainer").append(cardDiv);
 });
+
+// User sign in function starts here
+
+document.getElementById("sign-in-form").addEventListener("submit", userSignIn);
+
+function userSignIn(e) {
+  e.preventDefault();
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var user = users.filter(function (person) {
+    return person.userMobile == email && person.userPassword == password;
+  });
+  if (user[0] !== undefined) {
+    printUserName(user[0]);
+    closeModal();
+  } else {
+    alert("You entered wrong credentials!");
+  }
+}
