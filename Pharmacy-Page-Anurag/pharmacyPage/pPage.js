@@ -64,12 +64,13 @@ function removeCart() {
   console.log("clicked");
 }
 
-// redirecting to the cart.html
+
+  // redirecting to the cart.html
 document
-  .getElementById("goToCartButton")
-  .addEventListener("click", function () {
-    window.location.href = "cart.html";
-  });
+.getElementById("goToCartButton")
+.addEventListener("click", function () {
+  window.location.href = "cart.html";
+});
 
 // Registering the new user
 var users = JSON.parse(localStorage.getItem("userList")) || [];
@@ -114,30 +115,51 @@ function registerUser(e) {
 
   
   }
+  else {
+    alert("You entered registered number!");
+    return;
+  }
 
 }
 
 
-var sign=document.getElementById("signin")
+// var sign=document.getElementById("signin")
 
-var userdata=JSON.parse(localStorage.getItem("userList"))
-        // console.log(userdata)
+// var userdata=JSON.parse(localStorage.getItem("userList"))
+//         console.log(userdata)
 
-var user=localStorage.getItem("user")
+// var user=localStorage.getItem("user")
 // console.log(user)
 
-for(var i=0;i<userdata.length;i++){
-    if(userdata[i].userName==user){
-        sign.innerHTML=`${user}
-        <i style="font-size:24px" class="fa">&#xf2be;</i>`;
+// for(var i=0;i<userdata.length;i++){
+//     if(userdata[i].userName==user){
+
+//         sign.innerHTML=`${user}
+//         <i style="font-size:24px" class="fa">&#xf2be;</i>`;
          
-sign.style.color="black";
-sign.style.fontSize="16px"
-sign.style.border="none";
+// sign.style.color="black";
+// sign.style.fontSize="16px"
+// sign.style.border="none";
 
-     }
+//      }
 
+// }
+document.getElementById("sign-in-form").addEventListener("submit", userSignIn);
+function userSignIn(e) {
+  e.preventDefault();
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var user = users.filter(function (person) {
+    return person.userEmail == email && person.userPassword == password;
+  });
+  if (user[0] !== undefined) {
+    printUserName(user[0]);
+    closeModal();
+  } else {
+    alert("You entered wrong credentials!");
+  }
 }
+
 
 
 // Printing username
@@ -152,3 +174,133 @@ function printUserName(user) {
   div.innerHTML = "";
   div.append(span, icon);
 }
+window.addEventListener("load", function () {
+  if (localStorage.getItem("user")) {
+    document.getElementById("signin").style.display = "none";
+    var div = document.getElementById("userNameDiv2");
+    var span = document.createElement("span");
+    span.setAttribute("id", "userNameSpan");
+    span = localStorage.getItem("user");
+    var icon = document.createElement("span");
+    icon.innerHTML =
+      '<i class="far fa-user-circle"><i class="fas fa-sort-down"></i>';
+    div.innerHTML = "";
+    div.append(span, icon);
+  } else {
+    document.getElementById("signin").style.display = "block";
+  }
+});
+
+//  menu after clicking on username of main page
+
+var button = document.querySelector("#userNameDiv2");
+button.addEventListener("click", function () {
+  document.querySelector("#userNameMenu").style.display = "block";
+});
+var body = document.querySelector("#userNameMenu");
+//   button
+window.addEventListener("load", loadItem);
+
+var loadOptions = `<div id="aDiv">
+        <ul id="aUl">
+          <li class="aLi">
+            <a href="" title="My Account">
+              <img
+                class="sImg"
+                src="https://static2.medplusmart.com/live/webpwa/images/myprofile-icn-36-cssbg.svg"
+                alt=""
+              />
+              My Account
+            </a>
+          </li>
+          <li class="aLi">
+            <a href="">
+              <img
+                class="sImg"
+                src="https://static2.medplusmart.com/live/webpwa/images/purchasehistory-icn-cssbg.svg"
+                alt=""
+              />
+              Purchase History
+            </a>
+          </li>
+          <li class="aLi">
+            <a href="">
+              <img
+                class="sImg"
+                src="https://static2.medplusmart.com/live/webpwa/images/lab-orders-icn-cssbg.svg"
+                alt=""
+              />
+              My Lab Orders
+            </a>
+          </li>
+          <li class="aLi">
+            <a href="">
+              <img
+                class="sImg"
+                src="https://static2.medplusmart.com/live/webpwa/images/refillhistory-icn-cssbg.svg"
+                alt=""
+              />
+              Refill History
+            </a>
+          </li>
+          <li class="aLi">
+            <a href="">
+              <img
+                class="sImg"
+                src="https://static2.medplusmart.com/live/webpwa/images/healthrecords-icn-36-cssbg.svg"
+                alt=""
+              />
+              Health Records
+            </a>
+          </li>
+          <li class="aLi">
+              <a href="">
+                  <img class="sImg" src="https://static2.medplusmart.com/live/webpwa/images/frequently-ordered-list-36px.svg" alt="">
+                  Frequently Ordered List
+              </a>
+          </li>
+          <li class="aLi">
+              <a href="">
+                  <img class="sImg" src="https://static2.medplusmart.com/live/webpwa/images/flexirewards-icn-36-cssbg.svg" alt="">
+              FlexiRewards
+              </a>
+          </li>
+          <li class="aLi">
+              <a href="">
+                  <img class="sImg" src="https://static2.medplusmart.com/live/webpwa/images/medpluswallet-icn-36-cssbg.svg" alt="">
+              My Wallet
+              </a>            
+              
+          </li>
+          <li class="aLi">
+              <a href="">
+                  <img class="sImg" src="https://static2.medplusmart.com/live/webpwa/images/my-complaints-icn-36-cssbg.svg" alt="">
+              My Complaints
+              </a>
+          </li>
+          <hr id="myhr">
+          <li  class="aLi" id="logOutButton" onclick="logOutUser()">
+              <p>Logout</p>
+          </li>
+        </ul>
+      </div>`;
+function loadItem() {
+  body.innerHTML = loadOptions;
+  body.style.display = "none";
+}
+
+
+
+// Logging out the user
+function logOutUser() {
+  localStorage.removeItem("user");
+  document.querySelector("#userNameMenu").style.display = "none";
+  document.getElementById("userNameDiv2").style.display = "none";
+  document.getElementById("userNameDiv1").style.display = "block";
+
+}
+
+// User sign in function starts here
+
+document.getElementById("sign-in-form").addEventListener("submit", userSignIn);
+
