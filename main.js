@@ -436,6 +436,7 @@ function userSignIn(e) {
     return person.userMobile == email && person.userPassword == password;
   });
   if (user[0] !== undefined) {
+    localStorage.setItem("user",user[0].userName);
     printUserName(user[0]);
     closeModal();
   } else {
