@@ -968,3 +968,7 @@ i {
   color: white;
   font-size: 12px;
 }
+
+#active-link {
+  color: #c3161c;
+}

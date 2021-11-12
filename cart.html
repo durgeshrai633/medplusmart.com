@@ -125,6 +125,7 @@
       .card-left-div{
         display: flex;
         width: 600px;
+        gap: 30px;
       }
       .cart-product-details{
         display: flex;
@@ -204,47 +205,7 @@
         <div class="cart-product-main-container">
         <p class="shopping-cart-text">Shopping cart</p>
         <div class="cart-product-container">
-          <div class="cart-product-card">
-            <div class="card-left-div">
-              <img src="https://static2.medplusmart.com/products/_65dbfe_/HORL0079_T.jpg" alt="">
-              <div class="cart-product-details">
-                <a href="#" class="product-title">HORLICKS WOMEN'S PLUS CARAMEL 400G JAR</a>
-                <span class="product-total-price">Total Price - ₹ 299.00</span>
-                <span class="product-final-price">Final Price - ₹ 269.00</span>
-              </div>
-            </div>
-            <div class="card-right-div">
-              <button><i class="fas fa-trash-alt"></i>Remove</button>
-            </div>
-          </div>
-          <div class="cart-product-card">
-            <div class="card-left-div">
-              <img src="https://static2.medplusmart.com/products/_65dbfe_/HORL0079_T.jpg" alt="">
-              <div class="cart-product-details">
-                <a href="#" class="product-title">HORLICKS WOMEN'S PLUS CARAMEL 400G JAR</a>
-                <span class="product-total-price">Total Price ₹ 269.00</span>
-                <span class="product-final-price">Final Price - ₹ 269.00</span>
-              </div>
-            </div>
-            <div class="card-right-div">
-              <button><i class="fas fa-trash-alt"></i>Remove</button>
-            </div>
-          </div>
-          <div class="cart-product-card">
-            <div class="card-left-div">
-              <img src="https://static2.medplusmart.com/products/_65dbfe_/HORL0079_T.jpg" alt="">
-              <div class="cart-product-details">
-                <a href="#" class="product-title">HORLICKS WOMEN'S PLUS CARAMEL 400G JAR</a>
-                <span class="product-total-price">Total Price ₹ 269.00</span>
-                <span class="product-final-price">Final Price - ₹ 269.00</span>
-              </div>
-            </div>
-            <div class="card-right-div">
-              <button><i class="fas fa-trash-alt"></i>Remove</button>
-            </div>
-          </div>
         </div>
-
         <div class="cart-summary">
           <p>Cart-summary</p>
           <table>
@@ -258,7 +219,7 @@
             </tr>
           </table>
         </div>
-        <div >
+        <div>
           <button class="payment-button">Proceed to payment</button>
         </div>
       </div>
@@ -280,5 +241,44 @@
     var user = localStorage.getItem("user");
     console.log(user);
     document.getElementById("userNameSpan").textContent = user;
+
+
+
+    var cartItems = JSON.parse(localStorage.getItem("cart"));
+    console.log(cartItems);
+
+    cartItems.map(function (item){
+      var cardLeftDiv = document.createElement("div");
+      cardLeftDiv.setAttribute("class","card-left-div");
+      var productImg = document.createElement("img");
+      productImg.setAttribute("src",item.imgLink);
+      var cartProductDetails = document.createElement("div");
+
+      cartProductDetails.setAttribute("class","cart-product-details");
+      var productTitle = document.createElement("a");
+      productTitle.textContent = item.productName;
+      productTitle.setAttribute("class","product-title");
+      var productTotalPrice = document.createElement("span");
+      productTotalPrice.setAttribute("class","product-total-price");
+      productTotalPrice.textContent = item.price;
+      var productFinalPrice = document.createElement("span");
+      productFinalPrice.setAttribute("class","product-final-price");
+
+      cartProductDetails.append(productTitle,productTotalPrice,productFinalPrice);
+      cardLeftDiv.append(productImg,cartProductDetails);
+
+      var cardRightDiv = document.createElement("class","card-right-div");
+      cardRightDiv.setAttribute("class","card-right-div");
+      var removeButton = document.createElement("button");
+      removeButton.innerHTML = '<i class="fas fa-trash-alt"></i>Remove';
+      cardRightDiv.append(removeButton);
+
+      var productCard = document.createElement("div");
+      productCard.setAttribute("class","cart-product-card");
+      productCard.append(cardLeftDiv,cardRightDiv);
+
+      document.querySelector(".cart-product-container").append(productCard);
+
+    });
   </script>
 </html>
