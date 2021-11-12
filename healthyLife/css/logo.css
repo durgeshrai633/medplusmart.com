@@ -1,40 +1,51 @@
- 
-    img{
-        padding: 10px;
-        gap: 50px;
-        /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; */
-    }
+
     #container{
      
         font-family:Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
         display: grid;
        grid-template-columns: 50% 50%;
+       
     }
     .mat{
         font-family:Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
         font-size: 13px;
+        
     }
     .mat2{
         font-family:Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
        font-size: 13px;
+      
        
     }
-    h1{
+  #heading2{
         font-family:Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
-        font-size: 18px;
+        font-size: 21px;
+        font-weight:lighter;
     }
-    h3{
-        color: rgb(70, 69, 69);
-        font-size: 16px;
+   #heading{
+       
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-weight:500px;
+        margin-bottom: 5px;
+        color: #343a40;
+        
+    }
+    .head{
+        color: rgb(131, 128, 128);
         font-family:Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
+        font-size: 14px;
     }
-    a{
+  #anchor{
         text-decoration: none;
-        color: #555;
+        color: rgb(131, 128, 128);
+        line-height: 20px;
+     
     }
-    a:hover{
+ 
+    #anchor:hover{
         color: tomato;
-        font-weight: bolder;
+        
     }
   .mat > li {
     list-style: none;
@@ -42,34 +53,149 @@
   
     #locate{
         font-family:Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
-        color: rgb(70, 69, 69);
+        
         text-decoration: underline;
     }
     #locate:hover{
         color: red;
-        font-weight: bolder;
+        font-weight:normal;
     }
     #container2{
         font-family:Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
         display: grid;
-       grid-template-columns: 30% 35%;
+       grid-template-columns: 30% 35% 35%;
      
     }
+ .text3{
+list-style: none;
+line-height: 18px;
+color: rgb(131, 128, 128);
+ }
     .mat2> li{
         list-style: none;
     }
-    #box3 > ul{
-        font-family:Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
-        border: 1px solid red;
-        width: 100%;
-       
-        list-style: none;
-    } 
+ 
     #container2{
         list-style: none;
     }
     .text3{
         font-family:Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
         font-size: 13px;
-        color: rgb(70, 69, 69);
+        color: rgb(131, 128, 128);
     }
+
+      #fb{
+          font-size: 25px;
+          width: 35px;
+          height: 30px;
+          background-color: rgb(148, 143, 143);
+          border-radius: 50px;
+          text-align: center;
+         margin-right: 20px;
+          color:white;
+         
+          padding-top: 7px;
+        
+          
+      }
+      #fb:hover{
+          background-color: #004e75;
+          cursor: pointer;
+      }
+      #twitter{
+        font-size: 25px;
+        width: 35px;
+        height: 30px;
+        background-color: rgb(148, 143, 143);
+        border-radius: 50px;
+        text-align: center;
+       margin-right: 20px;
+        color:white;
+        
+        padding-top: 7px;
+      
+      }
+      #twitter:hover{
+        background-color: #1DA1F2;
+        cursor: pointer;
+    }
+    #insta{
+        font-size: 25px;
+        width: 35px;
+        height: 30px;
+        background-color: rgb(148, 143, 143);
+        border-radius: 50px;
+        text-align: center;
+        
+       margin-right: 20px;
+        color:white;
+       
+        padding-top: 6px;
+      
+      }
+      #insta:hover{
+        background-color: #C13584;
+        cursor: pointer;
+      }
+      #link{
+        font-size: 22px;
+        width: 35px;
+        height: 30px;
+        background-color: rgb(148, 143, 143);
+        border-radius: 50px;
+        text-align: center;
+       margin-right: 20px;
+        color:white;
+      
+        padding-top: 7px;
+      
+      }
+      #link:hover{
+        background-color:#1b7bcf;
+        cursor: pointer;
+      }
+      #youtube{
+        font-size: 23px;
+        width: 35px;
+        height: 30px;
+        background-color: rgb(148, 143, 143);
+        border-radius: 50px;
+        text-align: center;
+       
+       margin-right: 20px;
+        color:white;
+        
+        padding-top: 7px;
+      
+      }
+      #youtube:hover{
+        background-color:#FF0000;
+        cursor: pointer;
+      }
+      #box3 {
+        font-family:Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
+        padding: 1px;
+        background-color: #343a40;
+        margin: 0px -16px;
+      
+    } 
+    #box3>ul{
+        gap:103px;
+        display: flex;
+       
+        justify-content:start;
+        list-style: none;
+      font-size: 15px;
+    }
+    #box3>ul>li>img{
+        height: 18px;
+            vertical-align: bottom;
+            margin-right: 5px;
+       
+    }
+    .anchor2{
+        text-decoration: none;
+        color: white;
+        
+    }
+   
