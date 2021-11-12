@@ -269,7 +269,7 @@ margin-left: 2px;
 
 #ab{
 display: grid;
-grid-template-columns: 23% 73%;
+grid-template-rows: 23% 73%;
 padding: 10px 0px 60px 0px; 
 
 }
