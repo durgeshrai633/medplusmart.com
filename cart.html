@@ -23,31 +23,7 @@
     <!-- <script src="main.js"></script> -->
 
     <style>
-      .cart-main-div{
-        width: 60%;
-        margin: 20px auto;
-      }
-
-      .cart-product-card{
-        display: flex;
-      }
-
-      .cart-product-card >div{
-        display: flex;
-        flex-direction: column;
-        border: 2px solid red;
-      }
-
-      .cart-product-card >div img{
-        width: 100px;
-        height: 100px;
-      }
-      .cart-product-card>div:last-child{
-        display: flex;
-        flex-direction:column;
-        justify-content:baseline;
-        border: 2px solid green;
-      }
+      
     </style>
   </head>
   <body>
@@ -109,20 +85,193 @@
         <p style="font-size: 16px; vertical-align: center;display: flex;align-items: center;">Shopping Cart & payment</p>
       </div>
     </div>
-    <div style="border: 2px solid red;" class="cart-main-div">
-      <div>
-        <p>Shopping Cart</p>
-        <div class="cart-product-card">
-          <img src="https://static2.medplusmart.com/products/_6b32de_/FAST0098_T.jpg" alt="">
-          <div>
-            <span>FAST&UP VITALIZE EFFERVESCENT MULTIVITAMINS 20S TABLET ORANGE</span>
-            <span>1 Unit(s) / pack |MRP/Pack  ₹ 390.00</span>
-            <span>Total Price ₹ 370.50</span>
+    <style>
+      .cart-main-div{
+        background: #F8F9FA;
+        border: .5px solid #ddd;
+        position: relative;
+      }
+      .cart-products-div{
+        width: 70%;
+        /* border: 2px solid green; */
+        margin: 30px auto;
+        background-color: white;
+      }
+      .cart-product-main-container{
+        /* border: 2px solid blue; */
+        display: flex;
+        flex-direction: column;
+      }
+      .cart-product-main-container > p{
+        font-size: 1rem;
+        display: block;
+        padding-block: 20px;
+        padding-left: 10px;
+      }
+ 
+      .cart-product-container{
+        /* border: 2px solid black; */
+      }
+
+      .cart-product-card{
+        /* border: 2px solid yellow; */
+        display: flex;
+        margin: auto;
+        gap: 20px;
+        padding: 20px;
+        border-top: 1px solid #ddd;
+
+      }
+      .card-left-div{
+        display: flex;
+        width: 600px;
+      }
+      .cart-product-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 15px;
+      }
+      .product-title{
+        font-size: 1rem;
+      }
+      .product-title:hover{
+        text-decoration: underline;
+        transition: all 0.4s ease;
+      }
+      .card-right-div button{
+        border: 1px solid #DC3545;
+        color: #DC3545;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .card-right-div button:hover{
+        color: white;
+        background-color: #DC3545;
+        transition: all .5s ease;
+      }
+      .product-total-price{
+        text-decoration: line-through;
+      }
+      .product-final-price{
+        color: black;
+        font-weight: 500;
+        font-size: 13px;
+      }
+
+      .cart-summary{
+        /* width: 400px; */
+        width: 100%;
+        margin: auto;
+        font-size: 15px;
+        margin-block: 40px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      .cart-summary table tr,td{
+        padding: 10px;
+      }
+      .payment-button{
+      padding: 10px 20px;
+      background-color: #bc142a;
+      color: white;
+      border: #bc142a;
+      cursor: pointer;
+      text-transform: uppercase;
+      }
+      .payment-button:hover{
+        background-color: #d4102a;
+        transition: all 0.2s ease-in;
+      }
+      .payment-form-div{
+        position: absolute;
+        width: 600px;
+        border: 2px solid red;
+      }
+    </style>
+
+    <div class="cart-main-div">
+      <div class="cart-products-div">
+        <div class="cart-product-main-container">
+        <p class="shopping-cart-text">Shopping cart</p>
+        <div class="cart-product-container">
+          <div class="cart-product-card">
+            <div class="card-left-div">
+              <img src="https://static2.medplusmart.com/products/_65dbfe_/HORL0079_T.jpg" alt="">
+              <div class="cart-product-details">
+                <a href="#" class="product-title">HORLICKS WOMEN'S PLUS CARAMEL 400G JAR</a>
+                <span class="product-total-price">Total Price - ₹ 299.00</span>
+                <span class="product-final-price">Final Price - ₹ 269.00</span>
+              </div>
+            </div>
+            <div class="card-right-div">
+              <button><i class="fas fa-trash-alt"></i>Remove</button>
+            </div>
           </div>
-          <div><button>Remove</button></div>
-          
+          <div class="cart-product-card">
+            <div class="card-left-div">
+              <img src="https://static2.medplusmart.com/products/_65dbfe_/HORL0079_T.jpg" alt="">
+              <div class="cart-product-details">
+                <a href="#" class="product-title">HORLICKS WOMEN'S PLUS CARAMEL 400G JAR</a>
+                <span class="product-total-price">Total Price ₹ 269.00</span>
+                <span class="product-final-price">Final Price - ₹ 269.00</span>
+              </div>
+            </div>
+            <div class="card-right-div">
+              <button><i class="fas fa-trash-alt"></i>Remove</button>
+            </div>
+          </div>
+          <div class="cart-product-card">
+            <div class="card-left-div">
+              <img src="https://static2.medplusmart.com/products/_65dbfe_/HORL0079_T.jpg" alt="">
+              <div class="cart-product-details">
+                <a href="#" class="product-title">HORLICKS WOMEN'S PLUS CARAMEL 400G JAR</a>
+                <span class="product-total-price">Total Price ₹ 269.00</span>
+                <span class="product-final-price">Final Price - ₹ 269.00</span>
+              </div>
+            </div>
+            <div class="card-right-div">
+              <button><i class="fas fa-trash-alt"></i>Remove</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-summary">
+          <p>Cart-summary</p>
+          <table>
+            <tr>
+              <td>No. of Items</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Total amount to be paid</td>
+              <td> ₹  5000</td>
+            </tr>
+          </table>
+        </div>
+        <div >
+          <button class="payment-button">Proceed to payment</button>
         </div>
       </div>
+    </div>
+    <div class="payment-form-div">
+      <form action="">
+        <input type="number" id="cardNumber" placeholder="Enter card number">
+        <input type="number" id="cvv" placeholder="Enter cvv">
+        <input type="date" name="date" id="expDate" placeholder="Expiry date">
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+        <button type="submit">Make payment</button> 
+      </form>
+    </div>
     </div>
   </body>
   <!-- <script src="mainCaro.js"></script>
