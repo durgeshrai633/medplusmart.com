@@ -71,8 +71,14 @@ document
     window.location.href = "cart.html";
   });
 
+// fetching the cart from the localstorage
+
+var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+
 // Registering the new user
 var users = JSON.parse(localStorage.getItem("userList")) || [];
+
 
 document
   .getElementById("registration")
@@ -101,7 +107,6 @@ function registerUser(e) {
         userEmail: email,
         userPassword: password,
         userMobile: mobile,
-        cart: [],
       };
       users.push(user);
       localStorage.setItem("userList", JSON.stringify(users));
@@ -354,6 +359,14 @@ topOffersProduct.map(function (item) {
   var addCartButton = document.createElement("button");
   addCartButton.setAttribute("id", "addCartButton");
   addCartButton.textContent = "Add to Cart";
+  addCartButton.addEventListener("click",function(){
+    cartItems.push(item);
+    localStorage.setItem("cart",JSON.stringify(cartItems));
+    addCartButton.style.opacity = 0.8;
+    addCartButton.textContent = "Added to Cart";
+    addCartButton.disabled = true;
+    addCartButton.style.cursor = "not-allowed";
+  })
 
   var cardDiv = document.createElement("div");
   cardDiv.setAttribute("class", "pCard");
@@ -417,7 +430,15 @@ bestSellersProduct.map(function (item) {
   var addCartButton = document.createElement("button");
   addCartButton.setAttribute("id", "addCartButton");
   addCartButton.textContent = "Add to Cart";
-
+  addCartButton.addEventListener("click",function(){
+    cartItems.push(item);
+    localStorage.setItem("cart",JSON.stringify(cartItems));
+    console.log("clicked");
+    addCartButton.style.opacity = 0.8;
+    addCartButton.textContent = "Added to Cart";
+    addCartButton.disabled = true;
+    addCartButton.style.cursor = "not-allowed";
+  })
   var cardDiv = document.createElement("div");
   cardDiv.setAttribute("class", "pCard");
   cardDiv.append(img, nameSpan, priceSpan, addCartButton, heartIcon);
