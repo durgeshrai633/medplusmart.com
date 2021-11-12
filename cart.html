@@ -48,14 +48,7 @@
         justify-content:baseline;
         border: 2px solid green;
       }
-
     </style>
-
-
-
-
-
-
   </head>
   <body>
     <!-- Nav bar starts here -->
@@ -68,7 +61,7 @@
           >
         </div>
         <div class="right-div flex row">
-          <div>
+          <div style="display: flex;align-items: center;gap: 10px;">
             <span
               id="userNameSpan"
               style="
@@ -79,8 +72,8 @@
                 cursor: pointer;
                 font-weight: 400;
               "
-              >Username<i class="far fa-user-circle"></i
-            ></span>
+              >Username</span><i style="font-size: 18px;" class="far fa-user-circle"></i
+                >
           </div>
         </div>
       </div>
@@ -134,4 +127,10 @@
   </body>
   <!-- <script src="mainCaro.js"></script>
   <script src="main.js"></script> -->
+
+  <script>
+    var user = localStorage.getItem("user");
+    console.log(user)
+    document.getElementById("userNameSpan").textContent = user;
+  </script>
 </html>
