@@ -465,7 +465,7 @@
 <script src="flexiRewardsItemData.js"></script>
 <script>
     var addingCash = 3000;
-    var rewardCart=[]
+    var rewardCart = [];
     var userDetails = JSON.parse(localStorage.getItem("userDetails")) || {
         userId: "60178396",
         userName: "Vikash Kumar",
@@ -1013,7 +1013,6 @@
                 </div>
             </div>`;
 
-    
     var previousSelected = document.getElementById("myAcc");
     // console.log(flexiRewardsItemData)
 
@@ -1281,68 +1280,74 @@
 
         // var toShow = ``;
         document.querySelector(".rBody").innerHTML = flexiRew;
-        function displayItemsInflexiRew(){
+        function displayItemsInflexiRew() {
             flexiRewardsItemData.map((item) => {
-                var div1=document.createElement("div")
-                div1.setAttribute("class","flexiItemsCard")
-                
-                var div2=document.createElement("div")
-                div2.setAttribute("class","flexiItemsCardPhoto")
+                var div1 = document.createElement("div");
+                div1.setAttribute("class", "flexiItemsCard");
 
-                var img1=document.createElement("img")
-                img1.setAttribute("class","flexiItemsCardImg")
-                img1.src=item.img_url
+                var div2 = document.createElement("div");
+                div2.setAttribute("class", "flexiItemsCardPhoto");
 
-                div2.append(img1)
+                var img1 = document.createElement("img");
+                img1.setAttribute("class", "flexiItemsCardImg");
+                img1.src = item.img_url;
 
-                var div3=document.createElement("div")
-                div3.setAttribute("class","flexiItemsCardName")
+                div2.append(img1);
 
-                var h3=document.createElement("h3")
-                h3.textContent=item.name
+                var div3 = document.createElement("div");
+                div3.setAttribute("class", "flexiItemsCardName");
 
-                div3.append(h3)
+                var h3 = document.createElement("h3");
+                h3.textContent = item.name;
 
-                var p1=document.createElement("p")
-                p1.textContent="More Detailes"
-                p1.style.margin="2px 5px"
-                p1.style.color="rgb(82, 82, 241)"
+                div3.append(h3);
 
-                var div4=document.createElement("div")
-                div4.setAttribute("class","priceAndPoints")
+                var p1 = document.createElement("p");
+                p1.textContent = "More Detailes";
+                p1.style.margin = "2px 5px";
+                p1.style.color = "rgb(82, 82, 241)";
 
-                var p2=document.createElement("p")
-                p2.innerHTML=item.price
+                var div4 = document.createElement("div");
+                div4.setAttribute("class", "priceAndPoints");
 
-                var h2=document.createElement("h2")
-                h2.textContent=item.points
+                var p2 = document.createElement("p");
+                p2.innerHTML = item.price;
 
-                div4.append(p2,h2)
+                var h2 = document.createElement("h2");
+                h2.textContent = item.points;
 
-                var button=document.createElement("button")
-                button.setAttribute("class","redButton")
-                button.textContent="Add to Cart"
-                button.style.padding="4px"
-                button.style.width="95%"
-                button.style.margin="7px"
+                div4.append(p2, h2);
+
+                var button = document.createElement("button");
+                button.setAttribute("class", "redButton");
+                button.textContent = "Add to Cart";
+                button.style.padding = "4px";
+                button.style.width = "95%";
+                button.style.margin = "7px";
                 button.addEventListener("click", function () {
-                addToRewCart(item);
-            })
+                    addToRewCart(item);
+                });
 
-                div1.append(div2,div3,p1,div4,button)
+                div1.append(div2, div3, p1, div4, button);
 
-                document.getElementById("flexiItemsCards").append(div1)
-            })
+                document.getElementById("flexiItemsCards").append(div1);
+            });
 
-            function addToRewCart(item){
-                alert(item)
-                console.log(item)
+            function addToRewCart(item) {
+                if (userDetails.userRewardPoint > item.points) {
+                    rewardCart.push(item);
+                    localStorage.setItem("rewardCart", JSON.stringify(rewardCart));
+                    document.querySelector(".nItemsInCart").innerHTML = rewardCart.length;
+                }else{
+                    showflexiRew()
+                    alert("You have not sufficient point to add this item to cart.")
+                }
             }
         }
-        
+
         // flexiRew += toShow + "";
         // document.getElementById("flexiItemsCards").innerHTML=toShow
-        displayItemsInflexiRew()
+        displayItemsInflexiRew();
         previousSelected.style.color = "black";
         previousSelected.style.borderRight = "none";
         previousSelected = document.getElementById("flexiRew"); //to be changed
