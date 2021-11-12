@@ -18,6 +18,10 @@ body {
     color: #28f;
 }
 
+.fa-shopping-cart,.fa-bell{
+    font-size:25px;
+}
+
 /* footer */
 div.download-app-div {
     display: flex;
@@ -52,6 +56,10 @@ div.bottom-nav {
 
 div.bottom-nav>div>a {
     color: #28f;
+}
+div.partners-div > div:last-child {
+    justify-content:center;
+
 }
 
 /*  */
@@ -264,6 +272,12 @@ li {
         display: flex;
         gap:20px;
         flex-wrap: wrap;
+    }
+
+    div.partners-div>div >div{
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
     }
 
     #footer-end>ul {
