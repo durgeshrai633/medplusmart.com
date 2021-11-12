@@ -1,9 +1,237 @@
-#div1{
-    margin-top: 15px;
+.border {
+    border-radius: 3px;
+  }
   
+  /* ends here */
+  /* universal selectors */
+  * {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family:Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #ffffff;
+  }
+  .grid {
+    display: grid;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .grid-col-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .row {
+    flex-direction: row;
+  }
+  
+  .col {
+    flex-direction: column;
+  }
+  
+  img {
+    max-width: 100%;
+    /* height: auto; */
+  }
+      .top-nav {
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    align-items: center;
+    padding: 5px 20px;
+  }
+  .left-div {
+    width: fit-content;
+    /* border: 2px solid gray; */
+  }
+  .right-div {
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+    gap: 20px;
+    color: black;
+  }
+  .download {
+    align-items: center;
+    gap: 15px;
+  }
+  .download > img {
+    cursor: pointer;
+  }
+  .download > img:hover {
+    color: #e71c37;
+  }
+  .logo {
+    background-color: #c3161c;
+    padding: 5px 16px;
+    color: #fbf1f2;
+    font-weight: 800;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  .logo > span {
+    color: #ffffff;
+    font-weight: 500;
+  }
+  .sign-in-button {
+    padding: 8px 16px;
+    border: 1px solid #e71c37 !important ;
+    background-color: white;
+    color: #e71c37;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .sign-in-button:hover {
+    color: white;
+    background: #e71c37;
+    transition: all 0.5s ease;
+  }
+  
+  /* Signin/registration form container styling */
+  .container-sign-in {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid green;
+    z-index: 1050;
+  }
+  .location-nav {
+    /* padding: 10px 0; */
+    padding: 5px 20px;
+    justify-content: space-between;
+    border-block: 1px solid #dedede;
+    margin-top: 5px;
+  }
+  .location-nav > div:first-child {
+    margin-right: 40px;
+  }
+  .location-nav > div:nth-child(2) {
+    border: 1px solid #dedede;
+    position: relative;
+  }
+  .location-nav > div > span {
+    background: #dedede;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 10px;
+  }
+  .location-nav > div h3,
+  h4 {
+    font-weight: 400;
+  }
+  .right-location-div > * {
+    background-color: #f8f9fa;
+    font-size: 15px;
+  }
+  #searchButton {
+    padding-inline: 10px;
+  }
+  #searchButton:hover {
+    outline: 1px solid #dedede;
+  }
+  
+  .padding-inline {
+    padding-inline: 20px;
+  }
+  .no-border {
+    border: none;
+    outline: none;
+  }
+  .allProducts:hover,
+  #searchButton:hover {
+    cursor: pointer;
+  }
+  
+  #search-menu {
+    position: absolute;
+    top: 100%;
+    width: 150px;
+    display: none;
+    background-color: white;
+    border: 1px solid #dedede;
+    z-index: 1100;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+  }
+  #search-menu > a {
+    display: block;
+    padding: 5px 10px;
+    text-align: justify;
+  }
+  
+  #search-menu > a:hover {
+    color: red;
+  }
+  
+  .last-location-div {
+    justify-content: space-between;
+    flex-basis: 380px;
+  }
+  
+  .last-location-div > div > span {
+    font-size: 25px;
+  }
+  
+  .last-location-div button {
+    padding-inline: 25px;
+    background: #08ce73;
+    color: white;
+    border: 1px solid #08ce73;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+  }
+  .last-location-div button i {
+    margin-right: 5px;
+  }
+  i {
+    cursor: pointer;
+  }
+  
+  .last-location-div button:hover {
+    opacity: 0.8;
+  }
+  .shopping-cart-list-div {
+    position: absolute;
+    background: white;
+    width: 300px;
+    right: 5px;
+    top: 110px;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+    display: none;
+    z-index: 1110;
+  }
+
+  
+/* main nav bar */
+
+#div1{
+   
+  margin: auto;
     width: 98%;
     height: 65px;
-padding: 8px;
+padding: 10px;
 line-height: 15px;
 background-color: #21384f;
 color: whitesmoke;
@@ -22,7 +250,7 @@ font-family:Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
 
 #box{
 display: grid;
-grid-template-columns: 75% 25%;
+grid-template-columns: 73% 25%;
 padding: 20px;
 }
 #div2{
@@ -34,17 +262,22 @@ margin-left: 2px;
 
 
 }
-
+.content1{
+    margin-top: 20px;
+}
 
 
 #ab{
 display: grid;
-grid-template-columns: 23% 77%;
-padding: 10px;
+grid-template-columns: 23% 73%;
+padding: 10px 0px 60px 0px; 
+
 }
-img{
-width: 95%;
-height: 65%;
+
+#img_Url{
+width: 88%;
+
+
 }
 #nav{
 border-left: 1px solid rgb(194, 192, 192);
@@ -52,27 +285,33 @@ border-left: 1px solid rgb(194, 192, 192);
 background-color: white;
 
 }
-li:hover{
+
+#list:hover{
 
 color: red;
 }
-ul{
+#uLists{
+margin-left: 15px;
 
 font-size: 14px;
 font-family:Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
 font-weight: lighter;
 
 }
-li{
+ #list{
 
-color: #555;
+color: rgb(65, 63, 63);
 list-style: none;
+border-bottom: 1px solid rgb(196, 190, 190);
+
+padding: 2px 0px 5px 8px;
 
 }
 .arr1{
 font-size: 18px;
 float:right;
-margin-top: 0px;
+margin-top: -5px;
+
 
 }
 
@@ -84,18 +323,51 @@ color: #555;
 .arrow:hover{
 color: tomato;
 }
-a{
-
+#darrow{
+padding-top: 1px;
 text-decoration: none;
 }
 #artical{
 float: right;
-
+text-decoration: none;
 color: red;
 font-size: 14px;
 font-family:Roboto,Helvetica\ Neue,Helvetica,Arial,sans-serif;
 }
+
 #artical:hover{
 color: black;
 }
 
+li{
+ list-style: none;   
+}
+
+.main-nav {
+    height: 40px;
+    display: flex;
+    padding: 5px 25px;
+    background-color: #f8f9fa;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1;
+    box-shadow: 0 0.125rem 0.25rem rgb(8 8 8 / 8%);
+  }
+  .main-nav{
+      list-style: none;
+  }
+  .nav-list {
+    gap: 40px;
+  }
+  .nav-list-item a {
+    color: #343a40;
+  }
+  
+  .nav-list-item a:hover {
+    color: #e71c56;
+  }
+  .nav-list-item a:active {
+    color: #81092b;
+  }
+  

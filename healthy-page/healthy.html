@@ -7,56 +7,234 @@
 
     <link rel="stylesheet" href="healthy.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+  />
 </head>
 <body>
-          
+    <div class="firstdiv">
+
+        
+    <div class="nav-bar">
+        <!-- Top nav bar starts here -->
+        <div class="top-nav flex row">
+          <div class="left-div">
+            <a href="home.html"
+              ><div class="logo">MedPlus <span>Mart</span></div></a
+            >
+          </div>
+          <div class="right-div flex row">
+            <a href="#">call 040067006700!</a>
+            <a href="#">Store Finder</a>
+            <div class="download flex">
+              <span>Download App</span>
+              <img
+                src="https://img.icons8.com/material-rounded/24/000000/android-os.png"
+              />
+              <img
+                src="https://img.icons8.com/material-sharp/24/000000/mac-os.png"
+              />
+            </div>
+            <div>
+              <button class="sign-in-button" id="signin">Sign in/Register</button>
+            </div>
+          </div>
+        
+        </div>
+        <div class="location-nav flex">
+            <div class="left-location-div flex border">
+              <span>
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+              <div>
+                <h3>6,56, Moosapet, Bhavaninagr...</h3>
+                <h4>Home delivery and store pickup available</h4>
+              </div>
+            </div>
+            <div class="right-location-div flex border">
+              <button
+                class="padding-inline no-border allProducts"
+                id="searchMenu"
+                onblur="removeSearchList()"
+              >
+                All Products <span><i class="fas fa-caret-down"></i></span>
+              </button>
+              <div id="search-menu">
+                <a id="general-link" class="search-menu-item" href="#"
+                  ><i class="fas fa-check-circle" style="margin-right: 5px"></i
+                  >General store</a
+                >
+                <a class="search-menu-item" href="https://www.facebook.com"
+                  ><i class="fas fa-check-circle" style="margin-right: 5px"></i
+                  >Pharmacy</a
+                >
+                <a class="search-menu-item" href="#"
+                  ><i class="fas fa-check-circle" style="margin-right: 5px"></i>All
+                  products</a
+                >
+              </div>
+              <input
+                type="text"
+                id="search"
+                onblur="putPlaceholder()"
+                class="no-border"
+                placeholder="Search for... general or pharma products"
+                style="width: 400px; padding-left: 10px"
+              />
+              <button class="no-border" id="searchButton">
+                <span><i class="fas fa-search"></i></span>
+              </button>
+            </div>
+    
+            <div class="last-location-div flex border">
+              <div id="cart-mini-menu" class="shopping-cart-list-div">
+                <div
+                  class="flex"
+                  style="justify-content: space-between; padding: 10px"
+                >
+                  <h3>Current order</h3>
+                  <span href="" onclick="removeCart()">clear</span>
+                </div>
+                <table style="text-align: left; padding: 10px">
+                  <thead>
+                    <tr>
+                      <th>Product name</th>
+                      <th>Qty</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>HIMALAYA TOTAL CARE BABY PANTS M 54S</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button
+                  style="width: 100%; background: #e93049; padding-block: 10px"
+                  id="goToCartButton"
+                >
+                  View Shopping Cart
+                </button>
+              </div>
+              <button><i class="fas fa-cloud-upload-alt"></i>Upload</button>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  gap: 30px;
+                  position: relative;
+                "
+              >
+                <span
+                  ><span
+                    style="
+                      position: absolute;
+                      background: red;
+                      color: white;
+                      font-size: 8px;
+                      border-radius: 50%;
+                      width: 10px;
+                      text-align: center;
+                    "
+                    >0</span
+                  ><i class="fas fa-bell"></i
+                ></span>
+                <span
+                  ><span
+                    style="
+                      position: absolute;
+                      background: red;
+                      color: white;
+                      font-size: 8px;
+                      border-radius: 50%;
+                      width: 10px;
+                      text-align: center;
+                    "
+                    >0</span
+                  ><i onclick="viewShoppingCart()" class="fas fa-shopping-cart"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+</div>
+<div class="main-nav">
+    <ul class="nav-list flex">
+      <li class="nav-list-item"><a href="home.html">Health Store</a></li>
+      <li class="nav-list-item"><a href="">Pharmecy</a></li>
+      <li class="nav-list-item"><a href="">Lab tests</a></li>
+      <li class="nav-list-item">
+        <a href="myAccount.html">Flexi Rewards</a>
+      </li>
+      <li class="nav-list-item">
+        <a href="./promotion_page_sachin/promotion.html">Promotions</a>
+      </li>
+      <li class="nav-list-item"><a href="">Healthy Life</a></li>
+      <li class="nav-list-item">
+        <a href="myAccount.html">MedPlus Wallet</a>
+      </li>
+    </ul>
+  </div>
+<br>
+  
+          <!-- main content -->
     <div id="div1">
         <p>Home / Healthy Life</p>
+     <br>
         <h1>
             Healthy Life
         </h1>
         </div>
         <br>
+
     <div id="box">
     <div id="div2">
        <div id="ab">
         <div>
-    <img
-    src="https://blog.medplusmart.com/wp-content/uploads/2021/10/Exercises-to-Train-for-Easy-Childbirth.jpg"
+    <img id="img_Url"
+    src="https://blog.medplusmart.com/wp-content/uploads/2021/10/Exercises-to-Train-for-Easy-Childbirth.jpg" 
     />
         </div>
-        <div>
+        <div class="content1">
     <h1>
         Best Exercises  for Easy Childbirth 
     </h1>
+    <br>
     <p>
         Everything has its own process; childbirth is no different. Although it is a beautiful experience,
         it can also be quite difficult a situation to handle. One important milestone during pregnancy is the 
         labor and for this, it is important for pregnant....
-         <a id="artical" href=".html">
-            <li>Full Article <span class="arrow">&#8594;</span> </li>
+         <a id="artical" href="fullartical.html">
+            <li id="list1">Full Article <span class="arrow">&#8594;</span> </li>
         </a>
     </p>
         </div>
     </div>
     <hr>
     <div id="ab">
-        <div>
-    <img
+        <div >
+    <img id="img_Url"
     src="https://blog.medplusmart.com/wp-content/uploads/2021/10/106.-Biotin.jpg"
     />
         </div>
-        <div>
+        <div class="content1" >
     <h1>
         Health Benefits of Biotin
     </h1>
+    <br>
     <p>
         Biotin is a water-soluble vitamin, from the family of Vitamin B.
          It is also known as Vitamin H, where H stands for Haar and Haut
           – German words which mean hair and skin. One of the main uses of biotin
          ....
         <a id="artical" href=""  >
-            <li>Full Article <span class="arrow">&#8594;</span> </li>
+            <li id="list1">Full Article <span class="arrow">&#8594;</span> </li>
         </a>
     </p>
         </div>
@@ -64,21 +242,22 @@
     <hr>
 
     <div id="ab">
-        <div>
-    <img
+        <div >
+    <img id="img_Url"
     src="https://blog.medplusmart.com/wp-content/uploads/2021/08/Best-Exercises-for-Weight-Loss-1-min.jpg"
     />
         </div>
-        <div>
+        <div class="content1">
     <h1>
         8 Best Exercises for Weight Loss
     </h1>
+    <br>
     <p>
         As more of our life become sedentary in nature, more than ever due to COVID-19,
          it is becoming increasingly difficult for us to stay         
         in proper shape and stay fit. Obesity is a growing trend and thus, we are always…
         <a id="artical" href="">
-            <li>Full Article <span class="arrow">&#8594;</span> </li>
+            <li id="list1">Full Article <span class="arrow">&#8594;</span> </li>
         </a>
     </p>
         </div>
@@ -86,20 +265,21 @@
     <hr>
     <div id="ab">
         <div>
-    <img
+    <img id="img_Url"
     src="https://blog.medplusmart.com/wp-content/uploads/2021/08/Benefits-of-Morning-Yoga.jpg"
     />
         </div>
-        <div>
+        <div  class="content1">
     <h1>
         Health Benefits of Early Morning Yoga
     </h1>
+    <br>
     <p>
         Yoga is a great way to maintain your health and immunity. It is easy to practice
          and has many benefits. Doing a bit of yoga, 
         especially early in the mornings, can be quite fruitful for your body as well as…
         <a id="artical" href="">
-            <li>Full Article <span class="arrow">&#8594;</span> </li>
+            <li id="list1">Full Article <span class="arrow">&#8594;</span> </li>
         </a>
     </p>
         </div>
@@ -107,107 +287,112 @@
     <hr>
 
     <div id="ab">
-        <div>
-    <img
+        <div >
+    <img id="img_Url"
     src="https://blog.medplusmart.com/wp-content/uploads/2021/06/Infants-Children-Vaccination-1.jpg"
     />
         </div>
-        <div>
+        <div class="content1">
     <h1>
         Vaccinations for Infants & Children, Age 0-10 Years 
 
     </h1>
+    <br>
     <p>
         The timely vaccination of kids is important so that their immune system remains strong enough to protect their
          bodies against preventable diseases.
          Parents must keep track of the childhood vaccination schedule and get their kids vaccinated from time to time.….….
         <a id="artical" href="">
-            <li>Full Article <span class="arrow">&#8594;</span> </li>
+            <li id="list1">Full Article <span class="arrow">&#8594;</span> </li>
         </a>
     </p>
         </div>
     </div>
     <hr>
     <div id="ab">
-        <div>
-    <img
+        <div >
+    <img id="img_Url"
     src="https://blog.medplusmart.com/wp-content/uploads/2021/05/Protein-Foods-to-Lose-Weight-Blog.jpg"
     />
         </div>
-        <div>
+        <div class="content1">
     <h1>
         High Protein Foods to Lose Weight
     </h1>
+    <br>
     <p>
         Foods rich in protein are great for weight loss because protein boosts the metabolism of the body 
         for a few hours thus helping in weight loss.
          This happens because the body uses up more energy (calories) to digest protein. Protein…....
         <a id="artical" href="">
-            <li>Full Article <span class="arrow">&#8594;</span> </li>
+            <li id="list1">Full Article <span class="arrow">&#8594;</span> </li>
         </a>
     </p>
         </div>
     </div>
     <hr>
     <div id="ab">
-        <div>
-    <img
+        <div >
+    <img id="img_Url"
     src="https://blog.medplusmart.com/wp-content/uploads/2021/07/Face-Shape-Right-Eyeglass.jpg"
     />
         </div>
-        <div>
+        <div class="content1">
     <h1>
         How to Find Best Eye Glasses for Your Face Shape
     </h1>
+    <br>
     <p>
         Wearing eyeglasses needn’t be a dent in your confidence or even a drab affair
          anymore especially because of the wide variety of sophisticated and cool eyewear 
          which are available nowadays. 
         What is important is how to find the perfect glasses….....
         <a id="artical" href="">
-            <li>Full Article <span class="arrow">&#8594;</span> </li>
+            <li id="list1">Full Article <span class="arrow">&#8594;</span> </li>
         </a>
     </p>
         </div>
     </div>
     <hr>
     <div id="ab">
-        <div>
-    <img
+        <div >
+    <img id="img_Url"
     src="https://blog.medplusmart.com/wp-content/uploads/2021/07/Remove-Scratches-from-Eyeglasses.jpg"
     />
         </div>
-        <div>
+        <div class="content1">
     <h1>
         How to Remove Scratches from Spectacles 
     </h1>
+    <br>
     <p>
         So, you finally bought those spectacles you have been eyeing for a while. But after a few days,
          you notice scratches on them. 
         Imagine how crest-fallen that could make you feel? For someone who has to wear eyeglasses to see….....
         <a id="artical" href="">
-            <li>Full Article <span class="arrow">&#8594;</span> </li>
+            <li id="list1">Full Article <span class="arrow">&#8594;</span> </li>
         </a>
     </p>
         </div>
     </div>
     <hr>
     <div id="ab">
-        <div>
-    <img
+        <div >
+    <img id="img_Url"
     src="https://blog.medplusmart.com/wp-content/uploads/2021/07/All-About-Menopause.jpg"
     />
         </div>
-        <div>
+        <div class="content1">
     <h1>
         All About Menopause: Signs & Symptoms and More
     </h1>
+   <br>
     <p>
         If you are a woman above 40, feeling hot, sweating bucket loads, and don’t even have the weather to blame,
          it is most probably your body telling you that you might expect your menopause. 
         This is usually a classic sign.....
         <a id="artical" href="">
-            <li>Full Article <span class="arrow">&#8594;</span> </li>
+            <li id="list1">Full Article <span class="arrow">&#8594;</span> </li>
         </a>
     </p>
         </div>
@@ -215,20 +400,21 @@
     <hr>
     <div id="ab">
         <div>
-    <img
+    <img id="img_Url"
     src="https://blog.medplusmart.com/wp-content/uploads/2021/07/Period-Pain-Explained-blog.jpg"
     />
         </div>
-        <div>
+        <div  class="content1">
     <h1>
         Dysmenorrhea: What Is It? Causes, Symptoms & Treatment
     </h1>
+    <br>
     <p>
         So what is dysmenorrhea? The pain and discomfort associated with menstruation is called dysmenorrhea. 
         It is quite a common occurrence so much so that more than half
          of women who get their periods have some pain for at least 1….....
         <a id="artical" href="">
-            <li>Full Article <span class="arrow">&#8594;</span> </li>
+            <li id="list1">Full Article <span class="arrow">&#8594;</span> </li>
         </a>
     </p>
         </div>
@@ -237,74 +423,75 @@
 
     </div>
 <div id="nav">
-    <ul>
-        <h4>Categories</h4>
-       
-        <a href="" >
-            <li >Baby Care <span class="arr1">
+    
+        
+        <ul id="uLists">
+            <h4>Categories</h4>
+<br>
+        <a id="darrow" href="babycare.html" >
+            <li id="list" >Baby Care <span class="arr1">
                 &#8250;</span></li>
             
         </a>
-        <hr>
+        
        <br>
 
-        <a href="">
-           <li>Personal Care <span class="arr1"> &#8250;</span></li>
+        <a id="darrow" href="personalcare.html" >
+           <li id="list">Personal Care <span class="arr1"> &#8250;</span></li>
        </a>
        
-       <hr>
+      
        <br>
-       <a href="">
-           <li>Hair Care  <span class="arr1"> &#8250;</span> </li>
+       <a id="darrow" href="" >
+           <li id="list">Hair Care  <span class="arr1"> &#8250;</span> </li>
        </a>
-       <hr>
+      
        <br>
-       <a href=""> 
-           <li>Skin Care  <span class="arr1"> &#8250;</span> </li>
+       <a id="darrow" href="" > 
+           <li id="list">Skin Care  <span class="arr1"> &#8250;</span> </li>
        </a>
-       <hr>
+      
        <br>
-       <a href="">
-           <li>Diet Plans  <span class="arr1"> &#8250;</span> </li>
+       <a id="darrow" href="" >
+           <li id="list">Diet Plans  <span class="arr1"> &#8250;</span> </li>
        </a>
-       <hr>
+      
        <br>
-       <a href="">
-           <li>Food Nurtition  <span class="arr1"> &#8250;</span> </li>
+       <a id="darrow" href="" >
+           <li id="list">Food Nurtition  <span class="arr1"> &#8250;</span> </li>
        </a>
-       <hr>
+      
        <br>
-       <a href=" ">
-           <li>Health Care  <span class="arr1"> &#8250;</span> </li>
+       <a id="darrow" href="">
+           <li id="list">Health Care  <span class="arr1"> &#8250;</span> </li>
        </a>
-       <hr>
+      
        <br>
-       <a href="">
-           <li>Eye Care  <span class="arr1"> &#8250;</span> </li>
+       <a id="darrow" href="" >
+           <li id="list">Eye Care  <span class="arr1"> &#8250;</span> </li>
        </a>
-       <hr>
+      
        <br>
-       <a href="">
-        <li>Pregnancy  <span class="arr1"> &#8250;</span> </li>
+       <a id="darrow" href="" >
+        <li id="list">Pregnancy  <span class="arr1"> &#8250;</span> </li>
     </a>
-    <hr>
+   
     <br>
-    <a href="">
-        <li>Seasonal Health Issues  <span class="arr1"> &#8250;</span> </li>
+    <a id="darrow" href="" >
+        <li id="list">Seasonal Health Issues  <span class="arr1"> &#8250;</span> </li>
     </a>
-    <hr>
+   
     <br>
-    <a href="">
-        <li>Yoga Fitness  <span class="arr1"> &#8250;</span> </li>
+    <a id="darrow" href="yogafitness.html" >
+        <li id="list">Yoga Fitness <span class="arr1"> &#8250;</span> </li>
     </a>
    
       </ul>
 </div>
 
 </div>
-<hr>
 
-
+   
 </body>
 </html>
 
