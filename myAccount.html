@@ -465,6 +465,7 @@
 <script src="flexiRewardsItemData.js"></script>
 <script>
     var addingCash = 3000;
+    var rewardCart=[]
     var userDetails = JSON.parse(localStorage.getItem("userDetails")) || {
         userId: "60178396",
         userName: "Vikash Kumar",
@@ -1012,7 +1013,7 @@
                 </div>
             </div>`;
 
-    document.querySelector(".rBody").innerHTML = myAcc;
+    
     var previousSelected = document.getElementById("myAcc");
     // console.log(flexiRewardsItemData)
 
@@ -1259,11 +1260,11 @@
                         <div class="rewPointHeadBK">
                             <div class="rewPointText">
                                 <p>Rewards Points Summary</i></p>
-                                <p>Total available points for redemption as on today ${userDetails.rewardPoint} points</p>
+                                <p>Total available points for redemption as on today <span style="font-size:30px;">  ${userDetails.userRewardPoint}  </span> points</p>
                             </div>
                             <div class="rewardPointCartField">
                                 <img class="cartImg" src="https://i.ibb.co/kGJWMQm/123.jpg" alt="">
-                                <div class="nItemsInCart">10</div>
+                                <div class="nItemsInCart">${rewardCart.length}</div>
                             </div>
                         </div>
                         <img
@@ -1276,30 +1277,72 @@
                     <div class="allItemsInFlexiRewards">
                         <button class="allItemsButtonFlexiRewards">All Items</button>
                     </div>
-                    <div id="flexiItemsCards">`;
+                    <div id="flexiItemsCards"></div></div>`;
 
-        var toShow = ``;
-        flexiRewardsItemData.forEach((item) => {
-            toShow += `
-            <div class="flexiItemsCard">
-                            <div class="flexiItemsCardPhoto">
-                                <img class="flexiItemsCardImg" src="${item.img_url}" alt="">
-                            </div>
-                            <div class="flexiItemsCardName">
-                                <h3>${item.name}</h3>
-                            </div>
-                            <p style="margin: 2px 5px; color: rgb(82, 82, 241);">More Detailes</p>
-                            <div class="priceAndPoints">
-                                <p>₹${item.price}</p>
-                                <h2>${item.points} Pts</h2>
-                            </div>
-                            <button style="padding: 4px; width:95%;margin:7px"; class="redButton">Add to Cart</button>
-                        </div>
-            `;
-        });
-        flexiRew += toShow + "</div></div>";
-        // document.getElementById("flexiItemsCards").innerHTML=toShow
+        // var toShow = ``;
         document.querySelector(".rBody").innerHTML = flexiRew;
+        function displayItemsInflexiRew(){
+            flexiRewardsItemData.map((item) => {
+                var div1=document.createElement("div")
+                div1.setAttribute("class","flexiItemsCard")
+                
+                var div2=document.createElement("div")
+                div2.setAttribute("class","flexiItemsCardPhoto")
+
+                var img1=document.createElement("img")
+                img1.setAttribute("class","flexiItemsCardImg")
+                img1.src=item.img_url
+
+                div2.append(img1)
+
+                var div3=document.createElement("div")
+                div3.setAttribute("class","flexiItemsCardName")
+
+                var h3=document.createElement("h3")
+                h3.textContent=item.name
+
+                div3.append(h3)
+
+                var p1=document.createElement("p")
+                p1.textContent="More Detailes"
+                p1.style.margin="2px 5px"
+                p1.style.color="rgb(82, 82, 241)"
+
+                var div4=document.createElement("div")
+                div4.setAttribute("class","priceAndPoints")
+
+                var p2=document.createElement("p")
+                p2.innerHTML=item.price
+
+                var h2=document.createElement("h2")
+                h2.textContent=item.points
+
+                div4.append(p2,h2)
+
+                var button=document.createElement("button")
+                button.setAttribute("class","redButton")
+                button.textContent="Add to Cart"
+                button.style.padding="4px"
+                button.style.width="95%"
+                button.style.margin="7px"
+                button.addEventListener("click", function () {
+                addToRewCart(item);
+            })
+
+                div1.append(div2,div3,p1,div4,button)
+
+                document.getElementById("flexiItemsCards").append(div1)
+            })
+
+            function addToRewCart(item){
+                alert(item)
+                console.log(item)
+            }
+        }
+        
+        // flexiRew += toShow + "";
+        // document.getElementById("flexiItemsCards").innerHTML=toShow
+        displayItemsInflexiRew()
         previousSelected.style.color = "black";
         previousSelected.style.borderRight = "none";
         previousSelected = document.getElementById("flexiRew"); //to be changed
