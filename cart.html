@@ -207,8 +207,9 @@
       .payment-form-div {
         position: absolute;
         width: 600px;
-        top: 50px;
-        transform: translateX(50%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
         padding: 40px 20px;
         border-radius: 4px;
         background: white;
@@ -238,7 +239,7 @@
               </tr>
               <tr>
                 <td>Total amount to be paid -></td>
-                <td id="totalAmount">₹</td>
+                <td id="totalAmount">₹ </td>
               </tr>
             </table>
           </div>
@@ -377,14 +378,13 @@
         e.preventDefault();
         document.getElementById("paymentForm").style.display = "none";
         document.getElementById("otpForm").style.display = "flex";
-        alert("Your otp is '1234'.");
       });
 
     document.getElementById("otpForm").addEventListener("submit", function (e) {
       e.preventDefault();
       var otp = document.getElementById("otp").value;
       if (otp == "1234") {
-        alert("successfully paument has done");
+        alert("Successfully payment has done");
         var container = document.querySelector(".cart-product-container");
         localStorage.removeItem("cart");
         container.innerHTML =
