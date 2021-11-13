@@ -24,6 +24,9 @@ body {
   border-radius: 5px;
   font-size: 18px;
 }
+.redButton>a{
+  color: white;
+}
 .redButton:hover {
   cursor: pointer;
   background-color: #a71529;
@@ -462,4 +465,7 @@ body {
   height: 120px;
   border-bottom: 2px green solid;
   background-color: rgb(213, 247, 158);
+}
+#activePage1,#activePage2{
+  color: #c3161c;
 }

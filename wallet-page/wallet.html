@@ -42,7 +42,8 @@
             />
           </div>
           <div>
-            <button class="sign-in-button" id="signin">Sign in/Register</button>
+            <!-- <button class="sign-in-button" id="signin">Sign in/Register</button> -->
+            <div id="userNameDiv2">Hay</div>
           </div>
         </div>
         <div class="container-sign-in" id="modal">
@@ -321,20 +322,20 @@
     <!-- main-nav bar starts here -->
     <div class="main-nav">
       <ul class="nav-list flex">
-        <li class="nav-list-item"><a href="home.html">Health Store</a></li>
+        <li class="nav-list-item"><a href="/home.html">Health Store</a></li>
         <li class="nav-list-item">
-          <a href="/Pharmacy-Page-Anurag/pharmacyPage/pPage.html">Pharmecy</a>
+          <a href="/pharmacy-page/pharmacy.html">Pharmecy</a>
         </li>
-        <li class="nav-list-item"><a href="/labtest/lab.html">Lab tests</a></li>
+        <li class="nav-list-item"><a href="/labtest-page/labtest.html">Lab tests</a></li>
         <li class="nav-list-item">
-          <a href="myAccount.html">Flexi Rewards</a>
+          <a id="activePage1" href="/wallet-page/wallet.html">Flexi Rewards</a>
         </li>
         <li class="nav-list-item">
-          <a href="./promotions-page/promotion.html">Promotions</a>
+          <a href="/promotions-page/promotion.html">Promotions</a>
         </li>
-        <li class="nav-list-item"><a href="">Healthy Life</a></li>
+        <li class="nav-list-item"><a href="/healthy-page/healthy.html">Healthy Life</a></li>
         <li class="nav-list-item">
-          <a href="myAccount.html">MedPlus Wallet</a>
+          <a id="activePage2" href="/wallet-page/wallet.html">MedPlus Wallet</a>
         </li>
       </ul>
     </div>
@@ -481,10 +482,10 @@
 <script>
   var addingCash = 3000;
   var rewardCart = [];
-  var userDetails = JSON.parse(localStorage.getItem("user"))
+  var userDetails = JSON.parse(localStorage.getItem("userDetails"));
 
   var myAcc = `<p class="greetUser"><strong>Hello,</strong> ${userDetails.userName}</p>
-            <div class="userId"><i class="far fa-user fa-2x"> <span style="margin-left: 20px;">MedPlus ID: ${userDetails.userId}</span>     </i></div>
+            <div class="userId"><i class="far fa-user fa-2x"> <span style="margin-left: 20px;">MedPlus ID: ${86554158}</span>     </i></div>
             <div class="accDetails">
                 <div class="iconAccDetails">
                     <img src="https://static2.medplusmart.com/live/webpwa/images/my-account-password-icn-cssbg.svg" alt="">
@@ -602,7 +603,7 @@
                             </g>
                         </svg>
                         <h4>No Purchase History</h4>
-                        <button class="redButton">Start Ordering</button>
+                        <button class="redButton"><a href="../home.html">Start Ordering</a></button>
                     </div>
                 </div>`;
 
@@ -692,7 +693,7 @@
                             </g>
                         </svg>
                         <h4>No Lab Order History</h4>
-                        <button class="redButton">Order Now</button>
+                        <button class="redButton"><a href="../labtest-page/labtest.html">Order Now</a></button>
                     </div>
                 </div>`;
 
@@ -774,7 +775,7 @@
                             </g>
                         </svg>
                         <h4>No Refill History.</h4>
-                        <button class="redButton">Start Ordering</button>
+                        <button class="redButton"><a href="../home.html">Start Ordering</a></button>
                     </div>
                 </div>`;
 
@@ -946,7 +947,7 @@
                             </g>
                         </svg>
                         <h4>No Pharmacy products in Frequently Ordered List</h4>
-                        <button class="redButton">Start Ordering</button>
+                        <button class="redButton"><a href="../home.html">Start Ordering</a></button>
                     </div>
                 </div>`;
 
@@ -1099,7 +1100,7 @@
                   "userDetails",
                   JSON.stringify(userDetails)
                 );
-                window.location.href = "myAccount.html";
+                window.location.href = "wallet.html";
               } else {
                 alert("New Passwords are not same");
               }
@@ -1110,12 +1111,12 @@
         document
           .querySelector(".cancelUpdating")
           .addEventListener("click", function () {
-            window.location.href = "myAccount.html";
+            window.location.href = "wallet.html";
           });
         document
           .querySelector(".cancelUpdating1")
           .addEventListener("click", function () {
-            window.location.href = "myAccount.html";
+            window.location.href = "wallet.html";
           });
       });
 
@@ -1139,17 +1140,17 @@
           .addEventListener("click", function () {
             userDetails.userEmail = document.getElementById("newEmail").value;
             localStorage.setItem("userDetails", JSON.stringify(userDetails));
-            window.location.href = "myAccount.html";
+            window.location.href = "wallet.html";
           });
         document
           .querySelector(".cancelUpdating")
           .addEventListener("click", function () {
-            window.location.href = "myAccount.html";
+            window.location.href = "wallet.html";
           });
         document
           .querySelector(".cancelUpdating1")
           .addEventListener("click", function () {
-            window.location.href = "myAccount.html";
+            window.location.href = "wallet.html";
           });
       });
 
@@ -1173,17 +1174,17 @@
           .addEventListener("click", function () {
             userDetails.userMobile = document.getElementById("newMobile").value;
             localStorage.setItem("userDetails", JSON.stringify(userDetails));
-            window.location.href = "myAccount.html";
+            window.location.href = "wallet.html";
           });
         document
           .querySelector(".cancelUpdating")
           .addEventListener("click", function () {
-            window.location.href = "myAccount.html";
+            window.location.href = "wallet.html";
           });
         document
           .querySelector(".cancelUpdating1")
           .addEventListener("click", function () {
-            window.location.href = "myAccount.html";
+            window.location.href = "wallet.html";
           });
       });
 
@@ -1207,17 +1208,17 @@
             userDetails.userAddress =
               document.getElementById("newAddress").value;
             localStorage.setItem("userDetails", JSON.stringify(userDetails));
-            window.location.href = "myAccount.html";
+            window.location.href = "wallet.html";
           });
         document
           .querySelector(".cancelUpdating")
           .addEventListener("click", function () {
-            window.location.href = "myAccount.html";
+            window.location.href = "wallet.html";
           });
         document
           .querySelector(".cancelUpdating1")
           .addEventListener("click", function () {
-            window.location.href = "myAccount.html";
+            window.location.href = "wallet.html";
           });
       });
   }
@@ -1499,4 +1500,19 @@
   document.getElementById("myComp").addEventListener("click", function () {
     showmyComp();
   });
+  
+  var hiuser=userDetails.userName || "guest"
+  printUserName(hiuser)
+  // alert(hiuser)
+
+  function printUserName(user) {
+  var div1 = document.getElementById("userNameDiv2");
+  var span = document.createElement("span");
+  span.textContent = user
+  var icon = document.createElement("span");
+  icon.innerHTML =
+    '<i class="far fa-user-circle"><i class="fas fa-sort-down"></i>';
+  div1.innerHTML = "";
+  div1.append(span, icon);
+}
 </script>
