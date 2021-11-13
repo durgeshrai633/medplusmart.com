@@ -483,6 +483,9 @@
   var addingCash = 3000;
   var rewardCart = [];
   var userDetails = JSON.parse(localStorage.getItem("userDetails"));
+  userDetails.userRegularCash=3000
+  userDetails.userFlexiCash=30
+  userDetails.userRewardPoint=300
 
   var myAcc = `<p class="greetUser"><strong>Hello,</strong> ${userDetails.userName}</p>
             <div class="userId"><i class="far fa-user fa-2x"> <span style="margin-left: 20px;">MedPlus ID: ${86554158}</span>     </i></div>
