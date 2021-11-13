@@ -42,7 +42,8 @@
             />
           </div>
           <div>
-            <button class="sign-in-button" id="signin">Sign in/Register</button>
+            <!-- <button class="sign-in-button" id="signin">Sign in/Register</button> -->
+            <div id="userNameDiv2">Hay</div>
           </div>
         </div>
         <div class="container-sign-in" id="modal">
@@ -323,18 +324,18 @@
       <ul class="nav-list flex">
         <li class="nav-list-item"><a href="home.html">Health Store</a></li>
         <li class="nav-list-item">
-          <a href="/Pharmacy-Page-Anurag/pharmacyPage/pPage.html">Pharmecy</a>
+          <a href="/pharmacy-page/pharmacy.html">Pharmecy</a>
         </li>
-        <li class="nav-list-item"><a href="/labtest/lab.html">Lab tests</a></li>
+        <li class="nav-list-item"><a href="/labtest-page/labtest.html">Lab tests</a></li>
         <li class="nav-list-item">
-          <a href="myAccount.html">Flexi Rewards</a>
+          <a href="/wallet-page/wallet.html">Flexi Rewards</a>
         </li>
         <li class="nav-list-item">
-          <a href="./promotions-page/promotion.html">Promotions</a>
+          <a href="/promotions-page/promotion.html">Promotions</a>
         </li>
-        <li class="nav-list-item"><a href="">Healthy Life</a></li>
+        <li class="nav-list-item"><a href="/healthy-page/healthy.html">Healthy Life</a></li>
         <li class="nav-list-item">
-          <a href="myAccount.html">MedPlus Wallet</a>
+          <a id="activePage" href="/wallet-page/wallet.html">MedPlus Wallet</a>
         </li>
       </ul>
     </div>
@@ -1499,4 +1500,19 @@
   document.getElementById("myComp").addEventListener("click", function () {
     showmyComp();
   });
+  
+  var hiuser=userDetails[0].userName || "guest"
+  printUserName(hiuser)
+  // alert(hiuser)
+
+  function printUserName(user) {
+  var div1 = document.getElementById("userNameDiv2");userDetails[0].userName
+  var span = document.createElement("span");
+  span.textContent = user
+  var icon = document.createElement("span");
+  icon.innerHTML =
+    '<i class="far fa-user-circle"><i class="fas fa-sort-down"></i>';
+  div1.innerHTML = "";
+  div1.append(span, icon);
+}
 </script>
