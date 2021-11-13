@@ -354,7 +354,6 @@ ul {
 .logo > span {
   color: #ffffff;
   font-weight: 500;
-  
 }
 .sign-in-button {
   padding: 8px 16px;
@@ -364,8 +363,6 @@ ul {
   cursor: pointer;
   border-radius: 3px;
 }
-
-
 
 /* .sign-in-button:hover {
 color: white;
@@ -1048,4 +1045,8 @@ i {
 .footer-last-li a {
   color: white;
   font-size: 12px;
+}
+
+#active-link {
+  color: #c3161c;
 }

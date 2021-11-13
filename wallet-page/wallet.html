@@ -481,10 +481,10 @@
 <script>
   var addingCash = 3000;
   var rewardCart = [];
-  var userDetails = JSON.parse(localStorage.getItem("user"))
+  var userDetails = JSON.parse(localStorage.getItem("userDetails"));
 
-  var myAcc = `<p class="greetUser"><strong>Hello,</strong> ${userDetails.userName}</p>
-            <div class="userId"><i class="far fa-user fa-2x"> <span style="margin-left: 20px;">MedPlus ID: ${userDetails.userId}</span>     </i></div>
+  var myAcc = `<p class="greetUser"><strong>Hello,</strong> ${userDetails[0].userName}</p>
+            <div class="userId"><i class="far fa-user fa-2x"> <span style="margin-left: 20px;">MedPlus ID: ${userDetails[0].userId}</span>     </i></div>
             <div class="accDetails">
                 <div class="iconAccDetails">
                     <img src="https://static2.medplusmart.com/live/webpwa/images/my-account-password-icn-cssbg.svg" alt="">
@@ -497,21 +497,21 @@
                     <img src="https://static2.medplusmart.com/live/webpwa/images/my-account-mail-icn-cssbg.svg" alt="">
                     <div>
                         <p>Email | <span id="changeEmail" class="colorInfo">Change Email</span></p>
-                        <p class="colorInfo">${userDetails.userEmail}</p>
+                        <p class="colorInfo">${userDetails[0].userEmail}</p>
                     </div>
                 </div>
                 <div class="iconAccDetails">
                     <img src="https://static2.medplusmart.com/live/webpwa/images/my-account-phn-icn-cssbg.svg" alt="">
                     <div>
                         <p>Mobile Number | <span id="changeMobile" class="colorInfo">Change Mobile</span></p>
-                        <p>${userDetails.userMobile}</p>
+                        <p>${userDetails[0].userMobile}</p>
                     </div>
                 </div>
                 <div class="iconAccDetails">
                     <img src="https://static2.medplusmart.com/live/webpwa/images/my-account-loc-icn-cssbg.svg" alt="">
                     <div>
                         <p>Address | <span id="changeAddress" class="colorInfo">Change Address</span></p>
-                        <p>${userDetails.userAddress}</p>
+                        <p>${userDetails[0].userAddress}</p>
                     </div>
                 </div>
             </div>`;
