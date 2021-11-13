@@ -481,17 +481,7 @@
 <script>
   var addingCash = 3000;
   var rewardCart = [];
-  var userDetails = JSON.parse(localStorage.getItem("userDetails")) || {
-    userId: "60178396",
-    userName: "Vikash Kumar",
-    userPassword: "vikash",
-    userEmail: "vikashoffice.vk@gmail.com",
-    userMobile: "8986298980",
-    userAddress: "Qr- 407/800, L. B. Shashtri Nagar, Patna-23",
-    userRewardPoint: "30",
-    userRegularCash: "0.00",
-    userFlexiCash: "33.33",
-  };
+  var userDetails = JSON.parse(localStorage.getItem("user"))
 
   var myAcc = `<p class="greetUser"><strong>Hello,</strong> ${userDetails.userName}</p>
             <div class="userId"><i class="far fa-user fa-2x"> <span style="margin-left: 20px;">MedPlus ID: ${userDetails.userId}</span>     </i></div>
