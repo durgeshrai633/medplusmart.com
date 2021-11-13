@@ -21,9 +21,9 @@ firstCarousel.classList.add("current-slide")
 
 // To load carousel indicators start
 var indicatorNav = document.querySelector(".carousel-nav")
-carouselImges.map(function(){
+carouselImges.map(function () {
     var btn = document.createElement("button")
-    btn.setAttribute("class","carousel-indicator")
+    btn.setAttribute("class", "carousel-indicator")
     indicatorNav.append(btn)
 })
 var firstIndicator = indicatorNav.children[0];
@@ -80,20 +80,19 @@ function autoPlay() {
     var currentBar = barsNav.querySelector(".current-slide")
     var targetBar = currentBar.nextElementSibling;
     var targetIndex = bars.findIndex(bar => bar === targetBar);
-    if(targetIndex !== -1) {
+    if (targetIndex !== -1) {
         var currentSlide = track.querySelector(".current-slide")
         var targetSlide = currentSlide.nextElementSibling;
-    
-    
+
+
         moveToSlide(track, currentSlide, targetSlide)
         currentBar.classList.remove("current-slide")
         targetBar.classList.add("current-slide")
-    }
-    else{
+    } else {
         var currentSlide = track.querySelector(".current-slide");
         var targetSlide = track.children[0]
         moveToSlide(track, currentSlide, targetSlide)
-        
+
         var targetBar = barsNav.children[0]
         currentBar.classList.remove("current-slide");
         targetBar.classList.add("current-slide")
@@ -402,3 +401,9 @@ function displayBannersAll(event) {
         bannerImageCont.append(anch)
     })
 }
+
+document
+    .getElementById("goToCartButton")
+    .addEventListener("click", function () {
+        window.location.href = "../cart.html";
+    });
