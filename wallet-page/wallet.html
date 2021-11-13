@@ -1318,9 +1318,9 @@
                         <div class="rewPointHeadBK">
                             <div class="rewPointText">
                                 <p>Rewards Points Summary</i></p>
-                                <p>Total available points for redemption as on today <span style="font-size:30px;">  ${userDetails.userRewardPoint}  </span> points</p>
+                                <p>Total available points for redemption as on today <span id="showingUserRewardPoint" style="font-size:30px;">  ${userDetails.userRewardPoint}  </span> points</p>
                             </div>
-                            <div class="rewardPointCartField">
+                            <div id="goToCartReward" class="rewardPointCartField">
                                 <img class="cartImg" src="https://i.ibb.co/kGJWMQm/123.jpg" alt="">
                                 <div class="nItemsInCart">${rewardCart.length}</div>
                             </div>
@@ -1394,14 +1394,25 @@
 
       function addToRewCart(item) {
         if (userDetails.userRewardPoint > item.points) {
-          rewardCart.push(item);
+          rewardCart.push({
+            imgLink:item.img_url,
+            productName:item.name,
+            price:0
+          });
           localStorage.setItem("rewardCart", JSON.stringify(rewardCart));
+          userDetails.userRewardPoint=userDetails.userRewardPoint-item.points
+          document.getElementById("showingUserRewardPoint").textContent=userDetails.userRewardPoint
           document.querySelector(".nItemsInCart").innerHTML = rewardCart.length;
         } else {
           showflexiRew();
           alert("You have not sufficient point to add this item to cart.");
         }
       }
+
+      document.getElementById("goToCartReward").addEventListener("click",function (){
+        localStorage.setItem("cart",JSON.stringify(rewardCart))
+        window.location.href="../cart.html"
+      })
     }
 
     // flexiRew += toShow + "";
