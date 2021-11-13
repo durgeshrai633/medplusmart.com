@@ -457,7 +457,7 @@ function userSignIn(e) {
     return person.userMobile == email && person.userPassword == password;
   });
   if (user[0] !== undefined) {
-    localStorage.setItem("userDetails",JSON.stringify(user));
+    localStorage.setItem("userDetails",JSON.stringify(user[0]));
     localStorage.setItem("user",user[0].userName);
     printUserName(user[0]);
     closeModal();
