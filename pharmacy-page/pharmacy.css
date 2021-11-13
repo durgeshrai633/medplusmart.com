@@ -1050,3 +1050,14 @@ i {
 #active-link {
   color: #c3161c;
 }
+
+#userNameDiv2 {
+  font-size: 16px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+#userNameDiv2 i {
+  margin-left: 5px;
+}
