@@ -3,7 +3,7 @@
  
 ## How we got the project
  
-  #In the construct week of Unit 2 we were assigned to clone the website https://www.medplusmart.com/,and we are 6 peple in our group.
+  #In the construct week of Unit 2, we were assigned to clone the website https://www.medplusmart.com/, and we are 6 peple in our group.
 1. Durgesh kumar rai
 2. Sachin kumar koli
 3. Vikash kumar 
