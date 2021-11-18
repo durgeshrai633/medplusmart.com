@@ -1,200 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="promotion.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Med plus offers</title>
+    <link rel="stylesheet" href="/main.css" />
+  </head>
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,400;1,500&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="promotion.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Promotion Page</title>
-  <link rel="stylesheet" href="/main.css" />
-</head>
-
-<body>
-  <p id="route"><span>Home</span> / <span>Promotions</span></p>
-  <!-- Nav bar starts here -->
-  <div class="nav-bar">
-    <!-- Top nav bar starts here -->
-    <div class="top-nav flex row">
-      <div class="left-div">
-        <a href="home.html">
-          <div class="logo">MedPlus <span>Mart</span></div>
-        </a>
-      </div>
-      <div class="right-div flex row">
-        <a href="#">call 040067006700!</a>
-        <a href="#">Store Finder</a>
-        <div class="download flex">
-          <span>Download App</span>
-          <img src="https://img.icons8.com/material-rounded/24/000000/android-os.png" />
-          <img src="https://img.icons8.com/material-sharp/24/000000/mac-os.png" />
+  <body>
+    <p id="route"><span>Home</span> / <span>Promotions</span></p>
+    <!-- Nav bar starts here -->
+    <div class="nav-bar">
+      <!-- Top nav bar starts here -->
+      <div class="top-nav flex row">
+        <div class="left-div">
+          <a href="home.html">
+            <div class="logo">MedPlus <span>Mart</span></div>
+          </a>
         </div>
-        <div id="userNameDiv1">
-          <button class="sign-in-button" id="signin">Sign in/Register</button>
-        </div>
-        <div id="userNameDiv2"></div>
-        <div id="userNameMenu"></div>
-      </div>
-      <div class="container-sign-in" id="modal">
-        <div class="sign-in-div flex row">
-          <div class="left-part-sign-in">
-            <div>
-              <h2 class="heading-sign-in">Sign-in / Register</h2>
-              <ul>
-                <li class="icon">Participate in FlexiRewars program</li>
-                <li class="icon">Avail discounts at our stores</li>
-                <li class="icon">Access your previous bills & records</li>
-                <li class="icon">
-                  Exclusive MedPlus Family Health Plan Offer
-                </li>
-              </ul>
-            </div>
+        <div class="right-div flex row">
+          <a href="#">call 040067006700!</a>
+          <a href="#">Store Finder</a>
+          <div class="download flex">
+            <span>Download App</span>
             <img
-              src="https://static1.medplusmart.com/medplusmart/assets/_91c3f142ad1b80d8ec54af4248b2d805_/new_theme/web/images/new/signin-register.png"
-              alt="" />
+              src="https://img.icons8.com/material-rounded/24/000000/android-os.png"
+            />
+            <img
+              src="https://img.icons8.com/material-sharp/24/000000/mac-os.png"
+            />
           </div>
-          <div class="right-part-sign-in flex col">
-            <div class="close-icon">
+          <div id="userNameDiv1">
+            <button class="sign-in-button" id="signin">Sign in/Register</button>
+          </div>
+          <div id="userNameDiv2"></div>
+          <div id="userNameMenu"></div>
+        </div>
+        <div class="container-sign-in" id="modal">
+          <div class="sign-in-div flex row">
+            <div class="left-part-sign-in">
+              <div>
+                <h2 class="heading-sign-in">Sign-in / Register</h2>
+                <ul>
+                  <li class="icon">Participate in FlexiRewars program</li>
+                  <li class="icon">Avail discounts at our stores</li>
+                  <li class="icon">Access your previous bills & records</li>
+                  <li class="icon">
+                    Exclusive MedPlus Family Health Plan Offer
+                  </li>
+                </ul>
+              </div>
               <img
-                src="https://static1.medplusmart.com/medplusmart/assets/_2df912a8adaabe680f296d028912963b_/new_theme/web/images/xclose.png.pagespeed.ic.hZtCLUI4yy.png"
-                alt="" onclick="closeModal()" ; />
-              <form action="" class="flex col" id="sign-in-form">
-                <input type="email" name="email" id="email" class="sign-in-input" placeholder="Email Id / Mobile No" />
-                <input type="password" name="password" id="password" class="sign-in-input" placeholder="Password" />
-                <button type="submit" id="sign-in">Sign in</button>
-                <button id="otp-sign-in">Login through OTP</button>
-              </form>
-              <!-- Registration form -->
-              <form action="" class="flex col" id="registration">
-                <div style="
+                src="https://static1.medplusmart.com/medplusmart/assets/_91c3f142ad1b80d8ec54af4248b2d805_/new_theme/web/images/new/signin-register.png"
+                alt=""
+              />
+            </div>
+            <div class="right-part-sign-in flex col">
+              <div class="close-icon">
+                <img
+                  src="https://static1.medplusmart.com/medplusmart/assets/_2df912a8adaabe680f296d028912963b_/new_theme/web/images/xclose.png.pagespeed.ic.hZtCLUI4yy.png"
+                  alt=""
+                  onclick="closeModal()"
+                  ;
+                />
+                <form action="" class="flex col" id="sign-in-form">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="sign-in-input"
+                    placeholder="Email Id / Mobile No"
+                  />
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    class="sign-in-input"
+                    placeholder="Password"
+                  />
+                  <button type="submit" id="sign-in">Sign in</button>
+                  <button id="otp-sign-in">Login through OTP</button>
+                </form>
+                <!-- Registration form -->
+                <form action="" class="flex col" id="registration">
+                  <div
+                    style="
                       display: grid;
                       grid-template-columns: 150px 150px;
                       grid-gap: 20px;
-                    ">
-                  <input type="text" name="first name" id="fname" class="sign-in-input" placeholder="First Name" />
-                  <input type="text" name="last name" id="lname" class="sign-in-input" placeholder="Last Name" />
-                </div>
-                <input type="email" name="email" id="rEmail" class="sign-in-input" placeholder="Email" required />
-                <div style="
+                    "
+                  >
+                    <input
+                      type="text"
+                      name="first name"
+                      id="fname"
+                      class="sign-in-input"
+                      placeholder="First Name"
+                    />
+                    <input
+                      type="text"
+                      name="last name"
+                      id="lname"
+                      class="sign-in-input"
+                      placeholder="Last Name"
+                    />
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    id="rEmail"
+                    class="sign-in-input"
+                    placeholder="Email"
+                    required
+                  />
+                  <div
+                    style="
                       display: grid;
                       grid-template-columns: 150px 150px;
                       grid-gap: 20px;
-                    ">
-                  <input type="password" name="password" id="rPassword" class="sign-in-input" placeholder="Password"
-                    required />
-                  <input type="password" name="confirmPassword" id="confirmPassword" class="sign-in-input"
-                    placeholder="Confirm Password" required />
-                </div>
-                <input type="number" name="mobileNumber" id="mobileNumber" class="sign-in-input"
-                  placeholder="Mobile Number" required />
-                <span style="text-align: left">If you are an existing medplus customer enter the
-                  registered mobile number with us</span>
-                <div style="
+                    "
+                  >
+                    <input
+                      type="password"
+                      name="password"
+                      id="rPassword"
+                      class="sign-in-input"
+                      placeholder="Password"
+                      required
+                    />
+                    <input
+                      type="password"
+                      name="confirmPassword"
+                      id="confirmPassword"
+                      class="sign-in-input"
+                      placeholder="Confirm Password"
+                      required
+                    />
+                  </div>
+                  <input
+                    type="number"
+                    name="mobileNumber"
+                    id="mobileNumber"
+                    class="sign-in-input"
+                    placeholder="Mobile Number"
+                    required
+                  />
+                  <span style="text-align: left"
+                    >If you are an existing medplus customer enter the
+                    registered mobile number with us</span
+                  >
+                  <div
+                    style="
                       display: flex;
                       flex-direction: column;
                       justify-content: flex-start;
                       text-align: left;
-                    ">
-                  <div>
-                    <input type="checkbox" name="check1" id="check1" />
-                    <label for="check1">I have read and agree to <a href="">T&C's</a></label>
+                    "
+                  >
+                    <div>
+                      <input type="checkbox" name="check1" id="check1" />
+                      <label for="check1"
+                        >I have read and agree to <a href="">T&C's</a></label
+                      >
+                    </div>
+                    <div>
+                      <input type="checkbox" name="check2" id="check2" />
+                      <label for="check2"
+                        >Yes I would like to be updated of new promotional
+                        offers.</label
+                      >
+                    </div>
                   </div>
-                  <div>
-                    <input type="checkbox" name="check2" id="check2" />
-                    <label for="check2">Yes I would like to be updated of new promotional
-                      offers.</label>
-                  </div>
-                </div>
-                <button type="submit" id="register">Register</button>
-                <span style="text-align: left; margin-top: -10px; color: rgb(20, 14, 14)">Note: All fields are
-                  mandatory</span>
-              </form>
-              <!-- Registration form ends here -->
-            </div>
+                  <button type="submit" id="register">Register</button>
+                  <span
+                    style="
+                      text-align: left;
+                      margin-top: -10px;
+                      color: rgb(20, 14, 14);
+                    "
+                    >Note: All fields are mandatory</span
+                  >
+                </form>
+                <!-- Registration form ends here -->
+              </div>
 
-            <div class="right-part-sign-in-footer">
-              <span id="registration-span">New to MedPlus?
-                <a onclick="registration()">Register here</a></span>
-              <span id="sign-in-span">Existing User of MedPlus?
-                <a onclick="signin()">Sign In</a></span>
+              <div class="right-part-sign-in-footer">
+                <span id="registration-span"
+                  >New to MedPlus?
+                  <a onclick="registration()">Register here</a></span
+                >
+                <span id="sign-in-span"
+                  >Existing User of MedPlus?
+                  <a onclick="signin()">Sign In</a></span
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Top nav bar ends here -->
+      <!-- Top nav bar ends here -->
 
-    <!-- location nav bar starts here -->
-    <div class="location-nav flex">
-      <div class="left-location-div flex border">
-        <span>
-          <i class="fas fa-map-marker-alt"></i>
-        </span>
-        <div>
-          <h3>6,56, Moosapet, Bhavaninagr...</h3>
-          <h4>Home delivery and store pickup available</h4>
-        </div>
-      </div>
-      <div class="right-location-div flex border">
-        <button class="padding-inline no-border allProducts" id="searchMenu" onblur="removeSearchList()">
-          All Products <span><i class="fas fa-caret-down"></i></span>
-        </button>
-        <div id="search-menu">
-          <a id="general-link" class="search-menu-item" href="#"><i class="fas fa-check-circle"
-              style="margin-right: 5px"></i>General store</a>
-          <a class="search-menu-item" href="https://www.facebook.com"><i class="fas fa-check-circle"
-              style="margin-right: 5px"></i>Pharmacy</a>
-          <a class="search-menu-item" href="#"><i class="fas fa-check-circle" style="margin-right: 5px"></i>All
-            products</a>
-        </div>
-        <input type="text" id="search" onblur="putPlaceholder()" class="no-border"
-          placeholder="Search for... general or pharma products" style="width: 400px; padding-left: 10px" />
-        <button class="no-border" id="searchButton">
-          <span><i class="fas fa-search"></i></span>
-        </button>
-      </div>
-
-      <div class="last-location-div flex border">
-        <div id="cart-mini-menu" class="shopping-cart-list-div">
-          <div class="flex" style="justify-content: space-between; padding: 10px">
-            <h3>Current order</h3>
-            <span href="" onclick="removeCart()">clear</span>
+      <!-- location nav bar starts here -->
+      <div class="location-nav flex">
+        <div class="left-location-div flex border">
+          <span>
+            <i class="fas fa-map-marker-alt"></i>
+          </span>
+          <div>
+            <h3>6,56, Moosapet, Bhavaninagr...</h3>
+            <h4>Home delivery and store pickup available</h4>
           </div>
-          <table style="text-align: left; padding: 10px">
-            <thead>
-              <tr>
-                <th>Product name</th>
-                <th>Qty</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>HIMALAYA TOTAL CARE BABY PANTS M 54S</td>
-                <td>1</td>
-              </tr>
-            </tbody>
-          </table>
-          <button style="width: 100%; background: #e93049; padding-block: 10px" id="goToCartButton">
-            View Shopping Cart
+        </div>
+        <div class="right-location-div flex border">
+          <button
+            class="padding-inline no-border allProducts"
+            id="searchMenu"
+            onblur="removeSearchList()"
+          >
+            All Products <span><i class="fas fa-caret-down"></i></span>
+          </button>
+          <div id="search-menu">
+            <a id="general-link" class="search-menu-item" href="#"
+              ><i class="fas fa-check-circle" style="margin-right: 5px"></i
+              >General store</a
+            >
+            <a class="search-menu-item" href="https://www.facebook.com"
+              ><i class="fas fa-check-circle" style="margin-right: 5px"></i
+              >Pharmacy</a
+            >
+            <a class="search-menu-item" href="#"
+              ><i class="fas fa-check-circle" style="margin-right: 5px"></i>All
+              products</a
+            >
+          </div>
+          <input
+            type="text"
+            id="search"
+            onblur="putPlaceholder()"
+            class="no-border"
+            placeholder="Search for... general or pharma products"
+            style="width: 400px; padding-left: 10px"
+          />
+          <button class="no-border" id="searchButton">
+            <span><i class="fas fa-search"></i></span>
           </button>
         </div>
-        <button><i class="fas fa-cloud-upload-alt"></i>Upload</button>
-        <div style="
+
+        <div class="last-location-div flex border">
+          <div id="cart-mini-menu" class="shopping-cart-list-div">
+            <div
+              class="flex"
+              style="justify-content: space-between; padding: 10px"
+            >
+              <h3>Current order</h3>
+              <span href="" onclick="removeCart()">clear</span>
+            </div>
+            <table style="text-align: left; padding: 10px">
+              <thead>
+                <tr>
+                  <th>Product name</th>
+                  <th>Qty</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>HIMALAYA TOTAL CARE BABY PANTS M 54S</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+            <button
+              style="width: 100%; background: #e93049; padding-block: 10px"
+              id="goToCartButton"
+            >
+              View Shopping Cart
+            </button>
+          </div>
+          <button><i class="fas fa-cloud-upload-alt"></i>Upload</button>
+          <div
+            style="
               display: flex;
               justify-content: space-between;
               gap: 30px;
               position: relative;
-            ">
-          <span><span style="
+            "
+          >
+            <span
+              ><span
+                style="
                   position: absolute;
                   background: red;
                   color: white;
@@ -202,8 +312,13 @@
                   border-radius: 50%;
                   width: 10px;
                   text-align: center;
-                ">0</span><i class="fas fa-bell"></i></span>
-          <span><span style="
+                "
+                >0</span
+              ><i class="fas fa-bell"></i
+            ></span>
+            <span
+              ><span
+                style="
                   position: absolute;
                   background: red;
                   color: white;
@@ -211,348 +326,392 @@
                   border-radius: 50%;
                   width: 10px;
                   text-align: center;
-                ">0</span><i onclick="viewShoppingCart()" class="fas fa-shopping-cart"></i></span>
+                "
+                >0</span
+              ><i onclick="viewShoppingCart()" class="fas fa-shopping-cart"></i
+            ></span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- location nav bar ends here -->
+    <!-- location nav bar ends here -->
 
-  <!-- main-nav bar starts here -->
-  <div class="main-nav">
-    <ul class="nav-list flex">
-      <li class="nav-list-item"><a href="../home.html">Health Store</a></li>
-      <li class="nav-list-item"><a href="/pharmacy-page/pharmacy.html">Pharmecy</a></li>
-      <li class="nav-list-item"><a href="/labtest-page/labtest.html">Lab tests</a></li>
-      <li class="nav-list-item">
-        <a href="/wallet-page/wallet.html">Flexi Rewards</a>
-      </li>
-      <li class="nav-list-item">
-        <a href="#" id="active-link">Promotions</a>
-      </li>
-      <li class="nav-list-item"><a href="../healthy-page/healthy.html">Healthy Life</a></li>
-      <li class="nav-list-item">
-        <a href="/wallet-page/wallet.html">MedPlus Wallet</a>
-      </li>
-    </ul>
-  </div>
-  <!-- Promotion section-->
-
-  <!-- Promotion carousel start-->
-  <div class="carousel">
-    <div class="carousel-track-container">
-      <ul class="carousel-track">
-      
+    <!-- main-nav bar starts here -->
+    <div class="main-nav">
+      <ul class="nav-list flex">
+        <li class="nav-list-item"><a href="../home.html">Health Store</a></li>
+        <li class="nav-list-item">
+          <a href="/pharmacy-page/pharmacy.html">Pharmecy</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/labtest-page/labtest.html">Lab tests</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/wallet-page/wallet.html">Flexi Rewards</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#" id="active-link">Promotions</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="../healthy-page/healthy.html">Healthy Life</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/wallet-page/wallet.html">MedPlus Wallet</a>
+        </li>
       </ul>
     </div>
-    <div class="carousel-nav">
-      
-    </div>
-  </div>
-  <!-- Promotion carousel end-->
+    <!-- Promotion section-->
 
-  <!-- Promotion category start-->
-  <div class="category-section">
-    <ul class="category-list">
-
-    </ul>
-  </div>
-  <!-- Promotion category end-->
-
-  <!-- Promotion banner start-->
-  <div class="promotion-card-section">
-   
-  </div>
-  <!-- Promotion banner end-->
-
-  <!-- Promotion page footer start-->
-  <div class="download-app-div">
-    <div class="download-app-container">
-      <div>
-        <img
-          src="https://static1.medplusmart.com/medplusmart/assets/_3649eddcab909706a1c11a0b62ddd161_/new_theme/web/images/new/download-app.png"
-          alt="" />
+    <!-- Promotion carousel start-->
+    <div class="carousel">
+      <div class="carousel-track-container">
+        <ul class="carousel-track"></ul>
       </div>
-      <div>
-        <div>
-          <h6>Download our app now</h6>
-          <p>
-            Buy general store products and medicines from your mobile at
-            anytime, anywhere
-          </p>
-          <p>Available on:</p>
-        </div>
+      <div class="carousel-nav"></div>
+    </div>
+    <!-- Promotion carousel end-->
+
+    <!-- Promotion category start-->
+    <div class="category-section">
+      <ul class="category-list"></ul>
+    </div>
+    <!-- Promotion category end-->
+
+    <!-- Promotion banner start-->
+    <div class="promotion-card-section"></div>
+    <!-- Promotion banner end-->
+
+    <!-- Promotion page footer start-->
+    <div class="download-app-div">
+      <div class="download-app-container">
         <div>
           <img
-            src="https://static1.medplusmart.com/medplusmart/assets/_b493453735e6e4eb2438d8f4f4ac53cf_/new_theme/web/images/Google_Play_Store-cssbg.svg"
-            alt="" />
-          <img
-            src="https://static1.medplusmart.com/medplusmart/assets/_211ec1ea25fdedd19882d51c673a439d_/new_theme/web/images/App_Store-cssbg.svg"
-            alt="" />
+            src="https://static1.medplusmart.com/medplusmart/assets/_3649eddcab909706a1c11a0b62ddd161_/new_theme/web/images/new/download-app.png"
+            alt=""
+          />
         </div>
-      </div>
-    </div>
-
-    <div class="contact">
-      <div class="phone-div">
-        <img
-          src="https://static1.medplusmart.com/medplusmart/assets/_a34d265f3ea369c0259f6cf98563a642_/new_theme/web/images/call.svg"
-          alt="" />
-        <div>
-          <p>Need any help</p>
-          <h3>040-06666676</h3>
-        </div>
-      </div>
-      <div class="subs-form">
-        <div class="">
-          <p>subscribe for</p>
-          <h3>Latest offers</h3>
-        </div>
-        <form action="">
-          <input type="text" placeholder="Yor email address here" />
-          <button type="submit">subscribe</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="bottom-nav">
-      <div>
-        <a href="">About us</a>
-        <a href="">FAQs</a>
-        <a href="">Locate a medplus store</a>
-        <a href="">Track orders</a><a href="">Browse all brands</a>
-        <a href=""> customer feed back </a><a href="">Community delivery</a> <a href="">Bulk orders</a><a
-          href="">contact us</a>
-      </div>
-      <img src="https://www.medplusmart.com/new_theme/web/images/xsiteseal_gd_3_h_l_m.png.pagespeed.ic.POGQ56jb50.png"
-        alt="" />
-    </div>
-  </div>
-  <div class="payment-options">
-    <h2>Payments</h2>
-    <div>
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
-    </div>
-  </div>
-
-  <footer>
-    <div class="footer-upper-div">
-      <div class="footer-upper-div-left">
-        <h3>General store</h3>
-        <ul>
-          <li>
-            <h3>Baby-Needs:</h3>
-            <a href="">
-              Baby Care </a> /
-            <a href=""> Baby Food</a> /
-          </li>
-          <li>
-            <h3>Personal-Care :</h3>
-            <a href="">Skin Care </a> / <a href=""> Sanitary & Hygiene</a> / <a href="">Oral Care</a>
-            / <a href="">Hair Care</a> / <a href=""> Bath & Body Products</a> / <a href="">Sexual Wellness</a> / <br>
-            <a href=""> Eyes, Ears & Lips</a> /
-            <a href="">Shaving & Hair Removal</a> /
-            <a href="">Hand, Foot & Nails</a>
-          </li>
-          <li>
-            <h3>Health-n-Nutrition:</h3>
-            <a href="">Health Drinks</a> /
-            <a href="">Breakfast Cereals</a> /
-            <a href="">Nutritional Foods</a> /
-            <a href=""> Weight Management</a>
-          </li>
-          <li>
-            <h3>OTC-n-Health-Needs:</h3>
-            <a>First Aid</a> /
-            <a href="">Pain Relief </a> /
-            <a href="">Cold Relief </a> /
-            <a href="">Joint Care & Support</a> /
-            <a href="">Skin & Foot Care</a> /
-            <a href="">Digestives & Laxatives</a> /
-          </li>
-          <li>
-            <h3>Vitamins-n-Supplements:</h3>
-            <a href="">Sports Supplements </a> /
-            <a href="">Vitamins & Minerals </a> /
-            <a href=""> Herbal Supplements</a>/
-            <a href="">Jamieson</a>
-          </li>
-          <li>
-            <h3>Diabetic-Needs:</h3>
-            <a href="">Diabetic Testing Needs</a> /
-            <a href="">Diabetic Nutrition</a> /
-            <a href=""> Diabetic Aids</a>
-          </li>
-          <li>
-            <h3>Household-Needs:</h3>
-            <a href="">Cleaning Needs</a> /
-            <a href="">Detergents</a> /
-            <a href="">Germ Protection</a> /
-            <a href=""> Home Utilities</a> /
-            <a href="">Kitchen Utilities</a> /
-            <a href="">Rice & Grains</a> /
-
-            <a href="">Atta, Rava & Flours</a> /
-            <a href=""> Luggage</a> /
-            <a href="">Dried Fruits, Nuts and Seeds</a> /
-            <a href=""> Bakery & Confectionary</a> /
-            <a href=""> Beverages</a> /
-
-            <a href="">Noodles, Soups & Pasta</a> /
-            <a href=""> Snacks & Ready To Eat</a> /
-            <a href=""> jams, Sauces & Spreads</a> /
-            <a href="">Branded Organic & Ayurvedic</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-upper-div-right">
-        <h3>Phramacy</h3>
-
-        <ul>
-          <li>
-            <h3>Medicine Information:</h3>
-            <a href="">Health Records</a> /
-            <a href="">Request a Product</a> /
-            <a href=""> Store Locato</a>r /
-            <a href="">Top Searches</a> /
-            <a href="">Alphabet Wise Products</a>
-          </li>
-          <li>
-            <h3>Browse drugs by Therapeutic category:</h3>
-            <a href="">Gastrointestinal & Hepatobiliary System</a> /
-            <a href="">Cardiovascular & Hematopoietic system</a> /
-            <a href="">Central Nervous System </a> /
-            <a href=""> Musculo-Skeletal System</a> /
-            <a href=""> Hormones</a> /
-            <a href=""> Contraceptive Agents</a> /
-            <a href="">Oncology</a> /
-            <a href="">Genito - Urinary System</a> /
-            <a href="">Endocrine & Metabolic System</a> /
-            <a href="">Vitamins & Minerals</a> /
-            <a href="">Infectious Disease</a> /
-            <a href=""> Ear & Mouth</a> / <a href=""> Throat</a> /
-            <a href=""> Dermatologicals</a> /
-            <a href="">Anaesthetics & Intravenous Solutions</a> /
-            <a href=""> Allergy & Immune System</a> /
-            <a href=""> Antidotes, Detoxifying Agents & Drugs Used in Substance Dependence</a> / <a
-              href="">Miscellaneous</a>
-          </li>
-          <li>
-            <h3>Browse Surgicals products by category:</h3>
-            <a href=""> Anaesthesia</a> / <a href=""> Cardiovascular</a>/
-            <a href=""> CSSD</a> /
-            <a href="">Catheters & Tubes</a> /
-            <a href=""> IV Needs</a> /
-            <a href="">Mobilization Equipment</a> /
-            <a href="">Orthopaedic</a> /
-            <a href=""> Surgicals</a> /
-            <a href=""> Pulmonary</a> / <a href="">Emergency Care</a> /
-            <a href=""> Diagnostic</a> / <a href="">Imaging</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-about-div">
-      <strong>About MedPlusMart:</strong>
-      <p><strong>MedPlus:</strong> One of the most trusted gateways to medicines and general provision</p>
-      <div class="text3">
-        <p>With an aim to eradicate fake and ineffective medicines, and supply high-quality medicines in India,
-          MedPlus was launched in 2006 in Hyderabad.
-          According to WHO research, every 1 or 2 in 10 medicines
-          proven to be adulterated in low/medium income countries like India and MedPlus aspires to bring about a change
-          in this statistic.
-          To encourage and elevate transparency in the functioning of the
-          MedPlus has
-          pharmaceutical industry, been successfully contributing in providing genuine and income countries like India
-          and MedPlus aspires to bring about a change in this statistic.
-          To encourage and elevate,
-          MedPlus
-          transparency in the functioning of the pharmaceutical industry has been successfully contributing in providing
-          genuine and</p>
-        <p><strong> 6 Reasons for you to Shop from MedPlus:</strong></p>
-        <ol>
-          <li> <strong>Authentic medicines:</strong> Be 100% assured of receiving genuine medicines</li>
-          <li><strong>Monthly provisions:</strong> One stop store for both medicines as well as monthly provisions
-            (kiraana)</li>
-          <li><strong>Quick to-door deliveries: </strong> We ensure the delivery of well-packaged products to your
-            doorstep at quick timelines.</li>
-          <li><strong>Pocket-friendly: </strong> Our range of discounts, offers and deals will allow you to go
-            economical everyday, everytime. We recommend you to explore FlexiRewards, our special saving scheme.</li>
-          <li><strong>Customer-friendly: </strong> Order from the comfort of your sofa with our easy browsing and smooth
-            billing procedure. Our hassle-free Upload option allows you to seamlessly upload online and have your
-            medicines delivered to you!</li>
-          <li><strong>Track and Re-Order: </strong> Conveniently refer to all your previous bills and orders which will
-            allow you to re-order with a single click.</li>
-        </ol>
-        <p>Also, for those of you who prefer offline shopping, <a href="" id="locate">locate your nearest store</a> and
-          get going!</p>
-      </div>
-    </div>
-
-    <div class="partners-div">
-      <div>
         <div>
           <div>
-            <h4>Partners</h4>
-            <img
-              src="https://static1.medplusmart.com/medplusmart/assets/_bdc13e652d59c521845483efb1f30b31_/new_theme/web/images/new/MedPlusLens.png"
-              alt="">
+            <h6>Download our app now</h6>
+            <p>
+              Buy general store products and medicines from your mobile at
+              anytime, anywhere
+            </p>
+            <p>Available on:</p>
           </div>
           <div>
-            <h4>Follow us</h4>
-            <div style="display: flex;gap: 20px;">
+            <img
+              src="https://static1.medplusmart.com/medplusmart/assets/_b493453735e6e4eb2438d8f4f4ac53cf_/new_theme/web/images/Google_Play_Store-cssbg.svg"
+              alt=""
+            />
+            <img
+              src="https://static1.medplusmart.com/medplusmart/assets/_211ec1ea25fdedd19882d51c673a439d_/new_theme/web/images/App_Store-cssbg.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
 
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-youtube"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="fab fa-linkedin"></i>
+      <div class="contact">
+        <div class="phone-div">
+          <img
+            src="https://static1.medplusmart.com/medplusmart/assets/_a34d265f3ea369c0259f6cf98563a642_/new_theme/web/images/call.svg"
+            alt=""
+          />
+          <div>
+            <p>Need any help</p>
+            <h3>040-06666676</h3>
+          </div>
+        </div>
+        <div class="subs-form">
+          <div class="">
+            <p>subscribe for</p>
+            <h3>Latest offers</h3>
+          </div>
+          <form action="">
+            <input type="text" placeholder="Yor email address here" />
+            <button type="submit">subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="bottom-nav">
+        <div>
+          <a href="">About us</a>
+          <a href="">FAQs</a>
+          <a href="">Locate a medplus store</a>
+          <a href="">Track orders</a><a href="">Browse all brands</a>
+          <a href=""> customer feed back </a><a href="">Community delivery</a>
+          <a href="">Bulk orders</a><a href="">contact us</a>
+        </div>
+        <img
+          src="https://www.medplusmart.com/new_theme/web/images/xsiteseal_gd_3_h_l_m.png.pagespeed.ic.POGQ56jb50.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="payment-options">
+      <h2>Payments</h2>
+      <div>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-upper-div">
+        <div class="footer-upper-div-left">
+          <h3>General store</h3>
+          <ul>
+            <li>
+              <h3>Baby-Needs:</h3>
+              <a href=""> Baby Care </a> / <a href=""> Baby Food</a> /
+            </li>
+            <li>
+              <h3>Personal-Care :</h3>
+              <a href="">Skin Care </a> / <a href=""> Sanitary & Hygiene</a> /
+              <a href="">Oral Care</a> / <a href="">Hair Care</a> /
+              <a href=""> Bath & Body Products</a> /
+              <a href="">Sexual Wellness</a> / <br />
+              <a href=""> Eyes, Ears & Lips</a> /
+              <a href="">Shaving & Hair Removal</a> /
+              <a href="">Hand, Foot & Nails</a>
+            </li>
+            <li>
+              <h3>Health-n-Nutrition:</h3>
+              <a href="">Health Drinks</a> / <a href="">Breakfast Cereals</a> /
+              <a href="">Nutritional Foods</a> /
+              <a href=""> Weight Management</a>
+            </li>
+            <li>
+              <h3>OTC-n-Health-Needs:</h3>
+              <a>First Aid</a> / <a href="">Pain Relief </a> /
+              <a href="">Cold Relief </a> /
+              <a href="">Joint Care & Support</a> /
+              <a href="">Skin & Foot Care</a> /
+              <a href="">Digestives & Laxatives</a> /
+            </li>
+            <li>
+              <h3>Vitamins-n-Supplements:</h3>
+              <a href="">Sports Supplements </a> /
+              <a href="">Vitamins & Minerals </a> /
+              <a href=""> Herbal Supplements</a>/
+              <a href="">Jamieson</a>
+            </li>
+            <li>
+              <h3>Diabetic-Needs:</h3>
+              <a href="">Diabetic Testing Needs</a> /
+              <a href="">Diabetic Nutrition</a> /
+              <a href=""> Diabetic Aids</a>
+            </li>
+            <li>
+              <h3>Household-Needs:</h3>
+              <a href="">Cleaning Needs</a> / <a href="">Detergents</a> /
+              <a href="">Germ Protection</a> / <a href=""> Home Utilities</a> /
+              <a href="">Kitchen Utilities</a> / <a href="">Rice & Grains</a> /
+
+              <a href="">Atta, Rava & Flours</a> / <a href=""> Luggage</a> /
+              <a href="">Dried Fruits, Nuts and Seeds</a> /
+              <a href=""> Bakery & Confectionary</a> /
+              <a href=""> Beverages</a> /
+
+              <a href="">Noodles, Soups & Pasta</a> /
+              <a href=""> Snacks & Ready To Eat</a> /
+              <a href=""> jams, Sauces & Spreads</a> /
+              <a href="">Branded Organic & Ayurvedic</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-upper-div-right">
+          <h3>Phramacy</h3>
+
+          <ul>
+            <li>
+              <h3>Medicine Information:</h3>
+              <a href="">Health Records</a> / <a href="">Request a Product</a> /
+              <a href=""> Store Locato</a>r / <a href="">Top Searches</a> /
+              <a href="">Alphabet Wise Products</a>
+            </li>
+            <li>
+              <h3>Browse drugs by Therapeutic category:</h3>
+              <a href="">Gastrointestinal & Hepatobiliary System</a> /
+              <a href="">Cardiovascular & Hematopoietic system</a> /
+              <a href="">Central Nervous System </a> /
+              <a href=""> Musculo-Skeletal System</a> /
+              <a href=""> Hormones</a> / <a href=""> Contraceptive Agents</a> /
+              <a href="">Oncology</a> / <a href="">Genito - Urinary System</a> /
+              <a href="">Endocrine & Metabolic System</a> /
+              <a href="">Vitamins & Minerals</a> /
+              <a href="">Infectious Disease</a> / <a href=""> Ear & Mouth</a> /
+              <a href=""> Throat</a> / <a href=""> Dermatologicals</a> /
+              <a href="">Anaesthetics & Intravenous Solutions</a> /
+              <a href=""> Allergy & Immune System</a> /
+              <a href="">
+                Antidotes, Detoxifying Agents & Drugs Used in Substance
+                Dependence</a
+              >
+              / <a href="">Miscellaneous</a>
+            </li>
+            <li>
+              <h3>Browse Surgicals products by category:</h3>
+              <a href=""> Anaesthesia</a> / <a href=""> Cardiovascular</a>/
+              <a href=""> CSSD</a> / <a href="">Catheters & Tubes</a> /
+              <a href=""> IV Needs</a> / <a href="">Mobilization Equipment</a> /
+              <a href="">Orthopaedic</a> / <a href=""> Surgicals</a> /
+              <a href=""> Pulmonary</a> / <a href="">Emergency Care</a> /
+              <a href=""> Diagnostic</a> / <a href="">Imaging</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-about-div">
+        <strong>About MedPlusMart:</strong>
+        <p>
+          <strong>MedPlus:</strong> One of the most trusted gateways to
+          medicines and general provision
+        </p>
+        <div class="text3">
+          <p>
+            With an aim to eradicate fake and ineffective medicines, and supply
+            high-quality medicines in India, MedPlus was launched in 2006 in
+            Hyderabad. According to WHO research, every 1 or 2 in 10 medicines
+            proven to be adulterated in low/medium income countries like India
+            and MedPlus aspires to bring about a change in this statistic. To
+            encourage and elevate transparency in the functioning of the MedPlus
+            has pharmaceutical industry, been successfully contributing in
+            providing genuine and income countries like India and MedPlus
+            aspires to bring about a change in this statistic. To encourage and
+            elevate, MedPlus transparency in the functioning of the
+            pharmaceutical industry has been successfully contributing in
+            providing genuine and
+          </p>
+          <p><strong> 6 Reasons for you to Shop from MedPlus:</strong></p>
+          <ol>
+            <li>
+              <strong>Authentic medicines:</strong> Be 100% assured of receiving
+              genuine medicines
+            </li>
+            <li>
+              <strong>Monthly provisions:</strong> One stop store for both
+              medicines as well as monthly provisions (kiraana)
+            </li>
+            <li>
+              <strong>Quick to-door deliveries: </strong> We ensure the delivery
+              of well-packaged products to your doorstep at quick timelines.
+            </li>
+            <li>
+              <strong>Pocket-friendly: </strong> Our range of discounts, offers
+              and deals will allow you to go economical everyday, everytime. We
+              recommend you to explore FlexiRewards, our special saving scheme.
+            </li>
+            <li>
+              <strong>Customer-friendly: </strong> Order from the comfort of
+              your sofa with our easy browsing and smooth billing procedure. Our
+              hassle-free Upload option allows you to seamlessly upload online
+              and have your medicines delivered to you!
+            </li>
+            <li>
+              <strong>Track and Re-Order: </strong> Conveniently refer to all
+              your previous bills and orders which will allow you to re-order
+              with a single click.
+            </li>
+          </ol>
+          <p>
+            Also, for those of you who prefer offline shopping,
+            <a href="" id="locate">locate your nearest store</a> and get going!
+          </p>
+        </div>
+      </div>
+
+      <div class="partners-div">
+        <div>
+          <div>
+            <div>
+              <h4>Partners</h4>
+              <img
+                src="https://static1.medplusmart.com/medplusmart/assets/_bdc13e652d59c521845483efb1f30b31_/new_theme/web/images/new/MedPlusLens.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <h4>Follow us</h4>
+              <div style="display: flex; gap: 20px">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+              </div>
             </div>
           </div>
+          <p style="margin-left: 40px; margin-top: 10px">
+            &copy; 2021 MedPlusMart.com. All rights reserved.
+          </p>
         </div>
-        <p style="margin-left: 40px;margin-top: 10px;">&copy; 2021 MedPlusMart.com. All rights reserved.</p>
+        <div>
+          <img
+            src="https://static1.medplusmart.com/medplusmart/assets/_b711323f52d18fea248956aa933a7a9a_/new_theme/web/images/new/footer-img.svg"
+            alt=""
+          />
+        </div>
       </div>
-      <div>
-        <img
-          src="https://static1.medplusmart.com/medplusmart/assets/_b711323f52d18fea248956aa933a7a9a_/new_theme/web/images/new/footer-img.svg"
-          alt="">
+      <div id="footer-end">
+        <ul
+          style="
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #343a40;
+          "
+        >
+          <li class="footer-last-li">
+            <img
+              src="https://static1.medplusmart.com/medplusmart/assets/_7ce28e4d38d5831f8b79ccb074f7efda_/new_theme/web/images/new/bulk-order.svg"
+              alt=""
+            /><a href="#">Bulk Order</a>
+          </li>
+          <li class="footer-last-li">
+            <img
+              src="https://static1.medplusmart.com/medplusmart/assets/_3f6749457ccb366054e8b4730031d82a_/new_theme/web/images/new/footer-community.svg"
+              alt=""
+            /><a href=""> Community Delivery</a>
+          </li>
+          <li class="footer-last-li">
+            <img
+              src="https://static1.medplusmart.com/medplusmart/assets/_ece1fc48e014048f8d5cdf497e01b7d4_/new_theme/web/images/new/sitemap.svg"
+              alt=""
+            /><a href=""> sitemap Sitemap </a>
+          </li>
+          <li class="footer-last-li">
+            <img
+              src="https://static1.medplusmart.com/medplusmart/assets/_9e669b497a0681ed24b8d7ba7e1b8378_/new_theme/web/images/new/privacy.svg"
+              alt=""
+            /><a href=""> privacy Privacy </a>
+          </li>
+          <li class="footer-last-li">
+            <img
+              src="https://static1.medplusmart.com/medplusmart/assets/_648114a464440ed20580b10c930debe7_/new_theme/web/images/new/footer-return.svg"
+              alt=""
+            /><a href=""> Returns & Cancellations</a>
+          </li>
+          <li class="footer-last-li">
+            <img
+              src="https://static1.medplusmart.com/medplusmart/assets/_18e40d90e742b9eb3da83bf859391a34_/new_theme/web/images/new/footer-term.svg"
+              alt=""
+            /><a href=""> terms-condition Terms & Conditions </a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <div id="footer-end">
-      <ul style="margin-top:20px;display: flex;justify-content: space-between;background-color: #343A40;">
-        <li class="footer-last-li"><img
-            src="https://static1.medplusmart.com/medplusmart/assets/_7ce28e4d38d5831f8b79ccb074f7efda_/new_theme/web/images/new/bulk-order.svg"
-            alt=""><a href="#">Bulk Order</a></li>
-        <li class="footer-last-li"><img
-            src="https://static1.medplusmart.com/medplusmart/assets/_3f6749457ccb366054e8b4730031d82a_/new_theme/web/images/new/footer-community.svg"
-            alt=""><a href=""> Community Delivery</a></li>
-        <li class="footer-last-li"><img
-            src="https://static1.medplusmart.com/medplusmart/assets/_ece1fc48e014048f8d5cdf497e01b7d4_/new_theme/web/images/new/sitemap.svg"
-            alt=""><a href=""> sitemap Sitemap </a></li>
-        <li class="footer-last-li"><img
-            src="https://static1.medplusmart.com/medplusmart/assets/_9e669b497a0681ed24b8d7ba7e1b8378_/new_theme/web/images/new/privacy.svg"
-            alt=""><a href=""> privacy Privacy </a></li>
-        <li class="footer-last-li"><img
-            src="https://static1.medplusmart.com/medplusmart/assets/_648114a464440ed20580b10c930debe7_/new_theme/web/images/new/footer-return.svg"
-            alt=""><a href=""> Returns & Cancellations</a></li>
-        <li class="footer-last-li"><img
-            src="https://static1.medplusmart.com/medplusmart/assets/_18e40d90e742b9eb3da83bf859391a34_/new_theme/web/images/new/footer-term.svg"
-            alt=""><a href=""> terms-condition Terms & Conditions </a></li>
-      </ul>
-    </div>
-  </footer>
-  <!-- Promotion page footer end-->
-  <!-- Promotion section end -->
-</body>
-<script src="../main.js"></script>
-<script src="promotion.js"></script>
-
-
+    </footer>
+    <!-- Promotion page footer end-->
+    <!-- Promotion section end -->
+  </body>
+  <script src="../main.js"></script>
+  <script src="promotion.js"></script>
 </html>
